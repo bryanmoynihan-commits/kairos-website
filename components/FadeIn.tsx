@@ -31,7 +31,7 @@ export default function FadeIn({
       className={className}
       initial={initial}
       animate={isInView ? { opacity: 1, y: 0, x: 0 } : initial}
-      transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
     >
       {children}
     </motion.div>
