@@ -6,9 +6,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "/about", disabled: true },
-  { label: "Work", href: "/work", disabled: true },
-  { label: "Contact", href: "/contact", disabled: false },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Nav() {
@@ -53,15 +51,7 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 mr-8">
-          {navLinks.map((link) =>
-            link.disabled ? (
-              <span
-                key={link.label}
-                className="text-base text-[#555] cursor-not-allowed select-none"
-              >
-                {link.label}
-              </span>
-            ) : (
+          {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -73,8 +63,7 @@ export default function Nav() {
               >
                 {link.label}
               </Link>
-            )
-          )}
+          ))}
         </nav>
 
         {/* Mobile menu button */}
@@ -111,15 +100,7 @@ export default function Nav() {
           transition={{ duration: 0.2 }}
           className="md:hidden border-t border-[#1f1f1f] bg-[#0a0a0a] px-6 py-4 flex flex-col gap-4"
         >
-          {navLinks.map((link) =>
-            link.disabled ? (
-              <span
-                key={link.label}
-                className="text-sm text-[#555] cursor-not-allowed"
-              >
-                {link.label}
-              </span>
-            ) : (
+          {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -128,8 +109,7 @@ export default function Nav() {
               >
                 {link.label}
               </Link>
-            )
-          )}
+          ))}
         </motion.div>
       )}
     </header>
