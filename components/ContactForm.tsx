@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import ArrowIcon from "@/components/ArrowIcon";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -168,33 +169,23 @@ export default function ContactForm() {
 
     try {
       const payload = {
-        fields: [
-          { name: "firstname",                  value: values.firstName },
-          { name: "lastname",                   value: values.lastName },
-          { name: "email",                      value: values.email },
-          { name: "jobtitle",                   value: values.title },
-          { name: "0-2/name",                   value: values.company },
-          { name: "numemployees",               value: values.companySize },
-          { name: "how_did_you_hear_about_us_", value: values.source },
-          {
-            name: "what_are_you_looking_to_solve_",
-            value: values.message,
-          },
-        ],
-        context: {
-          pageUri:  typeof window !== "undefined" ? window.location.href : "https://kairosperformance.ai/contact",
-          pageName: "Contact",
-        },
+        firstName: values.firstName,
+        lastName: values.lastName,
+        title: values.title,
+        email: values.email,
+        company: values.company,
+        companySize: values.companySize,
+        source: values.source,
+        message: values.message,
+        honeypot: values.honeypot,
+        pageUri: typeof window !== "undefined" ? window.location.href : undefined,
       };
 
-      const res = await fetch(
-        "https://api.hsforms.com/submissions/v3/integration/submit/244707042/5a30d2c9-ebe1-4d2e-ae32-8c9e3964e878",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        }
-      );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
       if (res.ok) {
         setFormState("success");
@@ -202,19 +193,18 @@ export default function ContactForm() {
         setTouched({});
         setErrors({});
       } else {
-        const errBody = await res.json().catch(() => ({}));
-        console.error("HubSpot submission error:", res.status, JSON.stringify(errBody, null, 2));
+        console.error("Contact submission error:", res.status);
         setFormState("error");
       }
     } catch (err) {
-      console.error("HubSpot submission exception:", err);
+      console.error("Contact submission exception:", err);
       setFormState("error");
     }
   }
 
   if (formState === "success") {
     return (
-      <div className="border border-[#2a2a2a] bg-[#111] p-10 text-center">
+      <div role="status" className="border border-[#2a2a2a] bg-[#111] p-10 text-center">
         <p className="text-[#f0ede8] text-lg font-medium mb-2">Message received.</p>
         <p className="text-[#999] text-sm">
           We&apos;ll be in touch within one business day to schedule a discovery call.
@@ -243,12 +233,13 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="firstName" className="text-xs uppercase tracking-widest text-[#999]">
-            First Name <span className="text-red-400">*</span>
+            First Name <span className="text-red-500">*</span>
           </label>
           <input
             id="firstName"
             name="firstName"
             type="text"
+            required
             autoComplete="given-name"
             placeholder="Jane"
             value={values.firstName}
@@ -257,18 +248,19 @@ export default function ContactForm() {
             className={`${inputBase} ${fieldBorder(!!touched.firstName, errors.firstName)}`}
           />
           {touched.firstName && errors.firstName && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.firstName}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.firstName}</p>
           )}
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="lastName" className="text-xs uppercase tracking-widest text-[#999]">
-            Last Name <span className="text-red-400">*</span>
+            Last Name <span className="text-red-500">*</span>
           </label>
           <input
             id="lastName"
             name="lastName"
             type="text"
+            required
             autoComplete="family-name"
             placeholder="Smith"
             value={values.lastName}
@@ -277,7 +269,7 @@ export default function ContactForm() {
             className={`${inputBase} ${fieldBorder(!!touched.lastName, errors.lastName)}`}
           />
           {touched.lastName && errors.lastName && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.lastName}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.lastName}</p>
           )}
         </div>
       </div>
@@ -286,12 +278,13 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="title" className="text-xs uppercase tracking-widest text-[#999]">
-            Job Title <span className="text-red-400">*</span>
+            Job Title <span className="text-red-500">*</span>
           </label>
           <input
             id="title"
             name="title"
             type="text"
+            required
             autoComplete="organization-title"
             placeholder="VP of Revenue"
             value={values.title}
@@ -300,18 +293,19 @@ export default function ContactForm() {
             className={`${inputBase} ${fieldBorder(!!touched.title, errors.title)}`}
           />
           {touched.title && errors.title && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.title}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.title}</p>
           )}
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="email" className="text-xs uppercase tracking-widest text-[#999]">
-            Work Email <span className="text-red-400">*</span>
+            Work Email <span className="text-red-500">*</span>
           </label>
           <input
             id="email"
             name="email"
             type="email"
+            required
             autoComplete="email"
             placeholder="jane@company.com"
             value={values.email}
@@ -320,7 +314,7 @@ export default function ContactForm() {
             className={`${inputBase} ${fieldBorder(!!touched.email, errors.email)}`}
           />
           {touched.email && errors.email && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.email}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.email}</p>
           )}
         </div>
       </div>
@@ -329,12 +323,13 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="company" className="text-xs uppercase tracking-widest text-[#999]">
-            Company <span className="text-red-400">*</span>
+            Company <span className="text-red-500">*</span>
           </label>
           <input
             id="company"
             name="company"
             type="text"
+            required
             autoComplete="organization"
             placeholder="Acme Corp"
             value={values.company}
@@ -343,17 +338,18 @@ export default function ContactForm() {
             className={`${inputBase} ${fieldBorder(!!touched.company, errors.company)}`}
           />
           {touched.company && errors.company && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.company}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.company}</p>
           )}
         </div>
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="companySize" className="text-xs uppercase tracking-widest text-[#999]">
-            Company Size <span className="text-red-400">*</span>
+            Company Size <span className="text-red-500">*</span>
           </label>
           <select
             id="companySize"
             name="companySize"
+            required
             value={values.companySize}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -365,7 +361,7 @@ export default function ContactForm() {
             ))}
           </select>
           {touched.companySize && errors.companySize && (
-            <p className="text-xs text-red-400 mt-0.5">{errors.companySize}</p>
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.companySize}</p>
           )}
         </div>
       </div>
@@ -395,15 +391,16 @@ export default function ContactForm() {
       <div className="flex flex-col gap-1.5">
         <div className="flex items-center justify-between">
           <label htmlFor="message" className="text-xs uppercase tracking-widest text-[#999]">
-            What are you looking to solve? <span className="text-red-400">*</span>
+            What are you looking to solve? <span className="text-red-500">*</span>
           </label>
-          <span className={`text-xs tabular-nums ${msgLen > MESSAGE_MAX ? "text-red-400" : "text-[#555]"}`}>
+          <span className={`text-xs tabular-nums ${msgLen > MESSAGE_MAX ? "text-red-500" : "text-[#555]"}`}>
             {msgLen}/{MESSAGE_MAX}
           </span>
         </div>
         <textarea
           id="message"
           name="message"
+          required
           rows={4}
           maxLength={MESSAGE_MAX}
           placeholder="Describe where your business is today, what's creating friction, and what you're hoping to achieve..."
@@ -413,16 +410,16 @@ export default function ContactForm() {
           className={`${inputBase} ${fieldBorder(!!touched.message, errors.message)} resize-none`}
         />
         {touched.message && errors.message && (
-          <p className="text-xs text-red-400 mt-0.5">{errors.message}</p>
+          <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.message}</p>
         )}
       </div>
 
       <p className="text-xs text-[#555]">
-        <span className="text-red-400">*</span> Required fields
+        <span className="text-red-500">*</span> Required fields
       </p>
 
       {formState === "error" && (
-        <p className="text-sm text-red-400">
+        <p role="alert" className="text-sm text-red-500">
           Something went wrong. Please try again or reach out directly.
         </p>
       )}
@@ -433,11 +430,7 @@ export default function ContactForm() {
         className="self-start inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-3.5 hover:bg-white transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {formState === "submitting" ? "Sending..." : "Send Message"}
-        {formState !== "submitting" && (
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        )}
+        {formState !== "submitting" && <ArrowIcon />}
       </button>
     </form>
   );

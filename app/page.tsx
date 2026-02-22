@@ -1,72 +1,22 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+import Hero from "@/components/Hero";
+import ArrowIcon from "@/components/ArrowIcon";
 
-const heroVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
-  }),
+export const metadata: Metadata = {
+  title: "Kairos Performance — AI-Native Operating Systems for Growth",
+  openGraph: {
+    title: "Kairos Performance — AI-Native Operating Systems for Growth",
+    url: "https://kairosperformance.ai",
+  },
 };
 
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="min-h-[92vh] flex flex-col justify-center border-b border-[#1f1f1f]">
-        <div className="max-w-6xl mx-auto w-full py-24 px-6">
-          <motion.p
-            className="text-lg uppercase tracking-widest text-[#999] mb-10"
-            variants={heroVariants}
-            initial="hidden"
-            animate="visible"
-            custom={0}
-          >
-            Kairos Performance
-          </motion.p>
-          <motion.h1
-            className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#f0ede8] leading-[1.1] tracking-tight max-w-3xl mb-8"
-            variants={heroVariants}
-            initial="hidden"
-            animate="visible"
-            custom={0.15}
-          >
-            Scale faster.<br /><span className="whitespace-nowrap">Without breaking your business.</span>
-          </motion.h1>
-          <motion.p
-            className="text-[#c0bdb8] text-lg max-w-2xl leading-relaxed mb-12"
-            variants={heroVariants}
-            initial="hidden"
-            animate="visible"
-            custom={0.3}
-          >
-            We partner with leadership teams to embed AI-native systems into
-            core operations, unlocking growth through better execution — not
-            bigger teams.
-          </motion.p>
-          <motion.div
-            variants={heroVariants}
-            initial="hidden"
-            animate="visible"
-            custom={0.45}
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 hover:bg-white transition-colors duration-200"
-            >
-              Start a conversation
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Tagline */}
       <section className="border-b border-[#1f1f1f] py-20">
@@ -199,9 +149,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 hover:bg-white transition-colors duration-200"
               >
                 Schedule Discovery Call
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <ArrowIcon />
               </Link>
             </div>
           </FadeIn>
