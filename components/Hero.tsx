@@ -40,7 +40,7 @@ export default function Hero() {
           animate={animate}
           custom={prefersReducedMotion ? 0 : 0.15}
         >
-          Scale faster.<br /><span className="whitespace-nowrap">Without breaking your business.</span>
+          Scale faster.<br /><span className="lg:whitespace-nowrap">Without breaking your business.</span>
         </motion.h1>
         <motion.p
           className="text-[#c0bdb8] text-lg max-w-2xl leading-relaxed mb-12"
