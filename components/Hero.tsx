@@ -34,7 +34,7 @@ export default function Hero() {
           Kairos Performance
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#f0ede8] leading-[1.1] tracking-tight max-w-3xl mb-8"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#f0ede8] leading-[1.1] tracking-tight max-w-3xl mb-8"
           variants={heroVariants}
           initial={initial}
           animate={animate}
