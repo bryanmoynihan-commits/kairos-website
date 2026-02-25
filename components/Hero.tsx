@@ -15,6 +15,20 @@ const heroVariants = {
   }),
 };
 
+const orbits = [
+  { rx: 160, ry: 64, duration: 60 },
+  { rx: 240, ry: 96, duration: 80 },
+  { rx: 340, ry: 136, duration: 100 },
+];
+
+const nodes = [
+  { cx: 560, cy: 400, r: 3, pulse: 3 },
+  { cx: 400, cy: 336, r: 2, pulse: 3.5 },
+  { cx: 260, cy: 400, r: 2.5, pulse: 4 },
+  { cx: 400, cy: 264, r: 2, pulse: 4.5 },
+  { cx: 680, cy: 400, r: 1.5, pulse: 5 },
+];
+
 export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -22,8 +36,80 @@ export default function Hero() {
   const animate = "visible";
 
   return (
-    <section className="min-h-[92vh] flex flex-col justify-center border-b border-[#1f1f1f]">
-      <div className="max-w-6xl mx-auto w-full py-24 px-6">
+    <section className="relative min-h-[92vh] flex flex-col justify-center border-b border-[#1f1f1f]">
+      {/* Abstract orbital visual */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+        <motion.svg
+          viewBox="0 0 800 800"
+          className="w-[700px] h-[700px] lg:w-[900px] lg:h-[900px]"
+          initial={prefersReducedMotion ? { opacity: 0.07 } : { opacity: 0 }}
+          animate={{ opacity: 0.07 }}
+          transition={{ duration: 2, ease: easing }}
+        >
+          {/* Concentric orbital rings */}
+          {orbits.map((orbit, i) => (
+            <motion.ellipse
+              key={orbit.rx}
+              cx="400"
+              cy="400"
+              rx={orbit.rx}
+              ry={orbit.ry}
+              fill="none"
+              stroke="#f0ede8"
+              strokeWidth="0.5"
+              initial={prefersReducedMotion ? {} : { rotate: 0 }}
+              animate={prefersReducedMotion ? {} : { rotate: 360 }}
+              transition={
+                prefersReducedMotion
+                  ? {}
+                  : {
+                      duration: orbit.duration,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }
+              }
+              style={{ transformOrigin: "400px 400px" }}
+            />
+          ))}
+
+          {/* Nodes on orbits */}
+          {nodes.map((node, i) => (
+            <motion.circle
+              key={i}
+              cx={node.cx}
+              cy={node.cy}
+              r={node.r}
+              fill="#f0ede8"
+              initial={prefersReducedMotion ? { opacity: 0.5 } : { opacity: 0 }}
+              animate={
+                prefersReducedMotion
+                  ? { opacity: 0.5 }
+                  : { opacity: [0.3, 0.8, 0.3] }
+              }
+              transition={
+                prefersReducedMotion
+                  ? {}
+                  : {
+                      duration: node.pulse,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }
+              }
+            />
+          ))}
+
+          {/* Central radial glow */}
+          <circle cx="400" cy="400" r="60" fill="url(#centerGlow)" />
+          <defs>
+            <radialGradient id="centerGlow">
+              <stop offset="0%" stopColor="#f0ede8" stopOpacity="0.15" />
+              <stop offset="100%" stopColor="#f0ede8" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+        </motion.svg>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full py-24 px-6">
         <motion.p
           className="text-lg uppercase tracking-widest text-[#999] mb-10"
           variants={heroVariants}

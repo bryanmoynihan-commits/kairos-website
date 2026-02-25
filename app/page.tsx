@@ -27,7 +27,7 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-3xl sm:text-4xl font-medium text-[#f0ede8] max-w-2xl leading-snug">
+            <p className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#f0ede8] max-w-3xl leading-[1.1] tracking-tight">
               Growth scales when execution scales.
             </p>
           </FadeIn>
@@ -112,7 +112,7 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 divide-[#1f1f1f]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 step: "01",
@@ -131,7 +131,7 @@ export default function Home() {
               },
             ].map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.12}>
-                <div className="md:px-10 py-10 first:pl-0 last:pr-0 space-y-4">
+                <div className="p-8 border border-[#1f1f1f] rounded-sm space-y-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
                   <p className="text-xs text-[#666] font-mono">{item.step}</p>
                   <h3 className="text-lg font-semibold text-[#f0ede8]">
                     {item.title}
