@@ -15,18 +15,67 @@ const heroVariants = {
   }),
 };
 
-const orbits = [
-  { rx: 160, ry: 64, duration: 60 },
-  { rx: 240, ry: 96, duration: 80 },
-  { rx: 340, ry: 136, duration: 100 },
+// Neural mesh network data
+const meshNodes: { x: number; y: number; r: number; hub?: boolean }[] = [
+  // Hub nodes (larger, breathing animation)
+  { x: 400, y: 400, r: 4, hub: true },
+  { x: 280, y: 320, r: 3.5, hub: true },
+  { x: 520, y: 340, r: 3.5, hub: true },
+  { x: 340, y: 500, r: 3, hub: true },
+  { x: 480, y: 480, r: 3, hub: true },
+  // Regular nodes
+  { x: 200, y: 400, r: 2 },
+  { x: 160, y: 280, r: 1.5 },
+  { x: 300, y: 220, r: 2 },
+  { x: 440, y: 240, r: 1.5 },
+  { x: 580, y: 260, r: 2 },
+  { x: 640, y: 380, r: 1.5 },
+  { x: 620, y: 480, r: 2 },
+  { x: 540, y: 560, r: 1.5 },
+  { x: 400, y: 580, r: 2 },
+  { x: 260, y: 540, r: 1.5 },
+  { x: 180, y: 480, r: 2 },
+  { x: 220, y: 200, r: 1.5 },
+  { x: 500, y: 180, r: 1.5 },
+  { x: 660, y: 300, r: 1.5 },
+  { x: 140, y: 360, r: 1.5 },
+  { x: 360, y: 160, r: 1.5 },
+  { x: 560, y: 160, r: 1.5 },
+  { x: 700, y: 440, r: 1.5 },
+  { x: 320, y: 620, r: 1.5 },
+  { x: 600, y: 580, r: 1.5 },
 ];
 
-const nodes = [
-  { cx: 560, cy: 400, r: 3, pulse: 3 },
-  { cx: 400, cy: 336, r: 2, pulse: 3.5 },
-  { cx: 260, cy: 400, r: 2.5, pulse: 4 },
-  { cx: 400, cy: 264, r: 2, pulse: 4.5 },
-  { cx: 680, cy: 400, r: 1.5, pulse: 5 },
+// Connections between nodes (index pairs)
+const meshEdges: [number, number][] = [
+  [0, 1], [0, 2], [0, 3], [0, 4],     // Hub center to other hubs
+  [1, 5], [1, 6], [1, 7],              // Hub 1 to nearby nodes
+  [2, 9], [2, 10], [2, 8],             // Hub 2 to nearby nodes
+  [3, 15], [3, 14], [3, 5],            // Hub 3 to nearby nodes
+  [4, 11], [4, 12], [4, 13],           // Hub 4 to nearby nodes
+  [1, 2], [2, 4], [3, 4], [1, 3],     // Hub-to-hub connections
+  [6, 7], [7, 8], [8, 9], [9, 10],    // Outer ring top
+  [10, 11], [11, 12], [12, 13],        // Outer ring right-bottom
+  [13, 14], [14, 15], [15, 6],         // Outer ring bottom-left
+  [16, 7], [17, 9], [18, 10],          // Extended nodes
+  [19, 6], [20, 8], [21, 9],           // More extended
+  [22, 11], [23, 14], [24, 12],        // Outer edges
+];
+
+// Traveling pulses — subset of edges with animation timing
+const meshPulses = [
+  { edge: 0, duration: 2.5, delay: 0 },
+  { edge: 1, duration: 3, delay: 0.8 },
+  { edge: 2, duration: 2.8, delay: 1.5 },
+  { edge: 3, duration: 3.2, delay: 2.2 },
+  { edge: 4, duration: 2.6, delay: 0.4 },
+  { edge: 7, duration: 3, delay: 1.0 },
+  { edge: 10, duration: 2.8, delay: 1.8 },
+  { edge: 13, duration: 3.5, delay: 0.6 },
+  { edge: 16, duration: 2.4, delay: 2.0 },
+  { edge: 20, duration: 3, delay: 1.2 },
+  { edge: 23, duration: 2.6, delay: 0.2 },
+  { edge: 26, duration: 3.2, delay: 1.6 },
 ];
 
 export default function Hero() {
@@ -37,72 +86,105 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center border-b border-[#1f1f1f]">
-      {/* Abstract orbital visual */}
+      {/* Neural mesh network visual */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <motion.svg
           viewBox="0 0 800 800"
           className="w-[700px] h-[700px] lg:w-[900px] lg:h-[900px]"
-          initial={prefersReducedMotion ? { opacity: 0.07 } : { opacity: 0 }}
-          animate={{ opacity: 0.07 }}
+          initial={prefersReducedMotion ? { opacity: 0.12 } : { opacity: 0 }}
+          animate={{ opacity: 0.12 }}
           transition={{ duration: 2, ease: easing }}
         >
-          {/* Concentric orbital rings */}
-          {orbits.map((orbit, i) => (
-            <motion.ellipse
-              key={orbit.rx}
-              cx="400"
-              cy="400"
-              rx={orbit.rx}
-              ry={orbit.ry}
-              fill="none"
+          {/* Connection lines */}
+          {meshEdges.map(([from, to], i) => (
+            <line
+              key={`edge-${i}`}
+              x1={meshNodes[from].x}
+              y1={meshNodes[from].y}
+              x2={meshNodes[to].x}
+              y2={meshNodes[to].y}
               stroke="#f0ede8"
               strokeWidth="0.5"
-              initial={prefersReducedMotion ? {} : { rotate: 0 }}
-              animate={prefersReducedMotion ? {} : { rotate: 360 }}
-              transition={
-                prefersReducedMotion
-                  ? {}
-                  : {
-                      duration: orbit.duration,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }
-              }
-              style={{ transformOrigin: "400px 400px" }}
+              opacity="0.3"
             />
           ))}
 
-          {/* Nodes on orbits */}
-          {nodes.map((node, i) => (
-            <motion.circle
-              key={i}
-              cx={node.cx}
-              cy={node.cy}
-              r={node.r}
-              fill="#f0ede8"
-              initial={prefersReducedMotion ? { opacity: 0.5 } : { opacity: 0 }}
-              animate={
-                prefersReducedMotion
-                  ? { opacity: 0.5 }
-                  : { opacity: [0.3, 0.8, 0.3] }
-              }
-              transition={
-                prefersReducedMotion
-                  ? {}
-                  : {
-                      duration: node.pulse,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }
-              }
-            />
-          ))}
+          {/* Static regular nodes */}
+          {meshNodes
+            .filter((n) => !n.hub)
+            .map((node, i) => (
+              <circle
+                key={`node-${i}`}
+                cx={node.x}
+                cy={node.y}
+                r={node.r}
+                fill="#f0ede8"
+                opacity="0.4"
+              />
+            ))}
 
-          {/* Central radial glow */}
-          <circle cx="400" cy="400" r="60" fill="url(#centerGlow)" />
+          {/* Breathing hub nodes */}
+          {meshNodes
+            .filter((n) => n.hub)
+            .map((node, i) => (
+              <motion.circle
+                key={`hub-${i}`}
+                cx={node.x}
+                cy={node.y}
+                r={node.r}
+                fill="#f0ede8"
+                initial={
+                  prefersReducedMotion ? { opacity: 0.5 } : { opacity: 0.2 }
+                }
+                animate={
+                  prefersReducedMotion
+                    ? { opacity: 0.5 }
+                    : { opacity: [0.2, 0.6, 0.2] }
+                }
+                transition={
+                  prefersReducedMotion
+                    ? {}
+                    : {
+                        duration: 4 + i * 0.8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }
+                }
+              />
+            ))}
+
+          {/* Traveling pulses along connections */}
+          {!prefersReducedMotion &&
+            meshPulses.map((pulse, i) => {
+              const [from, to] = meshEdges[pulse.edge];
+              const n1 = meshNodes[from];
+              const n2 = meshNodes[to];
+              return (
+                <motion.circle
+                  key={`pulse-${i}`}
+                  r={2}
+                  fill="#f0ede8"
+                  initial={{ cx: n1.x, cy: n1.y, opacity: 0 }}
+                  animate={{
+                    cx: [n1.x, n2.x, n1.x],
+                    cy: [n1.y, n2.y, n1.y],
+                    opacity: [0, 0.7, 0],
+                  }}
+                  transition={{
+                    duration: pulse.duration,
+                    repeat: Infinity,
+                    delay: pulse.delay,
+                    ease: "easeInOut",
+                  }}
+                />
+              );
+            })}
+
+          {/* Central glow */}
+          <circle cx="400" cy="400" r="80" fill="url(#meshGlow)" />
           <defs>
-            <radialGradient id="centerGlow">
-              <stop offset="0%" stopColor="#f0ede8" stopOpacity="0.15" />
+            <radialGradient id="meshGlow">
+              <stop offset="0%" stopColor="#f0ede8" stopOpacity="0.12" />
               <stop offset="100%" stopColor="#f0ede8" stopOpacity="0" />
             </radialGradient>
           </defs>
@@ -147,10 +229,12 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 hover:bg-white transition-colors duration-200"
+            className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
             Start a conversation
-            <ArrowIcon />
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              <ArrowIcon />
+            </span>
           </Link>
         </motion.div>
       </div>

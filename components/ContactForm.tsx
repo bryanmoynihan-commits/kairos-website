@@ -427,10 +427,14 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={formState === "submitting"}
-        className="self-start inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-3.5 hover:bg-white transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="group self-start inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-3.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_1px_3px_rgba(240,237,232,0.08)]"
       >
         {formState === "submitting" ? "Sending..." : "Send Message"}
-        {formState !== "submitting" && <ArrowIcon />}
+        {formState !== "submitting" && (
+          <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+            <ArrowIcon />
+          </span>
+        )}
       </button>
     </form>
   );
