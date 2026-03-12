@@ -132,7 +132,7 @@ export default function Home() {
             ].map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.12}>
                 <div className="p-8 border border-[#1f1f1f] rounded-sm space-y-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
-                  <p className="text-xs text-[#666] font-mono">{item.step}</p>
+                  <p className="text-xs text-[#2dd4bf] font-mono">{item.step}</p>
                   <h3 className="text-lg font-semibold text-[#f0ede8]">
                     {item.title}
                   </h3>

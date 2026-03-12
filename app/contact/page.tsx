@@ -38,15 +38,15 @@ export default function ContactPage() {
                 </p>
                 <ul className="space-y-4 text-[#c0bdb8] text-sm leading-relaxed">
                   <li className="flex gap-3">
-                    <span className="text-[#666] font-mono text-xs mt-0.5 shrink-0">01</span>
+                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">01</span>
                     <span>We&apos;ll review your message and reach out within one business day to schedule a discovery call.</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#666] font-mono text-xs mt-0.5 shrink-0">02</span>
+                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">02</span>
                     <span>The discovery call is focused — we&apos;ll learn how your business operates and where growth is creating friction.</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-[#666] font-mono text-xs mt-0.5 shrink-0">03</span>
+                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">03</span>
                     <span>If there&apos;s a fit, we&apos;ll define a clear plan and move into hands-on work together.</span>
                   </li>
                 </ul>

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const navLinks = [
+  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -45,7 +46,7 @@ export default function Nav() {
     >
       {/* Scroll progress bar */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-px bg-[#f0ede8] origin-left"
+        className="absolute bottom-0 left-0 right-0 h-px bg-[#2dd4bf] origin-left"
         style={{ scaleX }}
       />
 

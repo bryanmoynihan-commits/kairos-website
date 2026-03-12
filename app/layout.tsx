@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.variable} antialiased bg-[#0a0a0a] text-[#f0ede8]`}>
+        <ScrollToTop />
         <Nav />
         <main className="pt-16">{children}</main>
       </body>
