@@ -39,6 +39,17 @@ export default function Footer() {
           <p className="text-xs text-[#666]">
             &copy; {new Date().getFullYear()} Kairos Performance. All rights reserved.
           </p>
+          <nav className="flex items-center gap-6">
+            <Link href="/pricing" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+              Pricing
+            </Link>
+            <Link href="/operator-insights" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+              Operator Insights
+            </Link>
+            <Link href="/contact" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+              Contact
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

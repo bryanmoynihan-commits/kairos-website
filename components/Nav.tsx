@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 const navLinks = [
   { label: "Pricing", href: "/pricing" },
+  { label: "Operator Insights", href: "/operator-insights", matchPrefix: true },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -65,7 +66,7 @@ export default function Nav() {
                 key={link.label}
                 href={link.href}
                 className={`text-base transition-colors duration-200 ${
-                  pathname === link.href
+                  ("matchPrefix" in link && link.matchPrefix ? pathname.startsWith(link.href) : pathname === link.href)
                     ? "text-[#f0ede8]"
                     : "text-[#b0b0b0] hover:text-[#f0ede8]"
                 }`}

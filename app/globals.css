@@ -20,6 +20,154 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Article prose styling — dark theme */
+.prose-kairos {
+  color: #c0bdb8;
+  line-height: 1.75;
+  font-size: 1.125rem;
+}
+
+.prose-kairos > * + * {
+  margin-top: 1.5em;
+}
+
+/* Headings */
+.prose-kairos h2 {
+  color: #f0ede8;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-kairos h3 {
+  color: #f0ede8;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.prose-kairos h4 {
+  color: #f0ede8;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraphs */
+.prose-kairos p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose-kairos > p:first-child {
+  margin-top: 0;
+}
+
+/* Bold & italic */
+.prose-kairos strong {
+  color: #f0ede8;
+  font-weight: 600;
+}
+
+.prose-kairos em {
+  font-style: italic;
+}
+
+/* Links */
+.prose-kairos a {
+  color: #2dd4bf;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(45, 212, 191, 0.4);
+  transition: text-decoration-color 0.2s;
+}
+
+.prose-kairos a:hover {
+  text-decoration-color: #2dd4bf;
+}
+
+/* Lists */
+.prose-kairos ul {
+  list-style-type: disc;
+  padding-left: 1.625em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose-kairos ol {
+  list-style-type: decimal;
+  padding-left: 1.625em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose-kairos li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-kairos li::marker {
+  color: #555;
+}
+
+/* Blockquotes */
+.prose-kairos blockquote {
+  border-left: 3px solid #2dd4bf;
+  background-color: rgba(17, 17, 17, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+  color: #c0bdb8;
+  font-style: italic;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose-kairos blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Horizontal rules */
+.prose-kairos hr {
+  border-color: #1f1f1f;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* Code */
+.prose-kairos code:not(pre code) {
+  color: #f0ede8;
+  background-color: #111111;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  border: 1px solid #1f1f1f;
+}
+
+.prose-kairos pre {
+  background-color: #111111;
+  color: #c0bdb8;
+  border: 1px solid #1f1f1f;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+/* Images */
+.prose-kairos img {
+  border-radius: 0.5rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 /* Subtle grain/noise texture overlay */
 body::after {
   content: "";
