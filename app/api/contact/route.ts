@@ -16,6 +16,9 @@ interface ContactPayload {
   message: string;
   honeypot?: string;
   pageUri?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
 }
 
 function validatePayload(data: ContactPayload): string | null {
@@ -72,6 +75,9 @@ export async function POST(request: Request) {
       { name: "numemployees", value: data.companySize },
       { name: "how_did_you_hear_about_us_", value: data.source || "" },
       { name: "what_are_you_looking_to_solve_", value: data.message.trim() },
+      { name: "utm_source", value: data.utmSource || "" },
+      { name: "utm_medium", value: data.utmMedium || "" },
+      { name: "utm_campaign", value: data.utmCampaign || "" },
     ],
     context: {
       pageUri: data.pageUri || "https://kairosperformance.ai/contact",

@@ -7,6 +7,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import FadeIn from "@/components/FadeIn";
 import PostCard from "@/components/blog/PostCard";
 import ArrowIcon from "@/components/ArrowIcon";
+import ArticleTracker from "@/components/ArticleTracker";
 import Footer from "@/components/Footer";
 
 export const dynamicParams = false;
@@ -90,6 +91,12 @@ export default async function ArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <ArticleTracker
+        slug={post.slug}
+        category={post.category}
+        readingTime={post.readingTime}
       />
 
       <article className="pt-32 pb-24">

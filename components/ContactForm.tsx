@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import ArrowIcon from "@/components/ArrowIcon";
+import { trackFormSubmission, getUTMParams } from "@/lib/analytics";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -168,6 +169,7 @@ export default function ContactForm() {
     setFormState("submitting");
 
     try {
+      const utmParams = getUTMParams();
       const payload = {
         firstName: values.firstName,
         lastName: values.lastName,
@@ -179,6 +181,9 @@ export default function ContactForm() {
         message: values.message,
         honeypot: values.honeypot,
         pageUri: typeof window !== "undefined" ? window.location.href : undefined,
+        utmSource: utmParams.utm_source || "",
+        utmMedium: utmParams.utm_medium || "",
+        utmCampaign: utmParams.utm_campaign || "",
       };
 
       const res = await fetch("/api/contact", {
@@ -188,6 +193,10 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
+        trackFormSubmission({
+          companySize: values.companySize,
+          source: values.source,
+        });
         setFormState("success");
         setValues(INITIAL_VALUES);
         setTouched({});

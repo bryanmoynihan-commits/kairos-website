@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 import ArrowIcon from "@/components/ArrowIcon";
 
 export default function Footer() {
@@ -23,15 +24,17 @@ export default function Footer() {
           </p>
         </div>
 
-        <Link
+        <TrackedLink
           href="/contact"
+          ctaName="Let's Connect"
+          ctaLocation="footer"
           className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
         >
           Let&apos;s Connect
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
             <ArrowIcon />
           </span>
-        </Link>
+        </TrackedLink>
       </div>
 
       <div className="relative border-t border-[#1f1f1f]">

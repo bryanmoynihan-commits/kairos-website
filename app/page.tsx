@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import Hero from "@/components/Hero";
+import TrackedLink from "@/components/TrackedLink";
 import ArrowIcon from "@/components/ArrowIcon";
 
 export const metadata: Metadata = {
@@ -144,15 +144,17 @@ export default function Home() {
 
           <FadeIn delay={0.1}>
             <div className="mt-16">
-              <Link
+              <TrackedLink
                 href="/contact"
+                ctaName="Schedule Discovery Call"
+                ctaLocation="how_it_works"
                 className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
               >
                 Schedule Discovery Call
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowIcon />
                 </span>
-              </Link>
+              </TrackedLink>
             </div>
           </FadeIn>
         </div>
