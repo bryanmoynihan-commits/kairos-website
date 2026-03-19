@@ -37,11 +37,9 @@ export const metadata: Metadata = {
       "We partner with leadership teams to embed AI-native systems into core operations, unlocking growth through better execution, not bigger teams.",
   },
   robots: { index: true, follow: true },
-  ...(process.env.GOOGLE_SITE_VERIFICATION && {
-    verification: {
-      google: process.env.GOOGLE_SITE_VERIFICATION,
-    },
-  }),
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || "vh0k1ntAdApuetTrqMTWh9164Zopnt_QoVWot8hnGyA",
+  },
 };
 
 export default function RootLayout({
@@ -57,15 +55,11 @@ export default function RootLayout({
         <main className="pt-16">{children}</main>
 
         {/* Analytics */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-        )}
-        {process.env.NEXT_PUBLIC_CLARITY_ID && (
-          <Script
-            id="microsoft-clarity"
-            strategy="afterInteractive"
-          >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${process.env.NEXT_PUBLIC_CLARITY_ID}");`}</Script>
-        )}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-32GC385N7L"} />
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+        >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${process.env.NEXT_PUBLIC_CLARITY_ID || "vwg2kh9s7g"}");`}</Script>
         <UTMCapture />
         <ScrollDepthTracker />
       </body>
