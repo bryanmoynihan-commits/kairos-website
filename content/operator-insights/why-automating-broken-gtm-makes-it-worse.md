@@ -1,7 +1,7 @@
 ---
 title: "Why Does Automating a Broken Go-to-Market System Make It Worse?"
 slug: "why-automating-broken-gtm-makes-it-worse"
-date: "2026-04-15"
+date: "2026-03-24"
 author: "Kairos Performance"
 category: "RevOps"
 excerpt: "Automation is an accelerant, not a solution. If your data is messy, your funnel definitions are misaligned, and your handoffs are undefined, automation scales the dysfunction. Here's the diagnostic framework and fix sequence."
