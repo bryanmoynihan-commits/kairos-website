@@ -28,7 +28,7 @@ export default function PostCard({ post }: PostCardProps) {
       </p>
 
       <time className="text-xs text-[#555]" dateTime={post.date}>
-        {new Date(post.date).toLocaleDateString("en-US", {
+        {new Date(post.date + "T00:00:00").toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
