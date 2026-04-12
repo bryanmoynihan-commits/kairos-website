@@ -34,13 +34,13 @@ export default function EngagementTypes() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-10">
           <FadeIn delay={0}>
-            <p className="text-base uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
               Engagement models
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug">
-              How We Engage
+              How we engage
             </h2>
           </FadeIn>
         </div>

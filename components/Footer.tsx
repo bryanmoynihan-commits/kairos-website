@@ -19,18 +19,18 @@ export default function Footer() {
           <p className="text-xs uppercase tracking-widest text-[#999] mb-3">
             Kairos Performance
           </p>
-          <p className="text-[#f0ede8] text-lg font-medium max-w-xs leading-snug">
-            Does this resonate?
+          <p className="text-[#f0ede8] text-lg font-medium max-w-sm leading-snug">
+            Ready to build the foundation behind the growth story?
           </p>
         </div>
 
         <TrackedLink
           href="/contact"
-          ctaName="Let's Connect"
+          ctaName="Schedule a Discovery Call"
           ctaLocation="footer"
           className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
         >
-          Let&apos;s Connect
+          Schedule a Discovery Call
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
             <ArrowIcon />
           </span>

@@ -114,7 +114,7 @@ export default function ProjectsSection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              Project-Based Work
+              Project-based work
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -155,7 +155,7 @@ export default function ProjectsSection() {
                 href="/contact"
                 className="text-[#f0ede8] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0ede8] transition-colors"
               >
-                Start a conversation
+                Schedule a discovery call
               </Link>
               .
             </p>

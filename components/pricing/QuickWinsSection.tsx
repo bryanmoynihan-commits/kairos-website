@@ -63,7 +63,7 @@ export default function QuickWinsSection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              Quick Wins
+              Quick wins
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

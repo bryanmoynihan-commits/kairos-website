@@ -9,6 +9,7 @@ import PostCard from "@/components/blog/PostCard";
 import ArrowIcon from "@/components/ArrowIcon";
 import ArticleTracker from "@/components/ArticleTracker";
 import Footer from "@/components/Footer";
+import TrackedLink from "@/components/TrackedLink";
 
 export const dynamicParams = false;
 
@@ -176,23 +177,61 @@ export default async function ArticlePage({
         </div>
       </article>
 
+      {/* End-of-article CTA */}
+      <section className="border-t border-[#1f1f1f] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-2xl">
+            <FadeIn>
+              <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+                Ready to act
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+                Ready to build the foundation behind the growth story?
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
+                If any of this resonated with what you&apos;re seeing inside
+                your own revenue operation, let&apos;s talk. We start every
+                engagement with a focused discovery call &mdash; no pitch,
+                just a conversation about where things are breaking down and
+                whether we&apos;re the right partner to help fix it.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <TrackedLink
+                href="/contact"
+                ctaName="Schedule a Discovery Call"
+                ctaLocation="article_end"
+                className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+              >
+                Schedule a Discovery Call
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  <ArrowIcon />
+                </span>
+              </TrackedLink>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Related articles */}
       {relatedPosts.length > 0 && (
-        <section className="pb-24">
+        <section className="border-t border-[#1f1f1f] py-20">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="border-t border-[#1f1f1f] pt-16">
-              <FadeIn>
-                <h2 className="text-xl font-semibold text-[#f0ede8] mb-8">
-                  More in {post.category}
-                </h2>
-              </FadeIn>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map((related, i) => (
-                  <FadeIn key={related.slug} delay={i * 0.1}>
-                    <PostCard post={related} />
-                  </FadeIn>
-                ))}
-              </div>
+            <FadeIn>
+              <h2 className="text-xl font-semibold text-[#f0ede8] mb-8">
+                More in {post.category}
+              </h2>
+            </FadeIn>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map((related, i) => (
+                <FadeIn key={related.slug} delay={i * 0.1}>
+                  <PostCard post={related} />
+                </FadeIn>
+              ))}
             </div>
           </div>
         </section>

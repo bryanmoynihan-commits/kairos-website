@@ -68,7 +68,7 @@ export default function RetainersSection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              Ongoing Retainers
+              Ongoing retainers
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -129,7 +129,7 @@ export default function RetainersSection() {
               >
                 {tier.highlighted && (
                   <span className="absolute -top-3 left-8 inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-[#2dd4bf]/10 text-[#2dd4bf] rounded-sm">
-                    Most Common
+                    Most common
                   </span>
                 )}
 
@@ -207,7 +207,7 @@ export default function RetainersSection() {
                 href="/contact"
                 className="text-[#f0ede8] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0ede8] transition-colors"
               >
-                Start a conversation
+                Schedule a discovery call
               </Link>
               .
             </p>

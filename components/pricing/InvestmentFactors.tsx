@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn";
 
 const investmentFactors = [
   {
-    title: "Organizational Complexity",
+    title: "Organizational complexity",
     higher: [
       "Multiple business units, geographies, or GTM motions running simultaneously",
       "Large stakeholder counts",
@@ -14,7 +14,7 @@ const investmentFactors = [
     ],
   },
   {
-    title: "Tech Stack Maturity",
+    title: "Tech stack maturity",
     higher: [
       "Legacy systems, significant data debt, no API connectivity",
       "Poor CRM hygiene requiring remediation before automation is viable",
@@ -25,7 +25,7 @@ const investmentFactors = [
     ],
   },
   {
-    title: "Scope of Functional Coverage",
+    title: "Scope of functional coverage",
     higher: [
       "Simultaneous RevOps and AI Ops work",
       "Active builds and strategic roadmap management in parallel",
@@ -36,7 +36,7 @@ const investmentFactors = [
     ],
   },
   {
-    title: "Engagement Depth",
+    title: "Engagement depth",
     higher: [
       "Executive-level involvement, board-ready reporting",
       "PE or investor communication support, on-demand access",
@@ -60,7 +60,7 @@ export default function InvestmentFactors() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              What Determines Your Investment
+              What determines your investment
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

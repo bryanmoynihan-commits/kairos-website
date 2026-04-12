@@ -13,11 +13,11 @@ import PricingCTA from "@/components/pricing/PricingCTA";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for AI-native RevOps consulting. Discovery sprints from $2,000, assessments, project work, and ongoing retainers \u2014 no surprises.",
+    "Transparent pricing for AI-native revenue operating systems. Discovery sprints from $2,000, assessments, project work, and ongoing retainers \u2014 no surprises.",
   openGraph: {
     title: "Pricing | Kairos Performance",
     description:
-      "Transparent pricing for AI-native RevOps consulting. Discovery sprints from $2,000, assessments, project work, and ongoing retainers \u2014 no surprises.",
+      "Transparent pricing for AI-native revenue operating systems. Discovery sprints from $2,000, assessments, project work, and ongoing retainers \u2014 no surprises.",
   },
 };
 

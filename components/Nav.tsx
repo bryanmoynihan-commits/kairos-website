@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import TrackedLink from "@/components/TrackedLink";
 
 const navLinks = [
   { label: "Pricing", href: "/pricing" },
@@ -60,7 +61,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 mr-8">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -74,6 +75,14 @@ export default function Nav() {
                 {link.label}
               </Link>
           ))}
+          <TrackedLink
+            href="/contact"
+            ctaName="Schedule a Discovery Call"
+            ctaLocation="nav"
+            className="inline-flex items-center bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-5 py-2.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+          >
+            Schedule a Discovery Call
+          </TrackedLink>
         </nav>
 
         {/* Mobile menu button */}
@@ -121,6 +130,15 @@ export default function Nav() {
                 {link.label}
               </Link>
           ))}
+          <TrackedLink
+            href="/contact"
+            ctaName="Schedule a Discovery Call"
+            ctaLocation="nav_mobile"
+            onClick={() => setMenuOpen(false)}
+            className="mt-2 inline-flex items-center justify-center bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-5 py-3 rounded-sm transition-all duration-300 ease-out"
+          >
+            Schedule a Discovery Call
+          </TrackedLink>
         </motion.div>
       )}
     </header>

@@ -17,24 +17,24 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kairosperformance.ai"),
   title: {
-    default: "Kairos Performance — AI-Native Operating Systems for Growth",
+    default: "Kairos Performance — AI-Native Revenue Operating Systems",
     template: "%s | Kairos Performance",
   },
   description:
-    "We partner with leadership teams to embed AI-native systems into core operations, unlocking growth through better execution, not bigger teams.",
+    "Leadership teams use our AI-native revenue systems to drive growth through better execution — not bigger teams.",
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Kairos Performance",
-    title: "Kairos Performance — AI-Native Operating Systems for Growth",
+    title: "Kairos Performance — AI-Native Revenue Operating Systems",
     description:
-      "We partner with leadership teams to embed AI-native systems into core operations, unlocking growth through better execution, not bigger teams.",
+      "Leadership teams use our AI-native revenue systems to drive growth through better execution — not bigger teams.",
   },
   twitter: {
     card: "summary",
-    title: "Kairos Performance — AI-Native Operating Systems for Growth",
+    title: "Kairos Performance — AI-Native Revenue Operating Systems",
     description:
-      "We partner with leadership teams to embed AI-native systems into core operations, unlocking growth through better execution, not bigger teams.",
+      "Leadership teams use our AI-native revenue systems to drive growth through better execution — not bigger teams.",
   },
   robots: { index: true, follow: true },
   verification: {

@@ -77,7 +77,7 @@ export default function EngagementLadder() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              Start Small. Scale with Confidence.
+              Start small. Scale with confidence.
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

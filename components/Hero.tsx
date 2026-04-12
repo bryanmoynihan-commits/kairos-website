@@ -217,9 +217,8 @@ export default function Hero() {
           animate={animate}
           custom={prefersReducedMotion ? 0 : 0.3}
         >
-          We partner with leadership teams to embed AI-native systems into
-          core operations, unlocking growth through better execution — not
-          bigger teams.
+          Leadership teams use our AI-native revenue systems to drive growth
+          through better execution — not bigger teams.
         </motion.p>
         <motion.div
           variants={heroVariants}
@@ -229,11 +228,11 @@ export default function Hero() {
         >
           <TrackedLink
             href="/contact"
-            ctaName="Start a conversation"
+            ctaName="Schedule a Discovery Call"
             ctaLocation="hero"
             className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
-            Start a conversation
+            Schedule a Discovery Call
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               <ArrowIcon />
             </span>

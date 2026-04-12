@@ -8,7 +8,7 @@ export default function PricingCTA() {
       <div className="max-w-6xl mx-auto px-6 text-center">
         <FadeIn delay={0}>
           <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-            Ready to see if we&apos;re the right fit?
+            Ready to build the foundation behind the growth story?
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -25,27 +25,17 @@ export default function PricingCTA() {
           </p>
         </FadeIn>
         <FadeIn delay={0.2}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <TrackedLink
-              href="/contact"
-              ctaName="Schedule a Conversation"
-              ctaLocation="pricing_cta"
-              className="group inline-flex items-center justify-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
-            >
-              Schedule a Conversation
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                <ArrowIcon />
-              </span>
-            </TrackedLink>
-            <TrackedLink
-              href="/"
-              ctaName="View Our Services"
-              ctaLocation="pricing_services"
-              className="inline-flex items-center justify-center text-sm font-semibold text-[#f0ede8] px-8 py-4 rounded-sm border border-[#333] hover:border-[#f0ede8] transition-all duration-300"
-            >
-              View Our Services
-            </TrackedLink>
-          </div>
+          <TrackedLink
+            href="/contact"
+            ctaName="Schedule a Discovery Call"
+            ctaLocation="pricing_cta"
+            className="group inline-flex items-center justify-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+          >
+            Schedule a Discovery Call
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              <ArrowIcon />
+            </span>
+          </TrackedLink>
         </FadeIn>
       </div>
     </section>

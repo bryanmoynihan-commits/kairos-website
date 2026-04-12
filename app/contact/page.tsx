@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact — Kairos Performance",
-  description: "Start a conversation with Kairos Performance. Tell us where you are and what you're trying to solve.",
+  description: "Schedule your discovery call with Kairos Performance. Tell us where your revenue operation is breaking down and we'll follow up within one business day.",
 };
 
 export default function ContactPage() {
@@ -18,15 +18,16 @@ export default function ContactPage() {
           <div className="flex flex-col gap-10">
             <FadeIn delay={0}>
               <div>
-                <p className="text-base uppercase tracking-widest text-[#999] mb-4">
+                <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
                   Contact
                 </p>
-                <h1 className="text-4xl sm:text-5xl font-semibold text-[#f0ede8] leading-tight mb-4">
-                  Start a conversation.
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0ede8] leading-tight mb-4">
+                  Schedule your discovery call.
                 </h1>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">
-                  Tell us where you are and what you&apos;re trying to solve. We&apos;ll follow
-                  up to schedule a focused discovery call.
+                  Tell us where you are and what you&apos;re trying to solve.
+                  We&apos;ll follow up within one business day to set up a
+                  focused conversation.
                 </p>
               </div>
             </FadeIn>
