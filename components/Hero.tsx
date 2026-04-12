@@ -225,6 +225,7 @@ export default function Hero() {
           initial={initial}
           animate={animate}
           custom={prefersReducedMotion ? 0 : 0.45}
+          className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-7"
         >
           <TrackedLink
             href="/contact"
@@ -233,6 +234,18 @@ export default function Hero() {
             className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
             Schedule a Discovery Call
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              <ArrowIcon />
+            </span>
+          </TrackedLink>
+
+          <TrackedLink
+            href="/resources/ai-readiness-checklist"
+            ctaName="AI Readiness Checklist"
+            ctaLocation="hero_lead_magnet"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-[#c0bdb8] hover:text-[#f0ede8] underline underline-offset-[6px] decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-300 px-2 py-2"
+          >
+            Get the AI Readiness Checklist
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               <ArrowIcon />
             </span>
