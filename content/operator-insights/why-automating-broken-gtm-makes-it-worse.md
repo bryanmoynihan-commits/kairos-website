@@ -118,6 +118,6 @@ I should be nuanced here — the answer isn't always "fix everything first, then
 
 **Map your handoffs.** Pick your highest-volume transition point (usually marketing-to-sales or sales-to-CS) and document what currently happens vs. what should happen. Build a one-page RACI for that transition.
 
-**Talk to us.** If this article hit close to home and you want help figuring out what to fix first, that's exactly what our [AI Readiness Assessment](/pricing#entry-points) is designed to do. We'll map your current state, identify the highest-impact gaps, and give you a prioritized plan — no commitment required.
+**Talk to us.** If this article hit close to home and you want help figuring out what to fix first, that's exactly what our [AI Readiness Assessment](/pricing#diagnose) is designed to do. We'll map your current state, identify the highest-impact gaps, and give you a prioritized plan — no commitment required.
 
 The companies that win with automation aren't the ones that automate first. They're the ones that build the foundation that makes automation actually work. That's it — go build the foundation.

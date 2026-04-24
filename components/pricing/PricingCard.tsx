@@ -2,6 +2,7 @@ import { CheckIcon } from "./icons";
 
 interface PricingCardProps {
   title: string;
+  subtitle?: string;
   price: string;
   timeline: string;
   description?: string;
@@ -12,6 +13,7 @@ interface PricingCardProps {
 
 export default function PricingCard({
   title,
+  subtitle,
   price,
   timeline,
   description,
@@ -21,9 +23,14 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div className="flex flex-col h-full p-8 border border-[#1f1f1f] border-t-2 border-t-[#2dd4bf] rounded-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:border-t-[#2dd4bf] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
-      <h3 className={`text-lg font-semibold text-[#f0ede8] ${description ? "mb-2" : "mb-3"}`}>
+      <h3 className={`text-lg font-semibold text-[#f0ede8] ${subtitle || description ? "mb-2" : "mb-3"}`}>
         {title}
       </h3>
+      {subtitle && (
+        <p className="text-sm italic text-[#c0bdb8]/70 leading-relaxed mb-3">
+          {subtitle}
+        </p>
+      )}
       <p className="text-2xl sm:text-3xl font-semibold text-[#2dd4bf] mb-1">
         {price}
       </p>

@@ -4,27 +4,27 @@ import { ClipboardIcon, CycleIcon, WrenchIcon, ZapIcon } from "./icons";
 const engagementTypes = [
   {
     icon: <ZapIcon />,
-    title: "Quick Start",
-    body: "Low-commitment entry point. A focused sprint or pilot to prove value on one automation opportunity \u2014 before a larger engagement.",
-    href: "#quick-wins",
+    title: "Prove",
+    body: "Low-commitment entry point. A focused sprint or pilot to prove value on one automation opportunity before a larger engagement.",
+    href: "#prove",
   },
   {
     icon: <ClipboardIcon />,
-    title: "Entry Point",
-    body: "Start with a time-bounded assessment. We diagnose your operation, score your AI readiness, and deliver a prioritized roadmap \u2014 then give you a clear path to execution.",
-    href: "#entry-points",
+    title: "Diagnose",
+    body: "Start with a time-bounded assessment. We diagnose your operation across AI readiness or GTM performance, deliver a prioritized roadmap, and give you a clear path to execution.",
+    href: "#diagnose",
   },
   {
     icon: <CycleIcon />,
-    title: "Ongoing Retainer",
-    body: "Fractional partnership for ongoing execution. We function as an embedded operator \u2014 building, managing, and evolving your revenue and AI operations month over month.",
-    href: "#ongoing-retainers",
+    title: "Partner",
+    body: "Fractional partnership for ongoing execution. We function as an embedded operator - building, managing, and evolving your revenue and AI operations month over month.",
+    href: "#partner",
   },
   {
     icon: <WrenchIcon />,
-    title: "Project-Based",
+    title: "Execute",
     body: "Scoped, fixed-fee work for defined problems. Automation builds, RevOps architecture, GTM system design. No retainer required to start here.",
-    href: "#project-based",
+    href: "#execute",
   },
 ];
 

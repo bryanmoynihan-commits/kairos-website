@@ -58,7 +58,7 @@ const retainerTiers = [
 
 export default function RetainersSection() {
   return (
-    <section id="ongoing-retainers" className="border-b border-[#1f1f1f] py-24 scroll-mt-20">
+    <section id="partner" className="border-b border-[#1f1f1f] py-24 scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
@@ -68,7 +68,7 @@ export default function RetainersSection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
-              Ongoing retainers
+              Partner
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>

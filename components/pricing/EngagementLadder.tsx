@@ -5,25 +5,25 @@ const steps = [
     label: "Discovery Sprint",
     price: "$2K\u2013$5K",
     timeline: "1\u20132 weeks",
-    href: "#quick-wins",
+    href: "#prove",
   },
   {
     label: "AI Pilot",
     price: "$5K\u2013$30K",
     timeline: "2\u20136 weeks",
-    href: "#quick-wins",
+    href: "#prove",
   },
   {
     label: "Assessment",
     price: "$15K\u2013$30K",
     timeline: "3\u20135 weeks",
-    href: "#entry-points",
+    href: "#diagnose",
   },
   {
     label: "Retainer",
     price: "from $10K/mo",
     timeline: "Ongoing",
-    href: "#ongoing-retainers",
+    href: "#partner",
   },
 ];
 
