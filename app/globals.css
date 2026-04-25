@@ -161,6 +161,46 @@ body {
   line-height: 1.7;
 }
 
+/* Tables */
+.prose-kairos table {
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  border: 1px solid #1f1f1f;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose-kairos thead th {
+  background-color: #111111;
+  text-align: left;
+  font-weight: 600;
+  color: #f0ede8;
+  padding: 0.875em 1em;
+  font-size: 0.875em;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.prose-kairos tbody td {
+  padding: 0.875em 1em;
+  color: #c0bdb8;
+  vertical-align: top;
+  line-height: 1.6;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.prose-kairos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose-kairos tbody td:not(:last-child),
+.prose-kairos thead th:not(:last-child) {
+  border-right: 1px solid #1f1f1f;
+}
+
 /* Images */
 .prose-kairos img {
   border-radius: 0.5rem;
