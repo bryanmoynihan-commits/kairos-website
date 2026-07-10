@@ -59,7 +59,7 @@ export default function InvestmentFactors() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
               What determines your investment
             </h2>
           </FadeIn>
@@ -76,14 +76,14 @@ export default function InvestmentFactors() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {investmentFactors.map((factor, i) => (
             <FadeIn key={factor.title} delay={i * 0.1} className="h-full">
-              <div className="flex flex-col h-full p-8 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
-                <h3 className="text-lg font-semibold text-[#f0ede8] mb-5">
+              <div className="flex flex-col h-full p-8 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
+                <h3 className="text-lg font-semibold text-[#f0f0eb] mb-5">
                   {factor.title}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
-                      <span className="text-[#f0ede8]/40">&uarr;</span>
+                      <span className="text-[#f0f0eb]/40">&uarr;</span>
                       Higher investment
                     </p>
                     <ul className="space-y-2">
@@ -99,7 +99,7 @@ export default function InvestmentFactors() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
-                      <span className="text-[#f0ede8]/40">&darr;</span>
+                      <span className="text-[#f0f0eb]/40">&darr;</span>
                       Lower investment
                     </p>
                     <ul className="space-y-2">

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Leadership teams use our AI-native revenue systems to drive growth through better execution — not bigger teams.",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Kairos Performance — AI-Native Revenue Operating Systems",
     description:
       "Leadership teams use our AI-native revenue systems to drive growth through better execution — not bigger teams.",
@@ -49,10 +49,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} antialiased bg-[#0a0a0a] text-[#f0ede8]`}>
+      <body className={`${geist.variable} antialiased bg-[#0e0d0d] text-[#f0f0eb]`}>
         <ScrollToTop />
         <Nav />
-        <main className="pt-16">{children}</main>
+        <main className="pt-20">{children}</main>
 
         {/* Analytics */}
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-32GC385N7L"} />

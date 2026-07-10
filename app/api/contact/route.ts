@@ -24,7 +24,7 @@ interface ContactPayload {
 function validatePayload(data: ContactPayload): string | null {
   if (data.honeypot) return "Invalid submission.";
 
-  const { firstName, lastName, title, email, company, companySize, message } = data;
+  const { firstName, lastName, title, email, company, companySize, source, message } = data;
 
   if (!firstName?.trim() || firstName.trim().length < 2 || !NAME_RE.test(firstName.trim()))
     return "Invalid first name.";
@@ -38,6 +38,8 @@ function validatePayload(data: ContactPayload): string | null {
     return "Invalid company name.";
   if (!companySize)
     return "Company size is required.";
+  if (!source?.trim())
+    return "Please tell us how you heard about us.";
   if (!message?.trim() || message.trim().length < MESSAGE_MIN || message.trim().length > MESSAGE_MAX)
     return `Message must be between ${MESSAGE_MIN} and ${MESSAGE_MAX} characters.`;
 
@@ -73,7 +75,7 @@ export async function POST(request: Request) {
       { name: "jobtitle", value: data.title.trim() },
       { name: "0-2/name", value: data.company.trim() },
       { name: "numemployees", value: data.companySize },
-      { name: "how_did_you_hear_about_us_", value: data.source || "" },
+      { name: "how_did_you_hear_about_us_text", value: data.source.trim() },
       { name: "what_are_you_looking_to_solve_", value: data.message.trim() },
       { name: "utm_source", value: data.utmSource || "" },
       { name: "utm_medium", value: data.utmMedium || "" },

@@ -103,7 +103,7 @@ export default function Hero() {
               y1={meshNodes[from].y}
               x2={meshNodes[to].x}
               y2={meshNodes[to].y}
-              stroke="#f0ede8"
+              stroke="#f0f0eb"
               strokeWidth="0.5"
               opacity="0.3"
             />
@@ -118,7 +118,7 @@ export default function Hero() {
                 cx={node.x}
                 cy={node.y}
                 r={node.r}
-                fill="#f0ede8"
+                fill="#f0f0eb"
                 opacity="0.4"
               />
             ))}
@@ -132,7 +132,7 @@ export default function Hero() {
                 cx={node.x}
                 cy={node.y}
                 r={node.r}
-                fill="#f0ede8"
+                fill="#2dd4bf"
                 initial={
                   prefersReducedMotion ? { opacity: 0.5 } : { opacity: 0.2 }
                 }
@@ -163,7 +163,7 @@ export default function Hero() {
                 <motion.circle
                   key={`pulse-${i}`}
                   r={2}
-                  fill="#f0ede8"
+                  fill="#2dd4bf"
                   initial={{ cx: n1.x, cy: n1.y, opacity: 0 }}
                   animate={{
                     cx: [n1.x, n2.x, n1.x],
@@ -184,8 +184,8 @@ export default function Hero() {
           <circle cx="400" cy="400" r="80" fill="url(#meshGlow)" />
           <defs>
             <radialGradient id="meshGlow">
-              <stop offset="0%" stopColor="#f0ede8" stopOpacity="0.12" />
-              <stop offset="100%" stopColor="#f0ede8" stopOpacity="0" />
+              <stop offset="0%" stopColor="#f0f0eb" stopOpacity="0.12" />
+              <stop offset="100%" stopColor="#f0f0eb" stopOpacity="0" />
             </radialGradient>
           </defs>
         </motion.svg>
@@ -202,7 +202,7 @@ export default function Hero() {
           Kairos Performance
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#f0ede8] leading-[1.1] tracking-tight max-w-3xl mb-8"
+          className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight max-w-3xl mb-8"
           variants={heroVariants}
           initial={initial}
           animate={animate}
@@ -231,7 +231,7 @@ export default function Hero() {
             href="/contact"
             ctaName="Schedule a Discovery Call"
             ctaLocation="hero"
-            className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+            className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
             Schedule a Discovery Call
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -243,7 +243,7 @@ export default function Hero() {
             href="/resources/ai-readiness-checklist"
             ctaName="AI Readiness Checklist"
             ctaLocation="hero_lead_magnet"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-[#c0bdb8] hover:text-[#f0ede8] underline underline-offset-[6px] decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-300 px-2 py-2"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-[#c0bdb8] hover:text-[#f0f0eb] underline underline-offset-[6px] decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-300 px-2 py-2"
           >
             Get the AI Readiness Checklist
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

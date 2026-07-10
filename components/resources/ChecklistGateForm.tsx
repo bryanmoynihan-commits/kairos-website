@@ -71,7 +71,7 @@ function validate(v: FormValues): FormErrors {
 }
 
 const inputBase =
-  "bg-[#111] border text-[#f0ede8] placeholder:text-[#555] px-4 py-3 text-sm focus:outline-none transition-colors w-full";
+  "bg-[#111] border text-[#f0f0eb] placeholder:text-[#555] px-4 py-3 text-sm focus:outline-none transition-colors w-full";
 
 function fieldBorder(touched: boolean, error?: string) {
   if (!touched) return "border-[#2a2a2a] focus:border-[#555]";
@@ -170,7 +170,7 @@ export default function ChecklistGateForm({ slug, headline, subhead, onUnlock }:
       <p className="text-xs uppercase tracking-widest text-[#2dd4bf] mb-3">
         Continue reading
       </p>
-      <h3 className="text-2xl sm:text-3xl font-semibold text-[#f0ede8] leading-tight mb-3">
+      <h3 className="text-2xl sm:text-3xl font-semibold text-[#f0f0eb] leading-tight mb-3">
         {headline}
       </h3>
       <p className="text-sm text-[#c0bdb8] mb-8 leading-relaxed">{subhead}</p>
@@ -285,7 +285,7 @@ export default function ChecklistGateForm({ slug, headline, subhead, onUnlock }:
         <button
           type="submit"
           disabled={formState === "submitting"}
-          className="group self-start inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-3.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_1px_3px_rgba(240,237,232,0.08)]"
+          className="group self-start inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-3.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_1px_3px_rgba(240,237,232,0.08)]"
         >
           {formState === "submitting" ? "Unlocking..." : "Unlock the Checklist"}
           {formState !== "submitting" && (

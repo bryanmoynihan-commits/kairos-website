@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const ctaButtonClass =
-  "group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out";
+  "group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out";
 
 function CTAButton({ location }: { location: string }) {
   return (
@@ -78,7 +78,7 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug max-w-2xl mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug max-w-2xl mb-4">
               The cost of scaling on a broken foundation
             </h2>
           </FadeIn>
@@ -116,7 +116,7 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug max-w-2xl mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug max-w-2xl mb-4">
               The operating system behind the growth story
             </h2>
           </FadeIn>
@@ -149,7 +149,7 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
                   Why Kairos
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+                <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
                   <span className="block">We didn&apos;t study these problems.</span>
                   <span className="block">We lived them.</span>
                 </h2>
@@ -183,8 +183,8 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.08}>
-                <div className="p-6 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:border-[#333] hover:bg-[#111111]/40">
-                  <p className="text-xl lg:text-2xl font-semibold text-[#f0ede8] mb-2 leading-tight">
+                <div className="p-6 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:border-[#333] hover:bg-[#2d2a2b]/40">
+                  <p className="text-xl lg:text-2xl font-semibold text-[#f0f0eb] mb-2 leading-tight">
                     {stat.value}
                   </p>
                   <p className="text-xs uppercase tracking-wider text-[#999]">
@@ -213,7 +213,7 @@ export default function Home() {
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug max-w-2xl">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug max-w-2xl">
                 A simple path from chaos to clarity
               </h2>
             </FadeIn>
@@ -222,9 +222,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {planSteps.map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.12} className="h-full">
-                <div className="h-full p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
+                <div className="h-full p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
                   <p className="text-xs text-[#2dd4bf] font-mono">{item.step}</p>
-                  <h3 className="text-lg font-semibold text-[#f0ede8]">
+                  <h3 className="text-lg font-semibold text-[#f0f0eb]">
                     {item.title}
                   </h3>
                   <p className="text-[#c0bdb8] text-sm leading-relaxed">
@@ -251,7 +251,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
                 What we actually do
               </p>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug">
                 <span className="block">AI-native revenue operations.</span>
                 <span className="block">Built right, owned by you.</span>
               </h2>

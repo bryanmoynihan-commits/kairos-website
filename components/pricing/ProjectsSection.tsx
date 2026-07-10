@@ -113,7 +113,7 @@ export default function ProjectsSection() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
               Execute
             </h2>
           </FadeIn>
@@ -147,13 +147,13 @@ export default function ProjectsSection() {
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Don&apos;t see your use case?
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
               These represent common project types, not an exhaustive list. If
               you have a defined problem and want a fixed-fee engagement around
               it, we&apos;re likely able to scope it.{" "}
               <Link
                 href="/contact"
-                className="text-[#f0ede8] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0ede8] transition-colors"
+                className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
               >
                 Schedule a discovery call
               </Link>

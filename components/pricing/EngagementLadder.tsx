@@ -76,7 +76,7 @@ export default function EngagementLadder() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
               Start small. Scale with confidence.
             </h2>
           </FadeIn>
@@ -96,9 +96,9 @@ export default function EngagementLadder() {
               <div key={step.label} className="contents">
                 <a
                   href={step.href}
-                  className="flex flex-col items-center text-center p-6 border border-[#1f1f1f] rounded-sm w-48 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)] cursor-pointer"
+                  className="flex flex-col items-center text-center p-6 border border-[#1f1f1f] rounded-sm w-48 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)] cursor-pointer"
                 >
-                  <p className="text-sm font-semibold text-[#f0ede8] mb-2">
+                  <p className="text-sm font-semibold text-[#f0f0eb] mb-2">
                     {step.label}
                   </p>
                   <p className="text-lg font-semibold text-[#2dd4bf] mb-1">
@@ -119,9 +119,9 @@ export default function EngagementLadder() {
               <div key={step.label} className="contents">
                 <a
                   href={step.href}
-                  className="flex flex-col items-center text-center p-6 border border-[#1f1f1f] rounded-sm w-full max-w-sm transition-all duration-300 hover:border-[#333] hover:bg-[#111111]/40 cursor-pointer"
+                  className="flex flex-col items-center text-center p-6 border border-[#1f1f1f] rounded-sm w-full max-w-sm transition-all duration-300 hover:border-[#333] hover:bg-[#2d2a2b]/40 cursor-pointer"
                 >
-                  <p className="text-sm font-semibold text-[#f0ede8] mb-2">
+                  <p className="text-sm font-semibold text-[#f0f0eb] mb-2">
                     {step.label}
                   </p>
                   <p className="text-lg font-semibold text-[#2dd4bf] mb-1">

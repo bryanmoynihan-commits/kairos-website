@@ -4,7 +4,7 @@ import ArrowIcon from "@/components/ArrowIcon";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-[#1f1f1f] bg-[#0a0a0a] overflow-hidden">
+    <footer className="relative border-t border-[#1f1f1f] bg-[#0e0d0d] overflow-hidden">
       {/* Atmospheric glow at top edge */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full pointer-events-none"
@@ -19,7 +19,7 @@ export default function Footer() {
           <p className="text-xs uppercase tracking-widest text-[#999] mb-3">
             Kairos Performance
           </p>
-          <p className="text-[#f0ede8] text-lg font-medium max-w-sm leading-snug">
+          <p className="text-[#f0f0eb] text-lg font-medium max-w-sm leading-snug">
             Ready to build the foundation behind the growth story?
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function Footer() {
           href="/contact"
           ctaName="Schedule a Discovery Call"
           ctaLocation="footer"
-          className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+          className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
         >
           Schedule a Discovery Call
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -38,10 +38,18 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-[#1f1f1f]">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <p className="text-xs text-[#666]">
-            &copy; {new Date().getFullYear()} Kairos Performance. All rights reserved.
-          </p>
+        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-icon.svg"
+              alt="Kairos Performance"
+              className="h-7 w-auto select-none"
+            />
+            <p className="text-xs text-[#666]">
+              &copy; {new Date().getFullYear()} Kairos Performance. All rights reserved.
+            </p>
+          </div>
           <nav className="flex items-center gap-6">
             <Link href="/pricing" className="text-xs text-[#666] hover:text-[#999] transition-colors">
               Pricing

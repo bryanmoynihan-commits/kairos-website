@@ -67,7 +67,7 @@ export default function RetainersSection() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
               Partner
             </h2>
           </FadeIn>
@@ -94,7 +94,7 @@ export default function RetainersSection() {
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Why we lead with retainers
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed mb-3">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               On nine out of ten engagements, something changes halfway
               through &mdash; a new priority surfaces, a system behaves
               differently than expected, or the team realizes the real problem
@@ -102,13 +102,13 @@ export default function RetainersSection() {
               real time. No re-scoping, no re-documenting, no pause while a
               new SOW gets approved.
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed mb-3">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               That structure also changes incentives. Project-based work
               rewards delivering exactly what was specified &mdash; retainers
               reward building things that actually work, because we&apos;re
               still here next month when they need to hold up.
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
               And the longer we work together, the more productive we become.
               By month three, we have deep context on your business, your
               systems, and your team. Projects reset that institutional
@@ -123,8 +123,8 @@ export default function RetainersSection() {
               <div
                 className={`relative flex flex-col h-full p-8 rounded-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)] ${
                   tier.highlighted
-                    ? "border-2 border-[#2dd4bf]/30 bg-[#111111]/40 hover:border-[#2dd4bf]/50"
-                    : "border border-[#1f1f1f] hover:border-[#333] hover:bg-[#111111]/40"
+                    ? "border-2 border-[#2dd4bf]/30 bg-[#2d2a2b]/40 hover:border-[#2dd4bf]/50"
+                    : "border border-[#1f1f1f] hover:border-[#333] hover:bg-[#2d2a2b]/40"
                 }`}
               >
                 {tier.highlighted && (
@@ -136,7 +136,7 @@ export default function RetainersSection() {
                 <p className="text-xs uppercase tracking-widest text-[#2dd4bf] mb-3">
                   {tier.name}
                 </p>
-                <p className="text-3xl font-semibold text-[#f0ede8] mb-1">
+                <p className="text-3xl font-semibold text-[#f0f0eb] mb-1">
                   {tier.price}
                   <span className="text-sm font-normal text-[#999]">
                     {" "}
@@ -175,7 +175,7 @@ export default function RetainersSection() {
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Why a single partner matters
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
               Separate RevOps ($10K/mo) and AI advisory ($10K/mo) retainers
               cost more, require two vendor relationships, and lose the
               integration benefit. Our Build and Transform tiers deliver both
@@ -192,20 +192,20 @@ export default function RetainersSection() {
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Flexible scope
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed mb-3">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               These tiers represent our standard engagements &mdash; not a
               ceiling or a floor. If your organization requires broader
               coverage than Transform &mdash; portfolio-wide operations,
               multi-entity coordination, or dedicated senior capacity &mdash;
               we build custom partnerships scoped to match.
             </p>
-            <p className="text-[#f0ede8]/70 text-sm leading-relaxed">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
               On the other end, if you have a single, well-defined need that
               doesn&apos;t warrant a full retainer, we&apos;re open to shorter
               commitments with narrower scope and lower investment.{" "}
               <Link
                 href="/contact"
-                className="text-[#f0ede8] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0ede8] transition-colors"
+                className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
               >
                 Schedule a discovery call
               </Link>

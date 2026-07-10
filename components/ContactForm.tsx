@@ -25,6 +25,7 @@ interface FormErrors {
   email?: string;
   company?: string;
   companySize?: string;
+  source?: string;
   message?: string;
 }
 
@@ -48,15 +49,6 @@ const COMPANY_SIZES = [
   { label: "100–500 employees", value: "100-500" },
   { label: "500–1,000 employees", value: "500-1000" },
   { label: "1,000+ employees",  value: "1000+" },
-];
-
-const SOURCES = [
-  { label: "LinkedIn",           value: "LinkedIn" },
-  { label: "Referral",           value: "Referral" },
-  { label: "Google",             value: "Google" },
-  { label: "Podcast",            value: "Podcast" },
-  { label: "Conference / Event", value: "Conference / Event" },
-  { label: "Other",              value: "Other" },
 ];
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -105,6 +97,10 @@ function validate(v: FormValues): FormErrors {
     e.companySize = "Please select your company size.";
   }
 
+  if (!v.source.trim()) {
+    e.source = "Please let us know how you heard about us.";
+  }
+
   if (!v.message.trim()) {
     e.message = "Please tell us what you're looking to solve.";
   } else if (v.message.trim().length < MESSAGE_MIN) {
@@ -115,7 +111,7 @@ function validate(v: FormValues): FormErrors {
 }
 
 const inputBase =
-  "bg-[#111] border text-[#f0ede8] placeholder:text-[#555] px-4 py-3 text-sm focus:outline-none transition-colors w-full";
+  "bg-[#111] border text-[#f0f0eb] placeholder:text-[#555] px-4 py-3 text-sm focus:outline-none transition-colors w-full";
 
 function fieldBorder(touched: boolean, error?: string) {
   if (!touched) return "border-[#2a2a2a] focus:border-[#555]";
@@ -214,7 +210,7 @@ export default function ContactForm() {
   if (formState === "success") {
     return (
       <div role="status" className="border border-[#2a2a2a] bg-[#111] p-10 text-center">
-        <p className="text-[#f0ede8] text-lg font-medium mb-2">Message received.</p>
+        <p className="text-[#f0f0eb] text-lg font-medium mb-2">Message received.</p>
         <p className="text-[#999] text-sm">
           We&apos;ll be in touch within one business day to schedule a discovery call.
         </p>
@@ -379,20 +375,24 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="source" className="text-xs uppercase tracking-widest text-[#999]">
-            How did you hear about us?
+            How did you hear about us? <span className="text-red-500">*</span>
           </label>
-          <select
+          <input
             id="source"
             name="source"
+            type="text"
+            required
+            maxLength={500}
+            autoComplete="off"
+            placeholder="e.g. LinkedIn, a referral, a podcast…"
             value={values.source}
             onChange={handleChange}
-            className={`${inputBase} border-[#2a2a2a] focus:border-[#555] appearance-none cursor-pointer`}
-          >
-            <option value="" className="bg-[#111]">Select an option</option>
-            {SOURCES.map((s) => (
-              <option key={s.value} value={s.value} className="bg-[#111]">{s.label}</option>
-            ))}
-          </select>
+            onBlur={handleBlur}
+            className={`${inputBase} ${fieldBorder(!!touched.source, errors.source)}`}
+          />
+          {touched.source && errors.source && (
+            <p role="alert" className="text-xs text-red-500 mt-0.5">{errors.source}</p>
+          )}
         </div>
       </div>
 
@@ -436,7 +436,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={formState === "submitting"}
-        className="group self-start inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-3.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_1px_3px_rgba(240,237,232,0.08)]"
+        className="group self-start inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-3.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_1px_3px_rgba(240,237,232,0.08)]"
       >
         {formState === "submitting" ? "Sending..." : "Send Message"}
         {formState !== "submitting" && (

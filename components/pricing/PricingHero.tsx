@@ -10,7 +10,7 @@ export default function PricingHero() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0ede8] leading-[1.1] tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight mb-6">
             Transparent pricing. No surprises.
           </h1>
         </FadeIn>

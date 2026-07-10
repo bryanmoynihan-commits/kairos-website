@@ -42,8 +42,8 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-[#2a2a2a] bg-[#0a0a0a]/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(255,255,255,0.04)]"
-          : "border-b border-transparent bg-[#0a0a0a]/80 backdrop-blur-sm"
+          ? "border-b border-[#2a2a2a] bg-[#0e0d0d]/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(255,255,255,0.04)]"
+          : "border-b border-transparent bg-[#0e0d0d]/80 backdrop-blur-sm"
       }`}
     >
       {/* Scroll progress bar */}
@@ -52,12 +52,24 @@ export default function Nav() {
         style={{ scaleX }}
       />
 
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link
           href="/"
-          className="text-[#f0ede8] font-semibold tracking-wide text-base uppercase"
+          aria-label="Kairos Performance — home"
+          className="flex items-center"
         >
-          Kairos Performance
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-horizontal.svg"
+            alt="Kairos Performance"
+            className="hidden sm:block h-12 w-auto select-none"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-icon.svg"
+            alt="Kairos Performance"
+            className="sm:hidden h-10 w-auto select-none"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -68,8 +80,8 @@ export default function Nav() {
                 href={link.href}
                 className={`text-base transition-colors duration-200 ${
                   ("matchPrefix" in link && link.matchPrefix ? pathname.startsWith(link.href) : pathname === link.href)
-                    ? "text-[#f0ede8]"
-                    : "text-[#b0b0b0] hover:text-[#f0ede8]"
+                    ? "text-[#f0f0eb]"
+                    : "text-[#b0b0b0] hover:text-[#f0f0eb]"
                 }`}
               >
                 {link.label}
@@ -79,7 +91,7 @@ export default function Nav() {
             href="/contact"
             ctaName="Schedule a Discovery Call"
             ctaLocation="nav"
-            className="inline-flex items-center bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-5 py-2.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+            className="inline-flex items-center bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-5 py-2.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
             Schedule a Discovery Call
           </TrackedLink>
@@ -87,7 +99,7 @@ export default function Nav() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-[#b0b0b0] hover:text-[#f0ede8] transition-colors"
+          className="md:hidden text-[#b0b0b0] hover:text-[#f0f0eb] transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -118,14 +130,14 @@ export default function Nav() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
-          className="md:hidden border-t border-[#1f1f1f] bg-[#0a0a0a] px-6 py-4 flex flex-col gap-4"
+          className="md:hidden border-t border-[#1f1f1f] bg-[#0e0d0d] px-6 py-4 flex flex-col gap-4"
         >
           {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm text-[#b0b0b0] hover:text-[#f0ede8] transition-colors"
+                className="text-sm text-[#b0b0b0] hover:text-[#f0f0eb] transition-colors"
               >
                 {link.label}
               </Link>
@@ -135,7 +147,7 @@ export default function Nav() {
             ctaName="Schedule a Discovery Call"
             ctaLocation="nav_mobile"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 inline-flex items-center justify-center bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-5 py-3 rounded-sm transition-all duration-300 ease-out"
+            className="mt-2 inline-flex items-center justify-center bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-5 py-3 rounded-sm transition-all duration-300 ease-out"
           >
             Schedule a Discovery Call
           </TrackedLink>

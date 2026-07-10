@@ -42,7 +42,7 @@ export default function OperatorInsightsPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0ede8] leading-[1.1] mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-[1.1] mb-4">
               Perspectives from inside the revenue engine&nbsp;—&nbsp;not the sidelines.
             </h1>
           </FadeIn>
@@ -68,7 +68,7 @@ export default function OperatorInsightsPage() {
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
                 Ready to build the foundation behind the growth story?
               </h2>
             </FadeIn>
@@ -84,7 +84,7 @@ export default function OperatorInsightsPage() {
                 href="/contact"
                 ctaName="Schedule a Discovery Call"
                 ctaLocation="operator_insights_end"
-                className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+                className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
               >
                 Schedule a Discovery Call
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

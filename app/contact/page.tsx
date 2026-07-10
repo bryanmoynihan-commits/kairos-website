@@ -21,7 +21,7 @@ export default function ContactPage() {
                 <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
                   Contact
                 </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0ede8] leading-tight mb-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-tight mb-4">
                   Schedule your discovery call.
                 </h1>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">

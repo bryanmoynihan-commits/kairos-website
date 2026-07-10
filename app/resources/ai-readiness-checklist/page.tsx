@@ -59,6 +59,10 @@ export default function ChecklistPage() {
       "@type": "Organization",
       name: "Kairos Performance",
       url: "https://kairosperformance.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kairosperformance.ai/logo-kairos.png",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -85,7 +89,7 @@ export default function ChecklistPage() {
           <FadeIn>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0ede8] transition-colors duration-200 mb-10 group"
+              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0f0eb] transition-colors duration-200 mb-10 group"
             >
               <span className="rotate-180 transition-transform duration-300 group-hover:-translate-x-1">
                 <ArrowIcon />
@@ -103,7 +107,7 @@ export default function ChecklistPage() {
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#f0ede8] leading-[1.1] mb-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#f0f0eb] leading-[1.1] mb-4">
                 {resource.title}
               </h1>
             </FadeIn>
@@ -174,7 +178,7 @@ export default function ChecklistPage() {
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
                 Ready to build the foundation behind the growth story?
               </h2>
             </FadeIn>
@@ -192,7 +196,7 @@ export default function ChecklistPage() {
                 href="/contact"
                 ctaName="Schedule a Discovery Call"
                 ctaLocation="checklist_end"
-                className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+                className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
               >
                 Schedule a Discovery Call
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">

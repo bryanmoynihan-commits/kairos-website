@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# brand design source (large .ai/.indd/.pptx/.pdf/font originals — archived in parent Kairos workspace)
+/Logo Branding Artifacts/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

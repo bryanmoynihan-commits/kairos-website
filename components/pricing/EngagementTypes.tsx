@@ -39,7 +39,7 @@ export default function EngagementTypes() {
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug">
               How we engage
             </h2>
           </FadeIn>
@@ -50,10 +50,10 @@ export default function EngagementTypes() {
             <FadeIn key={item.title} delay={i * 0.1} className="h-full">
               <a
                 href={item.href}
-                className="flex flex-col h-full p-8 border border-[#1f1f1f] rounded-sm space-y-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#111111]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)] cursor-pointer"
+                className="flex flex-col h-full p-8 border border-[#1f1f1f] rounded-sm space-y-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)] cursor-pointer"
               >
                 <div className="text-[#2dd4bf]">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-[#f0ede8]">
+                <h3 className="text-lg font-semibold text-[#f0f0eb]">
                   {item.title}
                 </h3>
                 <p className="text-[#c0bdb8] text-sm leading-relaxed">

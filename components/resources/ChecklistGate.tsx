@@ -100,7 +100,7 @@ export default function ChecklistGate({
         <div className="prose-kairos blur-md opacity-40 max-h-80 overflow-hidden">
           <Markdown remarkPlugins={[remarkGfm]}>{previewText}</Markdown>
         </div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#0e0d0d]" />
       </div>
     </div>
   );

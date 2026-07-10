@@ -80,6 +80,10 @@ export default async function ArticlePage({
       "@type": "Organization",
       name: "Kairos Performance",
       url: "https://kairosperformance.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kairosperformance.ai/logo-kairos.png",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -106,7 +110,7 @@ export default async function ArticlePage({
           <FadeIn>
             <Link
               href="/operator-insights"
-              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0ede8] transition-colors duration-200 mb-10 group"
+              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0f0eb] transition-colors duration-200 mb-10 group"
             >
               <span className="rotate-180 transition-transform duration-300 group-hover:-translate-x-1">
                 <ArrowIcon />
@@ -124,7 +128,7 @@ export default async function ArticlePage({
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#f0ede8] leading-[1.1] mb-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#f0f0eb] leading-[1.1] mb-4">
                 {post.title}
               </h1>
             </FadeIn>
@@ -187,7 +191,7 @@ export default async function ArticlePage({
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0ede8] leading-snug mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
                 Ready to build the foundation behind the growth story?
               </h2>
             </FadeIn>
@@ -205,7 +209,7 @@ export default async function ArticlePage({
                 href="/contact"
                 ctaName="Schedule a Discovery Call"
                 ctaLocation="article_end"
-                className="group inline-flex items-center gap-2 bg-[#f0ede8] text-[#0a0a0a] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+                className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
               >
                 Schedule a Discovery Call
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -222,7 +226,7 @@ export default async function ArticlePage({
         <section className="border-t border-[#1f1f1f] py-20">
           <div className="max-w-6xl mx-auto px-6">
             <FadeIn>
-              <h2 className="text-xl font-semibold text-[#f0ede8] mb-8">
+              <h2 className="text-xl font-semibold text-[#f0f0eb] mb-8">
                 More in {post.category}
               </h2>
             </FadeIn>
