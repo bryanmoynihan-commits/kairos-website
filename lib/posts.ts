@@ -9,6 +9,7 @@ export type PostCategory = "RevOps" | "AI & Automation" | "Buying Guidance";
 export interface Post {
   slug: string;
   title: string;
+  metaTitle?: string;
   date: string;
   author: string;
   category: PostCategory;
@@ -39,6 +40,7 @@ export function getAllPosts(): Omit<Post, "content">[] {
       return {
         slug,
         title: data.title,
+        metaTitle: data.metaTitle,
         date: data.date,
         author: data.author,
         category: data.category as PostCategory,
@@ -65,6 +67,7 @@ export function getPostBySlug(slug: string): Post | null {
   return {
     slug,
     title: data.title,
+    metaTitle: data.metaTitle,
     date: data.date,
     author: data.author,
     category: data.category as PostCategory,

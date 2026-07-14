@@ -28,12 +28,13 @@ export async function generateMetadata({
   if (!post) return {};
 
   const url = `https://kairosperformance.ai/operator-insights/${post.slug}`;
+  const metaTitle = post.metaTitle ?? post.title;
 
   return {
-    title: post.title,
+    title: metaTitle,
     description: post.excerpt,
     openGraph: {
-      title: `${post.title} | Operator Insights`,
+      title: `${metaTitle} | Operator Insights`,
       description: post.excerpt,
       url,
       type: "article",
@@ -42,7 +43,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
     },
     alternates: {
@@ -154,7 +155,7 @@ export default async function ArticlePage({
           <FadeIn delay={0.25}>
             <div className="prose-kairos max-w-prose">
               <Markdown
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
                 components={{
                   a: ({ children, href, ...props }) => (
                     <a
