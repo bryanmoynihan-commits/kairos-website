@@ -3,7 +3,7 @@ title: "Fractional RevOps vs. Full-Time Hire vs. Agency: How to Actually Decide"
 metaTitle: "Fractional RevOps vs. Full-Time Hire vs. Agency: How to Decide"
 slug: "fractional-revops-vs-full-time-hire-vs-agency"
 date: "2026-07-13"
-author: "Bryan Moynihan"
+author: "Kairos Performance"
 category: "Buying Guidance"
 excerpt: "An honest guide to choosing between a fractional RevOps partner, a full-time hire, and an agency - based on the kind of need you have, not just your budget. Real cost ranges and when each is the wrong call."
 tags: ["revops", "fractional-ops", "hiring", "agency", "pricing", "buying-guidance"]
