@@ -60,6 +60,9 @@ export default function Footer() {
             <Link href="/contact" className="text-xs text-[#666] hover:text-[#999] transition-colors">
               Contact
             </Link>
+            <Link href="/legal/dpa" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+              Data Processing Agreement
+            </Link>
           </nav>
         </div>
       </div>
