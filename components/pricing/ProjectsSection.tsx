@@ -8,7 +8,7 @@ const projects = [
     price: "$15,000 \u2013 $75,000",
     timeline: "4\u201310 weeks",
     description:
-      "Design and implementation of a specific automation or AI workflow \u2014 lead routing, pipeline automation, data enrichment, reporting infrastructure, or a custom AI agent embedded into your operations.",
+      "Design and implementation of a specific automation or AI workflow: lead routing, pipeline automation, data enrichment, reporting infrastructure, or a custom AI agent embedded into your operations.",
     included: [
       "Discovery and requirements scoping session",
       "Architecture design and tool selection",
@@ -32,7 +32,7 @@ const projects = [
     price: "$25,000 \u2013 $60,000",
     timeline: "4\u20138 weeks",
     description:
-      "A full rebuild or structured optimization of your revenue operations infrastructure \u2014 pipeline stages, handoff criteria, CRM architecture, reporting framework, and process documentation.",
+      "A full rebuild or structured optimization of your revenue operations infrastructure: pipeline stages, handoff criteria, CRM architecture, reporting framework, and process documentation.",
     included: [
       "Current state audit of GTM systems and processes",
       "CRM architecture redesign (HubSpot or Salesforce)",
@@ -56,7 +56,7 @@ const projects = [
     price: "$15,000 \u2013 $35,000",
     timeline: "3\u20135 weeks",
     description:
-      "A structured audit of your revenue technology stack \u2014 what you have, what you\u2019re paying for, what\u2019s redundant, what\u2019s missing, and a clear consolidation and optimization roadmap. Includes evaluation through an AI and automation lens to identify where your stack can work harder with less manual effort.",
+      "A structured audit of your revenue technology stack: what you have, what you\u2019re paying for, what\u2019s redundant, what\u2019s missing, and a clear consolidation and optimization roadmap. Includes evaluation through an AI and automation lens to identify where your stack can work harder with less manual effort.",
     included: [
       "Full inventory and cost analysis of current tech stack",
       "Utilization and ROI assessment by tool",
@@ -81,7 +81,7 @@ const projects = [
     price: "$10,000 \u2013 $25,000",
     timeline: "2\u20134 weeks",
     description:
-      "Build the revenue planning infrastructure your leadership team is missing \u2014 a working capacity model, pipeline council cadence, and the reporting framework to run it.",
+      "Build the revenue planning infrastructure your leadership team is missing: a working capacity model, pipeline council cadence, and the reporting framework to run it.",
     included: [
       "Bottom-up capacity model (rep productivity, ramp, attrition)",
       "Pipeline council design: cadence, agenda, roles, escalation path",
@@ -155,7 +155,7 @@ export default function ProjectsSection() {
                 href="/contact"
                 className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
               >
-                Schedule a discovery call
+                Book an intro call
               </Link>
               .
             </p>

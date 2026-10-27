@@ -8,7 +8,7 @@ const retainerTiers = [
     price: "$10,000",
     commitment: "3-month minimum",
     bestFor:
-      "Companies with a single defined problem area \u2014 one GTM function that needs structure, one automation initiative that needs ownership.",
+      "Companies with a single defined problem area: one GTM function that needs structure, one automation initiative that needs ownership.",
     included: [
       "One defined functional area (RevOps or AI Ops)",
       "Monthly deliverable set agreed at engagement start",
@@ -24,7 +24,7 @@ const retainerTiers = [
     price: "$17,500",
     commitment: "3-month minimum",
     bestFor:
-      "Companies ready to move from diagnosis to active execution across RevOps and AI \u2014 with a single partner who owns the integrated roadmap and drives it forward.",
+      "Companies ready to move from diagnosis to active execution across RevOps and AI, with a single partner who owns the integrated roadmap and drives it forward.",
     included: [
       "Two functional areas or broader scope within one",
       "Active roadmap management and prioritization",
@@ -41,7 +41,7 @@ const retainerTiers = [
     price: "$25,000",
     commitment: "3-month minimum",
     bestFor:
-      "PE-backed operators or complex organizations where both RevOps and AI Ops require active, senior-level ownership \u2014 with executive-level involvement and full strategic alignment.",
+      "PE-backed operators or complex organizations where both RevOps and AI Ops require active, senior-level ownership, with executive-level involvement and full strategic alignment.",
     included: [
       "Full coverage across RevOps and AI Ops",
       "Executive-level strategic involvement",
@@ -73,14 +73,14 @@ export default function RetainersSection() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mb-4">
-              Fractional partnership priced by scope and depth of engagement
-              &mdash; not by hours.
+              Fractional partnership priced by scope and depth of engagement,
+              not by hours.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="text-[#c0bdb8] text-sm leading-relaxed max-w-3xl">
               We don&apos;t price by the hour. Each tier is defined by
-              functional coverage and deliverable commitment &mdash; the right
+              functional coverage and deliverable commitment. The right
               tier is determined by the scope of what you need us to own.
               Every engagement at every tier includes AI-assisted delivery.
               That&apos;s not a premium add-on. It&apos;s how we work.
@@ -96,7 +96,7 @@ export default function RetainersSection() {
             </p>
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               On nine out of ten engagements, something changes halfway
-              through &mdash; a new priority surfaces, a system behaves
+              through: a new priority surfaces, a system behaves
               differently than expected, or the team realizes the real problem
               is adjacent to the original brief. With a retainer, we adapt in
               real time. No re-scoping, no re-documenting, no pause while a
@@ -104,7 +104,7 @@ export default function RetainersSection() {
             </p>
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               That structure also changes incentives. Project-based work
-              rewards delivering exactly what was specified &mdash; retainers
+              rewards delivering exactly what was specified. Retainers
               reward building things that actually work, because we&apos;re
               still here next month when they need to hold up.
             </p>
@@ -180,7 +180,7 @@ export default function RetainersSection() {
               cost more, require two vendor relationships, and lose the
               integration benefit. Our Build and Transform tiers deliver both
               from one team that understands how your revenue operations and
-              AI strategy connect &mdash; at a lower total cost with
+              AI strategy connect, at a lower total cost with
               compounding context.
             </p>
           </div>
@@ -193,10 +193,10 @@ export default function RetainersSection() {
               Flexible scope
             </p>
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
-              These tiers represent our standard engagements &mdash; not a
+              These tiers represent our standard engagements, not a
               ceiling or a floor. If your organization requires broader
-              coverage than Transform &mdash; portfolio-wide operations,
-              multi-entity coordination, or dedicated senior capacity &mdash;
+              coverage than Transform (portfolio-wide operations,
+              multi-entity coordination, or dedicated senior capacity),
               we build custom partnerships scoped to match.
             </p>
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
@@ -207,7 +207,7 @@ export default function RetainersSection() {
                 href="/contact"
                 className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
               >
-                Schedule a discovery call
+                Book an intro call
               </Link>
               .
             </p>

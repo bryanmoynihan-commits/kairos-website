@@ -296,7 +296,7 @@ export default function ChecklistGateForm({ slug, headline, subhead, onUnlock }:
         </button>
 
         <p className="text-xs text-[#555]">
-          <span className="text-red-500">*</span> Required fields. No spam — unsubscribe any time.
+          <span className="text-red-500">*</span> Required fields. No spam. Unsubscribe any time.
         </p>
       </form>
     </div>

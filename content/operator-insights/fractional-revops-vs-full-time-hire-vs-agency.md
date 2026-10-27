@@ -38,7 +38,7 @@ Here's the trap I'd watch for: hiring one person to be your entire RevOps functi
 
 ## Fractional: rented senior leadership, not a warm body
 
-The sharpest use of fractional isn't "accelerate a team you already have." It's renting seniority you can't justify hiring. You need a VP-level operator to architect your revenue engine, untangle a messy CRM, or get you AI-ready - but that's a finite job, or a few days a month, not a full-time salary. Bringing in a $250K+ leader full-time for it makes no sense. Renting that judgment does.
+The sharpest use of fractional isn't "accelerate a team you already have." It's renting seniority you can't justify hiring. You need a VP-level operator to architect your revenue operations foundation, untangle a messy CRM, or get you AI-ready - but that's a finite job, or a few days a month, not a full-time salary. Bringing in a $250K+ leader full-time for it makes no sense. Renting that judgment does.
 
 Fractional RevOps runs roughly $5-25K/month depending on scope and seniority - independent benchmarks put most fractional-executive engagements between $8K and $22K a month, scaling with intensity. [3] At Kairos, our fractional retainers span that range across three tiers ($10K, $17.5K, $25K/month, three-month minimum). [4]
 
@@ -60,7 +60,7 @@ So, plainly:
 
 - If you need someone in the seat every day owning ops indefinitely, **hire** - and we'll tell you that.
 - If what you need on day one is a large standing team running high-volume execution, a **full-service agency** is likely the better fit today. That's also the capability we're expanding into - so if the timing lines up, talk to us before you assume we're out of scope.
-- If you want senior operators to get your revenue engine right, make it AI-ready, and increasingly stay on to run it, that's us.
+- If you want senior operators to get your revenue foundation right, make it AI-ready, and increasingly stay on to run it, that's us.
 
 Telling you when we're not the fit is still the point. If we talk and it's clearly a straight hire you need, we'll say so.
 

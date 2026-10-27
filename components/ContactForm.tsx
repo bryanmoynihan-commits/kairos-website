@@ -212,7 +212,7 @@ export default function ContactForm() {
       <div role="status" className="border border-[#2a2a2a] bg-[#111] p-10 text-center">
         <p className="text-[#f0f0eb] text-lg font-medium mb-2">Message received.</p>
         <p className="text-[#999] text-sm">
-          We&apos;ll be in touch within one business day to schedule a discovery call.
+          We&apos;ll be in touch within one business day to schedule an intro call.
         </p>
       </div>
     );

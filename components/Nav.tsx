@@ -55,7 +55,7 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link
           href="/"
-          aria-label="Kairos Performance — home"
+          aria-label="Kairos Performance home"
           className="flex items-center"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -89,11 +89,11 @@ export default function Nav() {
           ))}
           <TrackedLink
             href="/contact"
-            ctaName="Schedule a Discovery Call"
+            ctaName="Book an Intro Call"
             ctaLocation="nav"
             className="inline-flex items-center bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-5 py-2.5 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
-            Schedule a Discovery Call
+            Book an Intro Call
           </TrackedLink>
         </nav>
 
@@ -144,12 +144,12 @@ export default function Nav() {
           ))}
           <TrackedLink
             href="/contact"
-            ctaName="Schedule a Discovery Call"
+            ctaName="Book an Intro Call"
             ctaLocation="nav_mobile"
             onClick={() => setMenuOpen(false)}
             className="mt-2 inline-flex items-center justify-center bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-5 py-3 rounded-sm transition-all duration-300 ease-out"
           >
-            Schedule a Discovery Call
+            Book an Intro Call
           </TrackedLink>
         </motion.div>
       )}

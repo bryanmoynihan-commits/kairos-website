@@ -217,8 +217,9 @@ export default function Hero() {
           animate={animate}
           custom={prefersReducedMotion ? 0 : 0.3}
         >
-          Leadership teams use our AI-native revenue systems to drive growth
-          through better execution — not bigger teams.
+          Kairos Performance builds the AI-native revenue operating system
+          underneath your growth plan, so your team scales on clean data
+          instead of bigger headcount.
         </motion.p>
         <motion.div
           variants={heroVariants}
@@ -229,11 +230,11 @@ export default function Hero() {
         >
           <TrackedLink
             href="/contact"
-            ctaName="Schedule a Discovery Call"
+            ctaName="Book an Intro Call"
             ctaLocation="hero"
             className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
-            Schedule a Discovery Call
+            Book an Intro Call
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               <ArrowIcon />
             </span>

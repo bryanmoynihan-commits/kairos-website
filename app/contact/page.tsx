@@ -4,8 +4,8 @@ import FadeIn from "@/components/FadeIn";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact — Kairos Performance",
-  description: "Schedule your discovery call with Kairos Performance. Tell us where your revenue operation is breaking down and we'll follow up within one business day.",
+  title: "Contact",
+  description: "Book an intro call with Kairos Performance. Tell us where your revenue operation is breaking down and we'll follow up within one business day.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
                   Contact
                 </p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-tight mb-4">
-                  Schedule your discovery call.
+                  Book your intro call.
                 </h1>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">
                   Tell us where you are and what you&apos;re trying to solve.
@@ -40,11 +40,11 @@ export default function ContactPage() {
                 <ul className="space-y-4 text-[#c0bdb8] text-sm leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">01</span>
-                    <span>We&apos;ll review your message and reach out within one business day to schedule a discovery call.</span>
+                    <span>We&apos;ll review your message and reach out within one business day to schedule an intro call.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">02</span>
-                    <span>The discovery call is focused — we&apos;ll learn how your business operates and where growth is creating friction.</span>
+                    <span>The intro call is focused. We&apos;ll learn how your business operates and where growth is creating friction.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">03</span>

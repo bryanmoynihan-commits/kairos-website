@@ -67,7 +67,7 @@ export default function InvestmentFactors() {
             <p className="text-[#c0bdb8] text-base leading-relaxed max-w-3xl">
               Price in consulting is driven by scope, complexity, and the
               strategic depth of involvement. Here&apos;s a plain-English
-              breakdown of what pushes engagements in either direction &mdash;
+              breakdown of what pushes engagements in either direction,
               so you can estimate fit before you ever talk to us.
             </p>
           </FadeIn>

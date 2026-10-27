@@ -8,30 +8,30 @@ export default function PricingCTA() {
       <div className="max-w-6xl mx-auto px-6 text-center">
         <FadeIn delay={0}>
           <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
-            Ready to build the foundation behind the growth story?
+            Let&apos;s talk about where things are breaking down.
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
           <p className="text-[#c0bdb8] text-base leading-relaxed max-w-xl mx-auto mb-4">
             Whether you need a quick discovery sprint, a focused assessment,
-            a scoped project, or an ongoing partnership &mdash; the
+            a scoped project, or an ongoing partnership, the
             conversation starts the same way.
           </p>
         </FadeIn>
         <FadeIn delay={0.15}>
           <p className="text-[#c0bdb8]/70 text-sm leading-relaxed max-w-lg mx-auto mb-10">
-            We connect you with a principal &mdash; not an SDR. If
+            We connect you with a principal, not an SDR. If
             there&apos;s not a fit, we&apos;ll tell you directly.
           </p>
         </FadeIn>
         <FadeIn delay={0.2}>
           <TrackedLink
             href="/contact"
-            ctaName="Schedule a Discovery Call"
+            ctaName="Book an Intro Call"
             ctaLocation="pricing_cta"
             className="group inline-flex items-center justify-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
           >
-            Schedule a Discovery Call
+            Book an Intro Call
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               <ArrowIcon />
             </span>

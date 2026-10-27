@@ -4,7 +4,7 @@ slug: "what-is-ai-native-revops"
 date: "2026-04-25"
 author: "Kairos Performance"
 category: "AI & Automation"
-excerpt: "AI-native RevOps means AI lives at the core of revenue workflows — not bolted on top. The workflows wouldn't function without it. Here's the distinction most companies miss, why it matters now, and what it actually looks like in practice."
+excerpt: "AI-native RevOps means AI lives at the core of revenue workflows, not bolted on top. The workflows wouldn't function without it. Here's the distinction most companies miss, why it matters now, and what it actually looks like in practice."
 tags: ["ai-native", "revops", "ai", "gtm", "automation", "transformation"]
 published: true
 ---

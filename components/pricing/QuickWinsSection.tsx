@@ -31,7 +31,7 @@ const quickWins = [
     price: "$5,000 \u2013 $30,000",
     timeline: "2\u20136 weeks",
     description:
-      "Build and deploy one automation in a controlled environment. You get a working prototype with real performance data \u2014 proof that the approach works before committing to a larger engagement.",
+      "Build and deploy one automation in a controlled environment. You get a working prototype with real performance data, proof that the approach works before committing to a larger engagement.",
     included: [
       "Discovery and requirements scoping (or continuation from Discovery Sprint)",
       "Architecture design and tool selection",

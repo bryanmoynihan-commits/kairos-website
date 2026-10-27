@@ -26,8 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: resource.excerpt,
       url: CANONICAL,
       type: "article",
-      publishedTime: new Date(resource.date).toISOString(),
-      authors: [resource.author],
+      authors: ["Kairos Performance"],
     },
     twitter: {
       card: "summary",
@@ -49,10 +48,9 @@ export default function ChecklistPage() {
     "@type": "Article",
     headline: resource.title,
     description: resource.excerpt,
-    datePublished: new Date(resource.date).toISOString(),
     author: {
       "@type": "Organization",
-      name: resource.author,
+      name: "Kairos Performance",
       url: "https://kairosperformance.ai",
     },
     publisher: {
@@ -113,19 +111,9 @@ export default function ChecklistPage() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="flex items-center gap-3 text-sm text-[#555]">
-                <span>{resource.author}</span>
-                <span>·</span>
-                <time dateTime={resource.date}>
-                  {new Date(resource.date + "T00:00:00").toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-                <span>·</span>
-                <span>{resource.readingTime} min read</span>
-              </div>
+              <p className="text-sm text-[#555]">
+                A Kairos Performance operator resource.
+              </p>
             </FadeIn>
           </header>
 
@@ -179,26 +167,25 @@ export default function ChecklistPage() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
-                Ready to build the foundation behind the growth story?
+                Let&apos;s talk about where things are breaking down.
               </h2>
             </FadeIn>
             <FadeIn delay={0.15}>
               <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
                 If any of this resonated with what you&apos;re seeing inside
-                your own revenue operation, let&apos;s talk. We start every
-                engagement with a focused discovery call &mdash; no pitch,
-                just a conversation about where things are breaking down and
-                whether we&apos;re the right partner to help fix it.
+                your own revenue operation, start with a short intro call. No
+                pitch, just a conversation about what&apos;s getting in the
+                way and whether we&apos;re the right partner to help fix it.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <TrackedLink
                 href="/contact"
-                ctaName="Schedule a Discovery Call"
+                ctaName="Book an Intro Call"
                 ctaLocation="checklist_end"
                 className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
               >
-                Schedule a Discovery Call
+                Book an Intro Call
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowIcon />
                 </span>

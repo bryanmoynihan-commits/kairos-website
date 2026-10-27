@@ -21,7 +21,7 @@ export async function GET() {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Operator Insights — Kairos Performance</title>
+    <title>Operator Insights | Kairos Performance</title>
     <link>${base}/operator-insights</link>
     <description>Perspectives on RevOps, AI-native operations, and scaling revenue systems.</description>
     <language>en-us</language>

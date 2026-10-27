@@ -20,17 +20,17 @@ export default function Footer() {
             Kairos Performance
           </p>
           <p className="text-[#f0f0eb] text-lg font-medium max-w-sm leading-snug">
-            Ready to build the foundation behind the growth story?
+            The moment is now. Let&apos;s build your edge.
           </p>
         </div>
 
         <TrackedLink
           href="/contact"
-          ctaName="Schedule a Discovery Call"
+          ctaName="Book an Intro Call"
           ctaLocation="footer"
           className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
         >
-          Schedule a Discovery Call
+          Book an Intro Call
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
             <ArrowIcon />
           </span>

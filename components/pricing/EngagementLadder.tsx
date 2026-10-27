@@ -82,7 +82,7 @@ export default function EngagementLadder() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mx-auto">
-              Most clients start with a Discovery Sprint or Pilot &mdash; then
+              Most clients start with a Discovery Sprint or Pilot, then
               expand as results prove out. No pressure to commit to a large
               engagement upfront.
             </p>

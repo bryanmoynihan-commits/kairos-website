@@ -10,7 +10,7 @@ import path from "node:path";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "Kairos Performance — AI-Native Revenue Operating Systems";
+  "Kairos Performance | AI-Native Revenue Operating Systems";
 
 // Brand tokens (mirrors app/layout.tsx + logo-horizontal.svg)
 const BG = "#0e0d0d";

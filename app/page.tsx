@@ -6,9 +6,9 @@ import TrackedLink from "@/components/TrackedLink";
 import ArrowIcon from "@/components/ArrowIcon";
 
 export const metadata: Metadata = {
-  title: "Kairos Performance — AI-Native Revenue Operating Systems",
+  title: "Kairos Performance | AI-Native Revenue Operating Systems",
   openGraph: {
-    title: "Kairos Performance — AI-Native Revenue Operating Systems",
+    title: "Kairos Performance | AI-Native Revenue Operating Systems",
     url: "https://kairosperformance.ai",
   },
 };
@@ -20,11 +20,38 @@ function CTAButton({ location }: { location: string }) {
   return (
     <TrackedLink
       href="/contact"
-      ctaName="Schedule a Discovery Call"
+      ctaName="Book an Intro Call"
       ctaLocation={location}
       className={ctaButtonClass}
     >
-      Schedule a Discovery Call
+      Book an Intro Call
+      <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+        <ArrowIcon />
+      </span>
+    </TrackedLink>
+  );
+}
+
+const ladderLinkClass =
+  "group inline-flex items-center gap-2 text-sm font-medium text-[#c0bdb8] hover:text-[#f0f0eb] underline underline-offset-[6px] decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-300 py-2";
+
+function LadderLink({
+  href,
+  label,
+  location,
+}: {
+  href: string;
+  label: string;
+  location: string;
+}) {
+  return (
+    <TrackedLink
+      href={href}
+      ctaName={label}
+      ctaLocation={location}
+      className={ladderLinkClass}
+    >
+      {label}
       <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
         <ArrowIcon />
       </span>
@@ -49,18 +76,18 @@ const stats = [
 const planSteps = [
   {
     step: "01",
-    title: "Book a Discovery Call",
-    body: "Tell us where things are breaking down — data, process, tooling, team alignment. We listen first.",
+    title: "Book an Intro Call",
+    body: "Tell us where things are breaking down: data, process, tooling, team alignment. We listen first.",
   },
   {
     step: "02",
     title: "Get your AI Readiness Assessment",
-    body: "A prioritized roadmap of your data, process, and tooling gaps — so you know what to fix first and in what order.",
+    body: "A prioritized roadmap of your data, process, and tooling gaps, so you know what to fix first and in what order.",
   },
   {
     step: "03",
     title: "Build your Revenue Operating System",
-    body: "We execute alongside your team — and your team owns everything we build.",
+    body: "We execute alongside your team, and your team owns everything we build.",
   },
 ];
 
@@ -102,7 +129,11 @@ export default function Home() {
           </ul>
 
           <FadeIn delay={0.1}>
-            <CTAButton location="stakes" />
+            <LadderLink
+              href="/operator-insights/why-automating-broken-gtm-makes-it-worse"
+              label="Read why automating a broken GTM makes it worse"
+              location="stakes"
+            />
           </FadeIn>
         </div>
       </section>
@@ -130,12 +161,16 @@ export default function Home() {
             <p className="text-[#c0bdb8] text-base leading-relaxed max-w-3xl mb-12">
               The board trusts your forecast. Your team runs strategy instead
               of manual reconciliation. Your growth plan finally has the
-              infrastructure underneath it to match your ambition — and
+              infrastructure underneath it to match your ambition, and
               you&apos;re the operator who built it.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <CTAButton location="success" />
+            <LadderLink
+              href="/resources/ai-readiness-checklist"
+              label="Get the AI Readiness Checklist"
+              location="success"
+            />
           </FadeIn>
         </div>
       </section>
@@ -154,7 +189,7 @@ export default function Home() {
                   <span className="block">We lived them.</span>
                 </h2>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">
-                  Our founders built and fixed the same systems we now help you
+                  Our team built and fixed the same systems we now help you
                   build.
                 </p>
               </div>
@@ -169,10 +204,10 @@ export default function Home() {
                   wasn&apos;t built to support what comes next.
                 </p>
                 <p>
-                  Our founders built revenue operations and led AI
-                  transformation inside a PE-backed business, growing it from
-                  $12M to $25M+ in ARR, improving profit margins from −30% to
-                  +17%, and deploying numerous production AI systems.
+                  Before Kairos Performance existed, our team built and ran
+                  these systems inside a PE-backed SaaS company: growing it
+                  from $12M to $25M+ in ARR, improving profit margins from
+                  −30% to +17%, and deploying numerous production AI systems.
                   We&apos;ve done the work we&apos;re asking you to trust us
                   with.
                 </p>
@@ -197,7 +232,11 @@ export default function Home() {
 
           <FadeIn delay={0.1}>
             <div className="mt-8">
-              <CTAButton location="empathy_authority" />
+              <LadderLink
+                href="/pricing"
+                label="See what an engagement costs"
+                location="empathy_authority"
+              />
             </div>
           </FadeIn>
         </div>
@@ -260,21 +299,18 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-[#c0bdb8] text-base leading-relaxed">
               <p>
-                We partner with mid-market B2B leadership teams to diagnose and
-                fix the foundational gaps in their revenue operations — data,
-                definitions, process, and tooling. We start with an AI
+                Kairos Performance partners with mid-market B2B leadership
+                teams to diagnose and fix the foundational gaps in their revenue
+                operations: data, definitions, process, and tooling. We start with an AI
                 Readiness Assessment, build a prioritized roadmap, and execute
                 alongside your team.
               </p>
               <p>
-                AI and automation aren&apos;t an afterthought — we build them
-                into the foundation as we fix it, creating an AI-native
-                operating system that turns clean data and process into a
-                scalable growth engine. Everything we build, your team owns.
+                AI and automation aren&apos;t an afterthought. We build them
+                into the foundation as we fix it, so clean data and process
+                become an AI-native operating system that scales with your
+                growth plan. Everything we build, your team owns.
               </p>
-              <div className="pt-4">
-                <CTAButton location="explanatory" />
-              </div>
             </div>
           </FadeIn>
         </div>
