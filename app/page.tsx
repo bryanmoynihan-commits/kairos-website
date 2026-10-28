@@ -204,10 +204,10 @@ export default function Home() {
                   wasn&apos;t built to support what comes next.
                 </p>
                 <p>
-                  Before Kairos Performance existed, our team built and ran
-                  these systems inside a PE-backed SaaS company: growing it
-                  from $12M to $25M+ in ARR, improving profit margins from
-                  −30% to +17%, and deploying numerous production AI systems.
+                  Our team built revenue operations and led AI transformation
+                  inside a PE-backed business, growing it from $12M to $25M+
+                  in ARR, improving profit margins from −30% to +17%, and
+                  deploying numerous production AI systems.
                   We&apos;ve done the work we&apos;re asking you to trust us
                   with.
                 </p>
