@@ -27,7 +27,7 @@ Here's what you'll see if you start shopping:
 
 **Project-based work** - assessments, CRM migrations, automation builds, process redesigns - typically runs $6,500 to $75,000+ depending on complexity. A RevOps audit or assessment might cost $6,500-$30,000. A full CRM architecture rebuild or large-scale automation project can run $25,000-$75,000.
 
-**Hourly billing** still exists, typically $150-$400/hour for senior operators. I'll explain in a moment why this is usually the wrong model for RevOps work.
+**Hourly billing** still exists, typically $150-$400/hour for senior operators. More on why this is usually the wrong model for RevOps work in a moment.
 
 What you won't find on most consulting websites is published pricing at all. The majority of firms in this space gate their pricing behind "book a call" or "request a proposal." That doesn't necessarily mean they're hiding something - scoping RevOps work is genuinely complex and pricing depends on variables that are hard to standardize. But it does mean you'll spend more time in discovery calls before you can compare options. Firms that publish transparent pricing are making a deliberate choice to let you self-qualify before either side invests time - and that's worth noting when you're evaluating partners.
 
@@ -60,7 +60,7 @@ Hourly billing is structurally misaligned for RevOps consulting. RevOps work is 
 
 Worse, hourly billing creates friction that kills engagement momentum. When a client is watching the meter, they hesitate to call with the "quick question" that turns out to reshape the entire engagement. They start rationing access to the consultant, which is exactly the opposite of what you want during a transformation where context is everything.
 
-The retainer vs. project decision is more nuanced. Projects work well for bounded deliverables. But here's what I've seen play out repeatedly: every RevOps project surfaces new priorities and scope changes mid-stream. A CRM audit reveals data quality issues that need addressing before the automation work can start. A pipeline redesign uncovers forecasting gaps. On a project contract, each of those discoveries triggers a stop - draft a change order, negotiate scope, restart. On a retainer, you adjust and keep moving. The momentum difference is real.
+The retainer vs. project decision is more nuanced. Projects work well for bounded deliverables. But here's the pattern that plays out again and again: every RevOps project surfaces new priorities and scope changes mid-stream. A CRM audit reveals data quality issues that need addressing before the automation work can start. A pipeline redesign uncovers forecasting gaps. On a project contract, each of those discoveries triggers a stop - draft a change order, negotiate scope, restart. On a retainer, you adjust and keep moving. The momentum difference is real.
 
 ## The comparison most buyers actually need: fractional vs. full-time hire
 

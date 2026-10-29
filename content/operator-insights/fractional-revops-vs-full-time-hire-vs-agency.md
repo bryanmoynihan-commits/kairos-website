@@ -34,7 +34,7 @@ If you have steady, everyday RevOps work - someone owning the CRM, sitting in ev
 
 The honest cost picture: a Revenue Operations Manager averages roughly $125K in base salary in the US, and a Director of Revenue Operations runs about $216K base. [1] Load in payroll taxes, benefits, and overhead - the standard multiplier is 1.25 to 1.4x base [2] - and your true cost lands closer to $155-180K a year for a manager and $270-300K+ for a director. Add three to six months of ramp before they're fully productive, plus recruiting time and the risk of a mis-hire.
 
-Here's the trap I'd watch for: hiring one person to be your entire RevOps function. A single generalist rarely covers systems administration, analytics, process design, *and* enablement well. If your job description reads like four jobs, a lone hire will drown - and that's often the moment fractional or an agency makes more sense.
+Watch for this trap: hiring one person to be your entire RevOps function. A single generalist rarely covers systems administration, analytics, process design, *and* enablement well. If your job description reads like four jobs, a lone hire will drown - and that's often the moment fractional or an agency makes more sense.
 
 ## Fractional: rented senior leadership, not a warm body
 

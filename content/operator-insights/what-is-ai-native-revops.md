@@ -72,7 +72,7 @@ But most companies aren't starting from zero. They're running established GTM mo
 
 The jump to Orchestrative is where "AI-native" starts to take shape - because that's where you're redesigning the factory floor, not just swapping in a faster motor.
 
-Here's the pattern I keep seeing: the most common failure isn't picking the wrong AI tools. It's skipping straight to buying a platform before doing the process and data work required to support it. The model performs fine technically. The business outcomes don't materialize. And internal trust in AI collapses - which is harder to rebuild than the technology itself.
+Here's the pattern we keep seeing: the most common failure isn't picking the wrong AI tools. It's skipping straight to buying a platform before doing the process and data work required to support it. The model performs fine technically. The business outcomes don't materialize. And internal trust in AI collapses - which is harder to rebuild than the technology itself.
 
 Process first, definition and alignment first, AI second. Every time. That sequence isn't optional.
 

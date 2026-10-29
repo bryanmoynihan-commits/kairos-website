@@ -37,7 +37,7 @@ Here's what it looks like in practice. A company decides to automate lead routin
 
 **Undefined handoffs become automated black holes.** A deal closes, and automation triggers the onboarding sequence. But no one defined what information needs to transfer from sales to CS. So the onboarding team reaches out to the customer and starts asking questions the customer already answered during the sales process. The customer is annoyed. The CS team is guessing. And the implementation gets aimed at the wrong outcomes because nobody transitioned what the customer actually hoped to achieve.
 
-In my experience, the scariest version of this isn't the dramatic failure. It's the slow bleed: where the automation is running, the dashboards show activity, and leadership assumes things are working because the system is "doing stuff." But the stuff it's doing isn't moving revenue.
+The scariest version of this isn't the dramatic failure. It's the slow bleed: where the automation is running, the dashboards show activity, and leadership assumes things are working because the system is "doing stuff." But the stuff it's doing isn't moving revenue.
 
 ## The three root causes (and how to spot them)
 
@@ -71,15 +71,15 @@ The most common version of this: a deal closes and moves from sales to customer 
 
 The result? The onboarding team starts from scratch. They ask the customer questions they've already answered. Worse, they default to training the customer on every feature in the product instead of focusing on the one or two things the customer actually signed up to accomplish. Adoption suffers because the customer is drowning in capabilities they didn't ask for while the specific outcomes they cared about go unaddressed. And when renewal comes around, they churn, not because the product couldn't deliver, but because nobody ensured it delivered on what mattered to them.
 
-This isn't a hypothetical. I've watched it happen. Customers who were laser-focused on two or three key use cases got put through a generic onboarding that tried to cover everything. Their adoption was poor, their engagement dropped, and by the time renewal came up, they were gone. The product could have solved their problem. The handoff made sure it didn't.
+This isn't a hypothetical. We've watched it happen. Customers who were laser-focused on two or three key use cases got put through a generic onboarding that tried to cover everything. Their adoption was poor, their engagement dropped, and by the time renewal came up, they were gone. The product could have solved their problem. The handoff made sure it didn't.
 
-OnRamp's 2026 State of Customer Onboarding Report (a survey of 161 onboarding and CS leaders across B2B industries) found that misalignment between sales and CS during handoff is the single biggest operational blocker to scaling onboarding successfully. That tracks with everything I've seen.
+OnRamp's 2026 State of Customer Onboarding Report (a survey of 161 onboarding and CS leaders across B2B industries) found that misalignment between sales and CS during handoff is the single biggest operational blocker to scaling onboarding successfully. That tracks with everything we've seen.
 
 Without a RACI that defines who is responsible for what at each handoff point, automation just makes the gap more visible. You can automate a Slack notification that says "deal closed, start onboarding." But if nobody defined what information travels with that notification, you've automated the trigger without automating the substance.
 
 ## What this actually looks like: a real example
 
-I saw this play out at a company I worked with. The marketing team was hosting webinars that had been inherited from an acquired business. The format attracted attendees, but the attendees weren't real buyers. They were people interested in the educational content of the original webinar series, not people with buying intent or purchasing authority.
+We saw this play out at one B2B company. The marketing team was hosting webinars that had been inherited from an acquired business. The format attracted attendees, but the attendees weren't real buyers. They were people interested in the educational content of the original webinar series, not people with buying intent or purchasing authority.
 
 Nobody questioned the inputs. Instead, the team built automation to push those webinar leads into the sales funnel: nurture sequences, lead scoring, SDR follow-up. The automation worked perfectly. It efficiently routed hundreds of unqualified leads through a real pipeline with real sales resources attached.
 
@@ -91,7 +91,7 @@ That's the pattern. The automation did exactly what it was told to do. The probl
 
 If any of this sounds familiar, the answer isn't to stop automating. Automation is genuinely powerful when applied to a solid foundation. The answer is to fix the foundation first.
 
-I'm not going to throw some recycled stat at you about how 95% of AI projects fail. What I will tell you is that I've seen them fail, and when they do, it's almost always because the team implementing them didn't start from first principles. They didn't understand their foundation before they automated on top of it. The fix isn't complicated, but it does require discipline.
+Skip the recycled stat about how 95% of AI projects fail. Here's what we've seen firsthand: when they fail, it's almost always because the team implementing them didn't start from first principles. They didn't understand their foundation before they automated on top of it. The fix isn't complicated, but it does require discipline.
 
 Here's a practical sequence that works:
 
@@ -106,7 +106,7 @@ This isn't glamorous work. It's not the exciting AI transformation that gets exe
 
 ## When it's OK to automate in parallel
 
-I should be nuanced here: the answer isn't always "fix everything first, then automate." There are quick wins that are fine to pursue in parallel, as long as they don't depend on the broken parts of your foundation.
+One nuance: the answer isn't always "fix everything first, then automate." There are quick wins that are fine to pursue in parallel, as long as they don't depend on the broken parts of your foundation.
 
 **Examples of safe parallel automation:** scheduling tools that reduce back-and-forth, data enrichment that fills in missing fields from external sources, internal notifications that keep teams informed. These are additive. They don't amplify existing dysfunction because they're not built on top of it.
 
