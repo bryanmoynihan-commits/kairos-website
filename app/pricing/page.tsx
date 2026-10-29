@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import PricingHero from "@/components/pricing/PricingHero";
-import EngagementTypes from "@/components/pricing/EngagementTypes";
-import EngagementLadder from "@/components/pricing/EngagementLadder";
+import PricingPath from "@/components/pricing/PricingPath";
+import CreditsForward from "@/components/pricing/CreditsForward";
 import QuickWinsSection from "@/components/pricing/QuickWinsSection";
 import EntryPointsSection from "@/components/pricing/EntryPointsSection";
 import RetainersSection from "@/components/pricing/RetainersSection";
 import ProjectsSection from "@/components/pricing/ProjectsSection";
-import InvestmentFactors from "@/components/pricing/InvestmentFactors";
 import PricingCTA from "@/components/pricing/PricingCTA";
 
 export const metadata: Metadata = {
@@ -24,14 +23,18 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <>
-      <PricingHero />
-      <EngagementTypes />
-      <EngagementLadder />
+      {/* On desktop, hero + overview fill the first screen so the cards sit
+          just above the fold at any height. Extra space goes to the hero's
+          padding; capped so very tall screens don't get a cavernous hero. */}
+      <div className="flex flex-col lg:min-h-[min(calc(100svh-2rem),1000px)]">
+        <PricingHero />
+        <PricingPath />
+      </div>
+      <RetainersSection />
       <QuickWinsSection />
       <EntryPointsSection />
-      <RetainersSection />
       <ProjectsSection />
-      <InvestmentFactors />
+      <CreditsForward />
       <PricingCTA />
       <Footer />
     </>

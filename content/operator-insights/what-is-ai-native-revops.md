@@ -27,7 +27,7 @@ For most companies, the answer is yes. They'd be slower. Reporting would take lo
 
 That's not AI-native. That's AI-assisted. And there's nothing wrong with it as a starting point. But it's not where the real operational advantage lives.
 
-In an AI-native revenue operation, the workflows themselves are designed around what AI makes possible. They couldn't exist without it. Think about a CRM agent that ingests call transcripts from Gong, analyzes conversations across an entire book of business, and suggests field-level updates to account and opportunity records. That's not speeding up an existing process. That process didn't exist before. No rep was listening to 50 calls, cross-referencing what was said against 15 CRM fields, and proposing bulk updates with one-click approval. It wasn't happening slowly. It wasn't happening at all.
+In AI-native revenue operations, the workflows themselves are designed around what AI makes possible. They couldn't exist without it. Think about a CRM agent that ingests call transcripts from Gong, analyzes conversations across an entire book of business, and suggests field-level updates to account and opportunity records. That's not speeding up an existing process. That process didn't exist before. No rep was listening to 50 calls, cross-referencing what was said against 15 CRM fields, and proposing bulk updates with one-click approval. It wasn't happening slowly. It wasn't happening at all.
 
 And the data shows why this matters so much: 44% of the contacts sellers interact with aren't even in the CRM, and 26% of those missing contacts are senior decision-makers [3]. This isn't a speed problem. It's a visibility problem. An AI-native workflow doesn't just update fields faster - it captures signal that would otherwise never make it into the system at all.
 
@@ -41,7 +41,7 @@ It wasn't until the 1920s - when factories were completely redesigned around wha
 
 We're watching the same pattern play out with AI in revenue operations right now. Most companies have swapped the motor. They've bought Gong, plugged in ChatGPT Enterprise, maybe deployed an AI SDR tool. But the factory floor looks the same. Leads still route the same way. Reps still update the CRM the same way (or, more accurately, still don't). Forecasting still relies on the same manual inputs.
 
-Jacco van der Kooij at Winning by Design puts it bluntly: "AI is like a souped-up rocket engine - any flaws in its design will cause it to crash faster." [5] The companies pulling ahead aren't the ones with the most AI tools. They're the ones that asked a harder question: what would our revenue operation look like if we designed it from scratch, knowing what AI can do?
+Jacco van der Kooij at Winning by Design puts it bluntly: "AI is like a souped-up rocket engine - any flaws in its design will cause it to crash faster." [5] The companies pulling ahead aren't the ones with the most AI tools. They're the ones that asked a harder question: what would our revenue operations look like if we designed them from scratch, knowing what AI can do?
 
 ## What AI-Native Actually Looks Like in Practice
 
@@ -84,7 +84,7 @@ That's still early. But it's where the real competitive separation will happen. 
 
 ## Next Steps
 
-1. **Run the litmus test on your current AI usage.** For every AI tool or workflow in your revenue operation, ask: would this still function without AI? If the answer is yes for everything, you're AI-assisted, not AI-native. That's a starting point, not a destination.
+1. **Run the litmus test on your current AI usage.** For every AI tool or workflow in your revenue operations, ask: would this still function without AI? If the answer is yes for everything, you're AI-assisted, not AI-native. That's a starting point, not a destination.
 2. **Identify one workflow where AI could be structural, not supplemental.** Start with the area where manual effort is highest and data is richest - CRM hygiene and pipeline management are common first moves.
 3. **Fix the foundation before scaling AI.** If your CRM data isn't clean, your processes aren't defined, and your team isn't aligned on how data flows - adding more AI will amplify the mess, not fix it.
 

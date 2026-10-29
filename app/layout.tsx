@@ -6,6 +6,7 @@ import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import ScrollToTop from "@/components/ScrollToTop";
+import NoOrphans from "@/components/NoOrphans";
 import UTMCapture from "@/components/UTMCapture";
 import ScrollDepthTracker from "@/components/ScrollDepthTracker";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geist.variable} antialiased bg-[#0e0d0d] text-[#f0f0eb]`}>
         <ScrollToTop />
+        <NoOrphans />
         <Nav />
         <main className="pt-20">{children}</main>
 

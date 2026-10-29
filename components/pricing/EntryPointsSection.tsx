@@ -42,7 +42,7 @@ const entryPoints = [
     ],
     costsHigher: [
       "Multiple GTM motions (PLG + sales-led simultaneously)",
-      "Poor CRM hygiene requiring significant data archaeology",
+      "Poor CRM hygiene requiring significant data cleanup",
       "Large stakeholder group across multiple geographies",
     ],
     costsLower: [
@@ -59,7 +59,7 @@ export default function EntryPointsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               Assessments
             </p>
           </FadeIn>
@@ -69,7 +69,7 @@ export default function EntryPointsSection() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl">
+            <p className="text-[#c0bdb8] text-base leading-relaxed">
               Deep-dive assessments with a clear deliverable. Fixed-fee,
               time-bounded, zero ambiguity.
             </p>
@@ -85,7 +85,7 @@ export default function EntryPointsSection() {
         </div>
 
         <FadeIn delay={0.3}>
-          <p className="mt-10 text-center text-sm text-[#c0bdb8]/70 leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-10 text-base text-[#c0bdb8] leading-relaxed">
             Most engagements surface opportunities across both domains. We
             scope around your primary entry point and flag adjacent work as we
             go.

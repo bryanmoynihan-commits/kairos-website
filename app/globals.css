@@ -224,3 +224,18 @@ body::after {
   background-repeat: repeat;
   background-size: 256px 256px;
 }
+
+/* Typography: avoid orphaned words and lopsided headings */
+p,
+li,
+dd,
+blockquote,
+summary {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}

@@ -70,7 +70,6 @@ export function CheckIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className="shrink-0 mt-0.5"
     >
       <path d="M2 7.5l3.5 3.5L12 3" />
     </svg>

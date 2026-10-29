@@ -1,4 +1,5 @@
-import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
+import ArrowIcon from "@/components/ArrowIcon";
 import FadeIn from "@/components/FadeIn";
 import { CheckIcon } from "./icons";
 
@@ -10,6 +11,7 @@ const retainerTiers = [
     bestFor:
       "Companies with a single defined problem area: one GTM function that needs structure, one automation initiative that needs ownership.",
     included: [
+      "Executive-level strategic involvement",
       "One defined functional area (RevOps or AI Ops)",
       "Monthly deliverable set agreed at engagement start",
       "Bi-weekly working sessions",
@@ -26,13 +28,13 @@ const retainerTiers = [
     bestFor:
       "Companies ready to move from diagnosis to active execution across RevOps and AI, with a single partner who owns the integrated roadmap and drives it forward.",
     included: [
-      "Two functional areas or broader scope within one",
+      "Executive-level strategic involvement",
+      "Two focus areas, with two automation builds running concurrently",
+      "Discovery, design, build, documentation, and training for every build",
       "Active roadmap management and prioritization",
       "Weekly working sessions",
       "Async Slack access",
-      "Monthly ROI reporting",
-      "QBR at 90 days with upsell/scope review",
-      "New automation scoping included (builds priced separately)",
+      "QBR at 90 days",
     ],
     highlighted: true,
   },
@@ -41,16 +43,15 @@ const retainerTiers = [
     price: "$25,000",
     commitment: "3-month minimum",
     bestFor:
-      "PE-backed operators or complex organizations where both RevOps and AI Ops require active, senior-level ownership, with executive-level involvement and full strategic alignment.",
+      "Organizations ready to adopt AI across the whole business, not just in a few workflows. Everything in Build, plus the change management and workforce upskilling that make adoption stick.",
     included: [
-      "Full coverage across RevOps and AI Ops",
-      "Executive-level strategic involvement",
+      "Everything in Build",
+      "Organizational AI adoption consulting: operating model, champion network, and change management",
+      "Staged workforce training, from everyday AI use to building skills, agents, and automations",
+      "AI ROI dashboard for leadership, board, and investor conversations",
       "Weekly sessions plus on-demand access",
-      "Full async Slack access",
-      "Monthly board-ready ROI reporting",
       "Quarterly business reviews with PE/board presentation support",
       "Priority access for new automation builds",
-      "Dedicated capacity guarantee",
     ],
     highlighted: false,
   },
@@ -62,8 +63,8 @@ export default function RetainersSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
-              Fractional partnership
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
+              Where most clients end up
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -72,13 +73,13 @@ export default function RetainersSection() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mb-4">
+            <p className="text-[#c0bdb8] text-base leading-relaxed mb-4">
               Fractional partnership priced by scope and depth of engagement,
               not by hours.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-[#c0bdb8] text-sm leading-relaxed max-w-3xl">
+            <p className="text-[#c0bdb8] text-sm leading-relaxed">
               We don&apos;t price by the hour. Each tier is defined by
               functional coverage and deliverable commitment. The right
               tier is determined by the scope of what you need us to own.
@@ -90,10 +91,12 @@ export default function RetainersSection() {
 
         {/* Why we lead with retainers callout */}
         <FadeIn delay={0.25}>
-          <div className="mb-12 bg-white/[0.03] border border-white/10 rounded-lg p-6">
-            <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
+          <details className="group/why mb-12 bg-white/[0.03] border border-white/10 rounded-lg hover:border-white/20 transition-colors">
+            <summary className="flex items-center justify-between gap-2 cursor-pointer list-none p-6 text-sm text-[#2dd4bf] uppercase tracking-wider [&::-webkit-details-marker]:hidden">
               Why we lead with retainers
-            </p>
+              <span className="text-lg leading-none transition-transform duration-300 group-open/why:rotate-45">+</span>
+            </summary>
+            <div className="px-6 pb-6">
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-3">
               On nine out of ten engagements, something changes halfway
               through: a new priority surfaces, a system behaves
@@ -114,7 +117,8 @@ export default function RetainersSection() {
               systems, and your team. Projects reset that institutional
               knowledge every time. Retainers compound it.
             </p>
-          </div>
+            </div>
+          </details>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -133,7 +137,7 @@ export default function RetainersSection() {
                   </span>
                 )}
 
-                <p className="text-xs uppercase tracking-widest text-[#2dd4bf] mb-3">
+                <p className="text-sm uppercase tracking-widest text-[#2dd4bf] mb-3">
                   {tier.name}
                 </p>
                 <p className="text-3xl font-semibold text-[#f0f0eb] mb-1">
@@ -143,9 +147,9 @@ export default function RetainersSection() {
                     / month
                   </span>
                 </p>
-                <p className="text-xs text-[#666] mb-6">{tier.commitment}</p>
+                <p className="text-sm text-[#999] mb-6">{tier.commitment}</p>
 
-                <p className="text-sm text-[#c0bdb8]/60 italic leading-relaxed mb-6">
+                <p className="text-sm text-[#c0bdb8] italic leading-relaxed mb-6">
                   {tier.bestFor}
                 </p>
 
@@ -156,7 +160,7 @@ export default function RetainersSection() {
                         key={item}
                         className="flex gap-2 text-sm text-[#c0bdb8] leading-relaxed"
                       >
-                        <span className="text-[#2dd4bf]">
+                        <span className="flex h-[1lh] shrink-0 items-center text-[#2dd4bf]">
                           <CheckIcon />
                         </span>
                         {item}
@@ -169,9 +173,10 @@ export default function RetainersSection() {
           ))}
         </div>
 
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Value bridge callout for Build tier */}
-        <FadeIn delay={0.3}>
-          <div className="mt-10 bg-white/[0.03] border border-white/10 rounded-lg p-6">
+        <FadeIn delay={0.3} className="h-full">
+          <div className="h-full bg-white/[0.03] border border-white/10 rounded-lg p-6">
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Why a single partner matters
             </p>
@@ -187,8 +192,8 @@ export default function RetainersSection() {
         </FadeIn>
 
         {/* Flexible scope callout */}
-        <FadeIn delay={0.35}>
-          <div className="mt-6 bg-white/[0.03] border border-white/10 rounded-lg p-6">
+        <FadeIn delay={0.35} className="h-full">
+          <div className="h-full bg-white/[0.03] border border-white/10 rounded-lg p-6">
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Flexible scope
             </p>
@@ -202,17 +207,22 @@ export default function RetainersSection() {
             <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
               On the other end, if you have a single, well-defined need that
               doesn&apos;t warrant a full retainer, we&apos;re open to shorter
-              commitments with narrower scope and lower investment.{" "}
-              <Link
-                href="/contact"
-                className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
-              >
-                Book an intro call
-              </Link>
-              .
+              commitments with narrower scope and lower investment.
             </p>
+            <TrackedLink
+              href="/contact"
+              ctaName="Book an Intro Call"
+              ctaLocation="pricing_flexible_scope"
+              className="mt-5 group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+            >
+              Book an Intro Call
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                <ArrowIcon />
+              </span>
+            </TrackedLink>
           </div>
         </FadeIn>
+        </div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Book an intro call with Kairos Performance. Tell us where your revenue operation is breaking down and we'll follow up within one business day.",
+  description: "Book an intro call with Kairos Performance. Tell us where your revenue operations are breaking down and we'll follow up within one business day.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
           <div className="flex flex-col gap-10">
             <FadeIn delay={0}>
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+                <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                   Contact
                 </p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-tight mb-4">
@@ -34,20 +34,20 @@ export default function ContactPage() {
 
             <FadeIn delay={0.15}>
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+                <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                   What to expect
                 </p>
                 <ul className="space-y-4 text-[#c0bdb8] text-sm leading-relaxed">
-                  <li className="flex gap-3">
-                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">01</span>
+                  <li className="flex items-baseline gap-3">
+                    <span className="text-[#2dd4bf] font-mono text-xs shrink-0">01</span>
                     <span>We&apos;ll review your message and reach out within one business day to schedule an intro call.</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">02</span>
+                  <li className="flex items-baseline gap-3">
+                    <span className="text-[#2dd4bf] font-mono text-xs shrink-0">02</span>
                     <span>The intro call is focused. We&apos;ll learn how your business operates and where growth is creating friction.</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-[#2dd4bf] font-mono text-xs mt-0.5 shrink-0">03</span>
+                  <li className="flex items-baseline gap-3">
+                    <span className="text-[#2dd4bf] font-mono text-xs shrink-0">03</span>
                     <span>If there&apos;s a fit, we&apos;ll define a clear plan and move into hands-on work together.</span>
                   </li>
                 </ul>

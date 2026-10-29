@@ -54,7 +54,7 @@ export default function InvestmentFactors() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               Cost factors
             </p>
           </FadeIn>
@@ -64,7 +64,7 @@ export default function InvestmentFactors() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-3xl">
+            <p className="text-[#c0bdb8] text-base leading-relaxed">
               Price in consulting is driven by scope, complexity, and the
               strategic depth of involvement. Here&apos;s a plain-English
               breakdown of what pushes engagements in either direction,
@@ -82,7 +82,7 @@ export default function InvestmentFactors() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
+                    <p className="text-sm uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
                       <span className="text-[#f0f0eb]/40">&uarr;</span>
                       Higher investment
                     </p>
@@ -90,7 +90,7 @@ export default function InvestmentFactors() {
                       {factor.higher.map((item) => (
                         <li
                           key={item}
-                          className="text-sm text-[#c0bdb8]/70 leading-relaxed"
+                          className="text-sm text-[#c0bdb8] leading-relaxed"
                         >
                           {item}
                         </li>
@@ -98,7 +98,7 @@ export default function InvestmentFactors() {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
+                    <p className="text-sm uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
                       <span className="text-[#f0f0eb]/40">&darr;</span>
                       Lower investment
                     </p>
@@ -106,7 +106,7 @@ export default function InvestmentFactors() {
                       {factor.lower.map((item) => (
                         <li
                           key={item}
-                          className="text-sm text-[#c0bdb8]/70 leading-relaxed"
+                          className="text-sm text-[#c0bdb8] leading-relaxed"
                         >
                           {item}
                         </li>

@@ -23,7 +23,7 @@ export default function ContactFooter() {
             alt="Kairos Performance"
             className="h-7 w-auto select-none"
           />
-          <p className="text-xs text-[#666]">
+          <p className="text-xs text-[#999]">
             &copy; {new Date().getFullYear()} Kairos Performance. All rights reserved.
           </p>
         </div>

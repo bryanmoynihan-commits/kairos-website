@@ -123,7 +123,7 @@ export default async function ArticlePage({
           {/* Article header */}
           <header className="max-w-prose mb-12">
             <FadeIn delay={0.1}>
-              <span className="text-xs uppercase tracking-widest text-[#2dd4bf] mb-4 block">
+              <span className="text-sm uppercase tracking-widest text-[#2dd4bf] mb-4 block">
                 {post.category}
               </span>
             </FadeIn>
@@ -135,7 +135,7 @@ export default async function ArticlePage({
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="flex items-center gap-3 text-sm text-[#555]">
+              <div className="flex items-center gap-3 text-sm text-[#999]">
                 <span>{post.author}</span>
                 <span>·</span>
                 <time dateTime={post.date}>
@@ -187,7 +187,7 @@ export default async function ArticlePage({
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-2xl">
             <FadeIn>
-              <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+              <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                 Ready to act
               </p>
             </FadeIn>
@@ -199,7 +199,7 @@ export default async function ArticlePage({
             <FadeIn delay={0.15}>
               <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
                 If any of this resonated with what you&apos;re seeing inside
-                your own revenue operation, start with a short intro call. No
+                your own revenue operations, start with a short intro call. No
                 pitch, just a conversation about what&apos;s getting in the
                 way and whether we&apos;re the right partner to help fix it.
               </p>

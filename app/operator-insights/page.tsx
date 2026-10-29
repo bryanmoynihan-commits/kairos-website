@@ -36,7 +36,7 @@ export default function OperatorInsightsPage() {
       <section className="pt-32 pb-24">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               Operator Insights
             </p>
           </FadeIn>
@@ -48,7 +48,7 @@ export default function OperatorInsightsPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-[#c0bdb8] text-base sm:text-lg leading-relaxed max-w-4xl mb-16">
+            <p className="text-[#c0bdb8] text-base sm:text-lg leading-relaxed mb-16">
               How operators, not observers, think about RevOps, AI, and building
               systems that scale.
             </p>
@@ -63,7 +63,7 @@ export default function OperatorInsightsPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-2xl">
             <FadeIn>
-              <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+              <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                 Ready to act
               </p>
             </FadeIn>

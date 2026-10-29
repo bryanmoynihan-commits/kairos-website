@@ -1,5 +1,6 @@
-import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import TrackedLink from "@/components/TrackedLink";
+import ArrowIcon from "@/components/ArrowIcon";
 import PricingCard from "./PricingCard";
 
 const projects = [
@@ -108,7 +109,7 @@ export default function ProjectsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               Fixed-fee engagements
             </p>
           </FadeIn>
@@ -118,13 +119,13 @@ export default function ProjectsSection() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mb-4">
+            <p className="text-[#c0bdb8] text-base leading-relaxed mb-4">
               Scoped, fixed-fee engagements for defined problems. No retainer
               required.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-[#c0bdb8] text-sm leading-relaxed max-w-3xl">
+            <p className="text-[#c0bdb8] text-sm leading-relaxed">
               Some of the highest-value work we do is project-based. These are
               clearly scoped engagements with defined deliverables, fixed fees,
               and a target timeline. Every project includes a clear handoff:
@@ -147,18 +148,22 @@ export default function ProjectsSection() {
             <p className="text-sm text-[#2dd4bf] uppercase tracking-wider mb-2">
               Don&apos;t see your use case?
             </p>
-            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed">
+            <p className="text-[#f0f0eb]/70 text-sm leading-relaxed mb-5">
               These represent common project types, not an exhaustive list. If
               you have a defined problem and want a fixed-fee engagement around
-              it, we&apos;re likely able to scope it.{" "}
-              <Link
-                href="/contact"
-                className="text-[#f0f0eb] underline underline-offset-4 decoration-[#333] hover:decoration-[#f0f0eb] transition-colors"
-              >
-                Book an intro call
-              </Link>
-              .
+              it, we&apos;re likely able to scope it.
             </p>
+            <TrackedLink
+              href="/contact"
+              ctaName="Book an Intro Call"
+              ctaLocation="pricing_projects_callout"
+              className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-6 py-3 rounded-sm shadow-[0_1px_3px_rgba(240,237,232,0.08)] hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,237,232,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(240,237,232,0.08)] transition-all duration-300 ease-out"
+            >
+              Book an Intro Call
+              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                <ArrowIcon />
+              </span>
+            </TrackedLink>
           </div>
         </FadeIn>
       </div>

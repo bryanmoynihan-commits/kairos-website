@@ -43,7 +43,7 @@ export default function DpaPage() {
           {/* Header */}
           <header className="max-w-prose mb-12">
             <FadeIn>
-              <span className="text-xs uppercase tracking-widest text-[#2dd4bf] mb-4 block">
+              <span className="text-sm uppercase tracking-widest text-[#2dd4bf] mb-4 block">
                 Legal
               </span>
             </FadeIn>

@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="relative max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>
-          <p className="text-xs uppercase tracking-widest text-[#999] mb-3">
+          <p className="text-sm uppercase tracking-widest text-[#999] mb-3">
             Kairos Performance
           </p>
           <p className="text-[#f0f0eb] text-lg font-medium max-w-sm leading-snug">
@@ -46,21 +46,21 @@ export default function Footer() {
               alt="Kairos Performance"
               className="h-7 w-auto select-none"
             />
-            <p className="text-xs text-[#666]">
+            <p className="text-xs text-[#999]">
               &copy; {new Date().getFullYear()} Kairos Performance. All rights reserved.
             </p>
           </div>
           <nav className="flex items-center gap-6">
-            <Link href="/pricing" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+            <Link href="/pricing" className="text-xs text-[#999] hover:text-[#999] transition-colors">
               Pricing
             </Link>
-            <Link href="/operator-insights" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+            <Link href="/operator-insights" className="text-xs text-[#999] hover:text-[#999] transition-colors">
               Operator Insights
             </Link>
-            <Link href="/contact" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+            <Link href="/contact" className="text-xs text-[#999] hover:text-[#999] transition-colors">
               Contact
             </Link>
-            <Link href="/legal/dpa" className="text-xs text-[#666] hover:text-[#999] transition-colors">
+            <Link href="/legal/dpa" className="text-xs text-[#999] hover:text-[#999] transition-colors">
               Data Processing Agreement
             </Link>
           </nav>

@@ -77,16 +77,19 @@ const planSteps = [
   {
     step: "01",
     title: "Book an Intro Call",
+    href: "/contact",
     body: "Tell us where things are breaking down: data, process, tooling, team alignment. We listen first.",
   },
   {
     step: "02",
-    title: "Get your AI Readiness Assessment",
-    body: "A prioritized roadmap of your data, process, and tooling gaps, so you know what to fix first and in what order.",
+    title: "Get a recommended path",
+    href: "/pricing",
+    body: "We map what you actually need and recommend the right way in: a sprint, an assessment, a scoped build, or an ongoing partnership. Every option and price is published.",
   },
   {
     step: "03",
     title: "Build your Revenue Operating System",
+    href: "/contact",
     body: "We execute alongside your team, and your team owns everything we build.",
   },
 ];
@@ -100,7 +103,7 @@ export default function Home() {
       <section className="border-b border-[#1f1f1f] py-24">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               What happens if nothing changes
             </p>
           </FadeIn>
@@ -110,17 +113,19 @@ export default function Home() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mb-12">
+            <p className="text-[#c0bdb8] text-base leading-relaxed mb-12">
               The risks of standing still while your competitors don&apos;t.
             </p>
           </FadeIn>
 
-          <ul className="space-y-4 max-w-3xl mb-12">
+          <ul className="space-y-4 mb-12">
             {stakes.map((item, i) => (
               <FadeIn key={i} delay={0.2 + i * 0.08}>
                 <li className="flex gap-4 text-[#c0bdb8] text-base leading-relaxed">
-                  <span className="text-[#2dd4bf] font-mono text-xs mt-1.5 shrink-0">
-                    ▲
+                  <span className="flex h-[1lh] shrink-0 items-center text-[#2dd4bf]" aria-hidden="true">
+                    <svg width="8" height="10" viewBox="0 0 8 10">
+                      <path d="M0 0L8 5L0 10Z" fill="currentColor" />
+                    </svg>
                   </span>
                   <span>{item}</span>
                 </li>
@@ -142,7 +147,7 @@ export default function Home() {
       <section className="border-b border-[#1f1f1f] py-24">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
               What it looks like when it works
             </p>
           </FadeIn>
@@ -152,13 +157,13 @@ export default function Home() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl mb-8">
+            <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
               When the foundation is right and AI is doing the heavy lifting,
               the results follow.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-3xl mb-12">
+            <p className="text-[#c0bdb8] text-base leading-relaxed mb-12">
               The board trusts your forecast. Your team runs strategy instead
               of manual reconciliation. Your growth plan finally has the
               infrastructure underneath it to match your ambition, and
@@ -181,7 +186,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
             <FadeIn delay={0}>
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+                <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                   Why Kairos
                 </p>
                 <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug mb-4">
@@ -247,7 +252,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16">
             <FadeIn delay={0}>
-              <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+              <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                 How it works
               </p>
             </FadeIn>
@@ -261,7 +266,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {planSteps.map((item, i) => (
               <FadeIn key={item.step} delay={i * 0.12} className="h-full">
-                <div className="h-full p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
+                <TrackedLink
+                  href={item.href}
+                  ctaName={item.title}
+                  ctaLocation="plan_card"
+                  className="group h-full p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]"
+                >
                   <p className="text-xs text-[#2dd4bf] font-mono">{item.step}</p>
                   <h3 className="text-lg font-semibold text-[#f0f0eb]">
                     {item.title}
@@ -269,7 +279,10 @@ export default function Home() {
                   <p className="text-[#c0bdb8] text-sm leading-relaxed">
                     {item.body}
                   </p>
-                </div>
+                  <span className="mt-auto inline-block text-[#999] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#2dd4bf]">
+                    <ArrowIcon />
+                  </span>
+                </TrackedLink>
               </FadeIn>
             ))}
           </div>
@@ -287,7 +300,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <FadeIn delay={0}>
             <div>
-              <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
+              <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
                 What we actually do
               </p>
               <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug">
@@ -301,9 +314,9 @@ export default function Home() {
               <p>
                 Kairos Performance partners with mid-market B2B leadership
                 teams to diagnose and fix the foundational gaps in their revenue
-                operations: data, definitions, process, and tooling. We start with an AI
-                Readiness Assessment, build a prioritized roadmap, and execute
-                alongside your team.
+                operations: data, definitions, process, and tooling. We start by understanding
+                what you actually need, recommend the right way in, and then
+                build and execute alongside your team.
               </p>
               <p>
                 AI and automation aren&apos;t an afterthought. We build them

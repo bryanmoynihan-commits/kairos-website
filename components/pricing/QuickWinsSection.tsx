@@ -7,7 +7,7 @@ const quickWins = [
     price: "$2,000 \u2013 $5,000",
     timeline: "1\u20132 weeks",
     description:
-      "A focused exploration of one high-impact automation opportunity in your revenue operation. We map the workflow, quantify the cost of the status quo, estimate ROI against a specific automation approach, and deliver a priced path to execution - so the decision to move forward is a business case, not a leap of faith.",
+      "A focused exploration of one high-impact automation opportunity in your revenue operations. We map the workflow, quantify the cost of the status quo, estimate ROI against a specific automation approach, and deliver a priced path to execution - so the decision to move forward is a business case, not a leap of faith.",
     included: [
       "Kickoff session to identify highest-impact automation opportunity",
       "Current-state workflow mapping and friction analysis",
@@ -59,8 +59,8 @@ export default function QuickWinsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-16">
           <FadeIn delay={0}>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-4">
-              Start here
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
+              Start smaller
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -69,7 +69,7 @@ export default function QuickWinsSection() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="text-[#c0bdb8] text-base leading-relaxed max-w-2xl">
+            <p className="text-[#c0bdb8] text-base leading-relaxed">
               Low-commitment, high-signal. Prove the value of AI and
               automation in your operation before committing to a larger
               engagement.

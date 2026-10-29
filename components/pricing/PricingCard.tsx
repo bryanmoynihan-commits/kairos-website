@@ -27,7 +27,7 @@ export default function PricingCard({
         {title}
       </h3>
       {subtitle && (
-        <p className="text-sm italic text-[#c0bdb8]/70 leading-relaxed mb-3">
+        <p className="text-sm italic text-[#c0bdb8] leading-relaxed mb-3">
           {subtitle}
         </p>
       )}
@@ -37,13 +37,23 @@ export default function PricingCard({
       <p className={`text-sm text-[#999] ${description ? "mb-4" : "mb-6"}`}>{timeline}</p>
 
       {description && (
-        <p className="text-sm text-[#c0bdb8]/70 leading-relaxed mb-6">
+        <p className="text-sm text-[#c0bdb8] leading-relaxed mb-6">
           {description}
         </p>
       )}
 
+      {/* The summary bleeds into the card padding so everything below the
+          divider line toggles the panel, not just the label. */}
+      <details className="group/details mt-auto -mx-8 -mb-8">
+        <summary className="block cursor-pointer list-none px-8 pb-8 group-open/details:pb-0 [&::-webkit-details-marker]:hidden">
+          <span className="flex items-center justify-between gap-2 text-sm font-medium text-[#f0f0eb] border-t border-[#1f1f1f] pt-5">
+            What&apos;s included and what drives cost
+            <span className="text-[#2dd4bf] transition-transform duration-300 group-open/details:rotate-45 text-lg leading-none">+</span>
+          </span>
+        </summary>
+        <div className="px-8 pb-8 pt-5">
       {/* Included */}
-      <p className="text-xs uppercase tracking-widest text-[#999] mb-3">
+      <p className="text-sm uppercase tracking-widest text-[#999] mb-3">
         What&apos;s included
       </p>
       <ul className="space-y-2 mb-6">
@@ -52,7 +62,7 @@ export default function PricingCard({
             key={item}
             className="flex gap-2 text-sm text-[#c0bdb8] leading-relaxed"
           >
-            <span className="text-[#2dd4bf]">
+            <span className="flex h-[1lh] shrink-0 items-center text-[#2dd4bf]">
               <CheckIcon />
             </span>
             {item}
@@ -60,11 +70,11 @@ export default function PricingCard({
         ))}
       </ul>
 
-      <div className="border-t border-[#1f1f1f] pt-6 mt-auto">
+      <div className="border-t border-[#1f1f1f] pt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Higher */}
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
               <span className="text-[#f0f0eb]/40">&uarr;</span>
               Drives cost higher
             </p>
@@ -72,7 +82,7 @@ export default function PricingCard({
               {costsHigher.map((item) => (
                 <li
                   key={item}
-                  className="text-sm text-[#c0bdb8]/70 leading-relaxed"
+                  className="text-sm text-[#c0bdb8] leading-relaxed"
                 >
                   {item}
                 </li>
@@ -81,7 +91,7 @@ export default function PricingCard({
           </div>
           {/* Lower */}
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
+            <p className="text-sm uppercase tracking-widest text-[#999] mb-3 flex items-center gap-1.5">
               <span className="text-[#f0f0eb]/40">&darr;</span>
               Drives cost lower
             </p>
@@ -89,7 +99,7 @@ export default function PricingCard({
               {costsLower.map((item) => (
                 <li
                   key={item}
-                  className="text-sm text-[#c0bdb8]/70 leading-relaxed"
+                  className="text-sm text-[#c0bdb8] leading-relaxed"
                 >
                   {item}
                 </li>
@@ -98,6 +108,8 @@ export default function PricingCard({
           </div>
         </div>
       </div>
+        </div>
+      </details>
     </div>
   );
 }

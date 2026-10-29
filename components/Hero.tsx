@@ -86,8 +86,9 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[92vh] flex flex-col justify-center border-b border-[#1f1f1f]">
-      {/* Neural mesh network visual */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+      {/* Neural mesh network visual: fixed behind the whole page, so the
+          content scrolls over it */}
+      <div className="fixed inset-0 -z-10 flex items-center justify-center pointer-events-none overflow-hidden">
         <motion.svg
           viewBox="0 0 800 800"
           className="w-[700px] h-[700px] lg:w-[900px] lg:h-[900px]"
@@ -202,7 +203,7 @@ export default function Hero() {
           Kairos Performance
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight max-w-3xl mb-8"
+          className="text-5xl sm:text-6xl xl:text-7xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight max-w-3xl mb-8"
           variants={heroVariants}
           initial={initial}
           animate={animate}
@@ -211,7 +212,7 @@ export default function Hero() {
           Scale faster.<br /><span className="sm:whitespace-nowrap">Without breaking your business.</span>
         </motion.h1>
         <motion.p
-          className="text-[#c0bdb8] text-lg max-w-2xl leading-relaxed mb-12"
+          className="text-[#c0bdb8] text-lg leading-relaxed mb-12"
           variants={heroVariants}
           initial={initial}
           animate={animate}

@@ -68,7 +68,7 @@ function CategoryFilterInner({ posts }: CategoryFilterProps) {
         </div>
       ) : (
         <div className="text-center py-16">
-          <p className="text-[#555] text-base">
+          <p className="text-[#999] text-base">
             No articles in this category yet. Check back soon.
           </p>
         </div>
