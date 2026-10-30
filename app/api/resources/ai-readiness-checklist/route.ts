@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isPersonalEmail, WORK_EMAIL_MESSAGE } from "@/lib/email";
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const NAME_RE = /^[a-zA-Z\s'\-.]+$/;
@@ -28,6 +29,8 @@ function validatePayload(data: ChecklistPayload): string | null {
     return "Invalid last name.";
   if (!email?.trim() || !EMAIL_RE.test(email.trim()))
     return "Invalid email address.";
+  if (isPersonalEmail(email))
+    return WORK_EMAIL_MESSAGE;
   if (!company?.trim() || company.trim().length < 2)
     return "Invalid company name.";
 

@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import ArrowIcon from "@/components/ArrowIcon";
 import { trackFormSubmission, getUTMParams } from "@/lib/analytics";
+import { isPersonalEmail, WORK_EMAIL_MESSAGE } from "@/lib/email";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -85,6 +86,8 @@ function validate(v: FormValues): FormErrors {
     e.email = "Work email is required.";
   } else if (!EMAIL_RE.test(v.email.trim())) {
     e.email = "Please enter a valid email address.";
+  } else if (isPersonalEmail(v.email)) {
+    e.email = WORK_EMAIL_MESSAGE;
   }
 
   if (!v.company.trim()) {
