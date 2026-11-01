@@ -203,13 +203,13 @@ export default function Hero() {
           Kairos Performance
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl xl:text-7xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight max-w-3xl mb-8"
+          className="text-[clamp(2.25rem,10vw,3rem)] sm:text-6xl xl:text-7xl font-semibold text-[#f0f0eb] leading-[1.1] tracking-tight max-w-3xl mb-8"
           variants={heroVariants}
           initial={initial}
           animate={animate}
           custom={prefersReducedMotion ? 0 : 0.15}
         >
-          Scale faster.<br /><span className="sm:whitespace-nowrap">Without breaking your business.</span>
+          Scale faster.<br /><span className="lg:whitespace-nowrap">Without breaking your business.</span>
         </motion.h1>
         <motion.p
           className="text-[#c0bdb8] text-lg leading-relaxed mb-12"
@@ -242,12 +242,12 @@ export default function Hero() {
           </TrackedLink>
 
           <TrackedLink
-            href="/resources/ai-readiness-checklist"
-            ctaName="AI Readiness Checklist"
+            href="/resources/ai-readiness-scorecard"
+            ctaName="AI Readiness Scorecard"
             ctaLocation="hero_lead_magnet"
             className="group inline-flex items-center gap-2 text-sm font-medium text-[#c0bdb8] hover:text-[#f0f0eb] underline underline-offset-[6px] decoration-[#2a2a2a] hover:decoration-[#555] transition-colors duration-300 px-2 py-2"
           >
-            Get the AI Readiness Checklist
+            Get your AI Readiness Score (5 min)
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               <ArrowIcon />
             </span>

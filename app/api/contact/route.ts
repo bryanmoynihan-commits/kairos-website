@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { isPersonalEmail, WORK_EMAIL_MESSAGE } from "@/lib/email";
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const NAME_RE = /^[a-zA-Z\s'\-.]+$/;
+// Letters from any language (plus combining accents), spaces, apostrophes, hyphens, periods.
+const NAME_RE = /^[\p{L}\p{M}\s'’\-.]+$/u;
 const MESSAGE_MIN = 20;
 const MESSAGE_MAX = 1000;
 
@@ -23,13 +24,23 @@ interface ContactPayload {
 }
 
 function validatePayload(data: ContactPayload): string | null {
+  // Untrusted JSON: check shapes before calling string methods, so a malformed
+  // request gets a 400 instead of crashing the route.
+  if (!data || typeof data !== "object" || Array.isArray(data)) return "Invalid submission.";
+  for (const key of ["firstName", "lastName", "title", "email", "company", "companySize", "source", "message"] as const) {
+    if (typeof data[key] !== "string") return "Invalid submission.";
+  }
+  for (const key of ["honeypot", "pageUri", "utmSource", "utmMedium", "utmCampaign"] as const) {
+    if (data[key] !== undefined && typeof data[key] !== "string") return "Invalid submission.";
+  }
+
   if (data.honeypot) return "Invalid submission.";
 
   const { firstName, lastName, title, email, company, companySize, source, message } = data;
 
-  if (!firstName?.trim() || firstName.trim().length < 2 || !NAME_RE.test(firstName.trim()))
+  if (!firstName?.trim() || !NAME_RE.test(firstName.trim()))
     return "Invalid first name.";
-  if (!lastName?.trim() || lastName.trim().length < 2 || !NAME_RE.test(lastName.trim()))
+  if (!lastName?.trim() || !NAME_RE.test(lastName.trim()))
     return "Invalid last name.";
   if (!title?.trim() || title.trim().length < 2)
     return "Invalid job title.";

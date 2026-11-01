@@ -35,23 +35,20 @@ const INITIAL_VALUES: FormValues = {
 };
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const NAME_RE = /^[a-zA-Z\s'\-.]+$/;
+// Letters from any language (plus combining accents), spaces, apostrophes, hyphens, periods.
+const NAME_RE = /^[\p{L}\p{M}\s'’\-.]+$/u;
 
 function validate(v: FormValues): FormErrors {
   const e: FormErrors = {};
 
   if (!v.firstName.trim()) {
     e.firstName = "First name is required.";
-  } else if (v.firstName.trim().length < 2) {
-    e.firstName = "Please enter your first name.";
   } else if (!NAME_RE.test(v.firstName.trim())) {
     e.firstName = "First name contains invalid characters.";
   }
 
   if (!v.lastName.trim()) {
     e.lastName = "Last name is required.";
-  } else if (v.lastName.trim().length < 2) {
-    e.lastName = "Please enter your last name.";
   } else if (!NAME_RE.test(v.lastName.trim())) {
     e.lastName = "Last name contains invalid characters.";
   }

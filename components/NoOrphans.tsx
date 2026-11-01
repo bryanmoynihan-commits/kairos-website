@@ -29,19 +29,21 @@ function bindLastWords(el: Element) {
   }
   if (!last) return;
 
+  // Split on any whitespace: markdown-rendered text keeps soft line breaks
+  // ("\n") inside a text node, and those are break opportunities too.
   const text = last.data.trimEnd();
-  const words = text.split(/ +/);
-  if (words.length < WORDS_TO_KEEP + 1) return;
+  const words = text.split(/\s+/);
+  if (words.filter(Boolean).length < WORDS_TO_KEEP + 1) return;
 
   // Already fine if the third-to-last word sits on the same line as the last.
-  const tailStart = text.length - words.slice(-WORDS_TO_KEEP).join(" ").length;
-  if (Math.abs(topOf(last, tailStart) - topOf(last, text.length - 1)) < 2) return;
+  const tailMatch = text.match(/\S+(?:\s+\S+){2}$/);
+  if (!tailMatch || tailMatch.index === undefined) return;
+  if (Math.abs(topOf(last, tailMatch.index) - topOf(last, text.length - 1)) < 2) return;
 
   const original = last.data;
   const trailing = last.data.slice(text.length);
-  const height = el.getBoundingClientRect().height;
-
   const box = el.getBoundingClientRect();
+  const height = box.height;
 
   // Prefer binding three words, then two. Undo a binding that adds a line,
   // leaves the line above it less than half full (a ragged break is worse
@@ -64,6 +66,15 @@ export default function NoOrphans() {
 
   useEffect(() => {
     document.querySelectorAll(SELECTOR).forEach(bindLastWords);
+
+    // Text inside a closed <details> has no layout to measure, so check it
+    // when the panel opens. "toggle" doesn't bubble; listen in the capture phase.
+    const onToggle = (e: Event) => {
+      const details = e.target as HTMLDetailsElement;
+      if (details.open) details.querySelectorAll(SELECTOR).forEach(bindLastWords);
+    };
+    document.addEventListener("toggle", onToggle, true);
+    return () => document.removeEventListener("toggle", onToggle, true);
   }, [pathname]);
 
   return null;

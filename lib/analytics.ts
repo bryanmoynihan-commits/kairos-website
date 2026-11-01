@@ -68,6 +68,28 @@ export function trackGatedArticleUnlockSuccess(slug: string) {
   });
 }
 
+// --- AI Readiness Scorecard ---
+export function trackScorecardStart() {
+  gtag("event", "scorecard_start");
+}
+
+export function trackScorecardComplete(level: string, overall: number) {
+  gtag("event", "scorecard_complete", {
+    scorecard_level: level,
+    scorecard_score: overall,
+  });
+}
+
+export function trackScorecardUnlockSubmit() {
+  gtag("event", "scorecard_unlock_submit");
+}
+
+export function trackScorecardUnlockSuccess(level: string) {
+  gtag("event", "scorecard_unlock_success", {
+    scorecard_level: level,
+  });
+}
+
 // --- UTM Parameter Helpers ---
 const UTM_STORAGE_KEY = "kairos_utm";
 const UTM_KEYS = [

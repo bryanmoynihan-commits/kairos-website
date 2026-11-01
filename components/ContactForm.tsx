@@ -44,16 +44,17 @@ const INITIAL_VALUES: FormValues = {
 
 const COMPANY_SIZES = [
   { label: "1–5 employees",     value: "1-5" },
-  { label: "5–25 employees",    value: "5-25" },
-  { label: "25–50 employees",   value: "25-50" },
-  { label: "50–100 employees",  value: "50-100" },
-  { label: "100–500 employees", value: "100-500" },
-  { label: "500–1,000 employees", value: "500-1000" },
+  { label: "6–25 employees",    value: "5-25" },
+  { label: "26–50 employees",   value: "25-50" },
+  { label: "51–100 employees",  value: "50-100" },
+  { label: "101–500 employees", value: "100-500" },
+  { label: "501–1,000 employees", value: "500-1000" },
   { label: "1,000+ employees",  value: "1000+" },
 ];
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const NAME_RE = /^[a-zA-Z\s'\-.]+$/;
+// Letters from any language (plus combining accents), spaces, apostrophes, hyphens, periods.
+const NAME_RE = /^[\p{L}\p{M}\s'’\-.]+$/u;
 const MESSAGE_MIN = 20;
 const MESSAGE_MAX = 1000;
 
@@ -62,16 +63,12 @@ function validate(v: FormValues): FormErrors {
 
   if (!v.firstName.trim()) {
     e.firstName = "First name is required.";
-  } else if (v.firstName.trim().length < 2) {
-    e.firstName = "Please enter your first name.";
   } else if (!NAME_RE.test(v.firstName.trim())) {
     e.firstName = "First name contains invalid characters.";
   }
 
   if (!v.lastName.trim()) {
     e.lastName = "Last name is required.";
-  } else if (v.lastName.trim().length < 2) {
-    e.lastName = "Please enter your last name.";
   } else if (!NAME_RE.test(v.lastName.trim())) {
     e.lastName = "Last name contains invalid characters.";
   }
@@ -122,9 +119,12 @@ function fieldBorder(touched: boolean, error?: string) {
   return "border-[#444] focus:border-[#666]";
 }
 
-export default function ContactForm() {
+export default function ContactForm({ initialMessage = "" }: { initialMessage?: string }) {
   const [formState, setFormState] = useState<FormState>("idle");
-  const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
+  const [values, setValues] = useState<FormValues>({
+    ...INITIAL_VALUES,
+    message: initialMessage,
+  });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormValues, boolean>>>({});
 

@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
+import ContactFormPrefill from "@/components/ContactFormPrefill";
 import ContactFooter from "@/components/ContactFooter";
 import FadeIn from "@/components/FadeIn";
 import type { Metadata } from "next";
@@ -57,7 +59,10 @@ export default function ContactPage() {
 
           {/* Right: form */}
           <FadeIn delay={0.1}>
-            <ContactForm />
+            {/* Server-renders the plain form; swaps in a Scorecard prefill on the client. */}
+            <Suspense fallback={<ContactForm />}>
+              <ContactFormPrefill />
+            </Suspense>
           </FadeIn>
 
         </div>

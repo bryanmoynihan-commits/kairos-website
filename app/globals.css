@@ -225,17 +225,20 @@ body::after {
   background-size: 256px 256px;
 }
 
-/* Typography: avoid orphaned words and lopsided headings */
-p,
-li,
-dd,
-blockquote,
-summary {
-  text-wrap: pretty;
-}
+/* Typography: avoid orphaned words and lopsided headings. In the base layer
+   so utility classes (e.g. text-balance) can still override per element. */
+@layer base {
+  p,
+  li,
+  dd,
+  blockquote,
+  summary {
+    text-wrap: pretty;
+  }
 
-h1,
-h2,
-h3 {
-  text-wrap: balance;
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
 }

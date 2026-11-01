@@ -82,7 +82,7 @@ export default function PricingCard({
               {costsHigher.map((item) => (
                 <li
                   key={item}
-                  className="text-sm text-[#c0bdb8] leading-relaxed"
+                  className="text-sm text-[#c0bdb8] leading-relaxed text-balance"
                 >
                   {item}
                 </li>
@@ -99,7 +99,7 @@ export default function PricingCard({
               {costsLower.map((item) => (
                 <li
                   key={item}
-                  className="text-sm text-[#c0bdb8] leading-relaxed"
+                  className="text-sm text-[#c0bdb8] leading-relaxed text-balance"
                 >
                   {item}
                 </li>

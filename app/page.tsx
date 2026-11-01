@@ -223,11 +223,11 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.08}>
-                <div className="p-6 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:border-[#333] hover:bg-[#2d2a2b]/40">
-                  <p className="text-xl lg:text-2xl font-semibold text-[#f0f0eb] mb-2 leading-tight">
+                <div className="h-full p-3.5 sm:p-6 border border-[#1f1f1f] rounded-sm transition-all duration-300 hover:border-[#333] hover:bg-[#2d2a2b]/40">
+                  <p className="text-[clamp(0.9rem,4vw,1.25rem)] sm:text-xl lg:text-xl xl:text-2xl font-semibold text-[#f0f0eb] mb-2 leading-tight whitespace-nowrap">
                     {stat.value}
                   </p>
-                  <p className="text-xs uppercase tracking-wider text-[#999]">
+                  <p className="text-xs uppercase tracking-wider text-[#999] text-balance">
                     {stat.label}
                   </p>
                 </div>
@@ -270,7 +270,7 @@ export default function Home() {
                   href={item.href}
                   ctaName={item.title}
                   ctaLocation="plan_card"
-                  className="group h-full p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]"
+                  className="group h-full p-8 md:p-6 lg:p-8 border border-[#1f1f1f] rounded-sm flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]"
                 >
                   <p className="text-xs text-[#2dd4bf] font-mono">{item.step}</p>
                   <h3 className="text-lg font-semibold text-[#f0f0eb]">
