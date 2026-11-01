@@ -75,7 +75,7 @@ export default function OperatorInsightsPage() {
             <FadeIn delay={0.15}>
               <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
                 If these perspectives match what you&apos;re seeing inside
-                your own revenue operations, start with a 30-minute intro call.
+                your own revenue operations, start with a 30-minute Intro Call.
                 You leave with an outline of the fix, whether or not we work
                 together.
               </p>

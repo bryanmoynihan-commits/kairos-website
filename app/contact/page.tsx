@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Book a 30-minute intro call with Kairos Performance. Tell us where your revenue operations are breaking down and leave with an outline of the fix.",
+  description: "Book a 30-minute Intro Call with Kairos Performance. Tell us where your revenue operations are breaking down and leave with an outline of the fix.",
 };
 
 export default function ContactPage() {
@@ -24,7 +24,7 @@ export default function ContactPage() {
                   Contact
                 </p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#f0f0eb] leading-tight mb-4">
-                  Book your intro call.
+                  Book your Intro Call.
                 </h1>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">
                   A focused, 30-minute conversation about where your revenue
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <ul className="space-y-4 text-[#c0bdb8] text-sm leading-relaxed">
                   <li className="flex items-baseline gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs shrink-0">01</span>
-                    <span>We&apos;ll reply within one business day to schedule your 30-minute intro call.</span>
+                    <span>We&apos;ll reply within one business day to schedule your 30-minute Intro Call.</span>
                   </li>
                   <li className="flex items-baseline gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs shrink-0">02</span>
