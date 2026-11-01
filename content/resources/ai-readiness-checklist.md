@@ -1,16 +1,14 @@
 ---
-title: "The AI Readiness Checklist: 5 Things to Fix Before You Automate Anything"
+title: "The AI Readiness Checklist: 6 Things to Fix Before You Automate Anything"
 date: "2026-04-12"
 author: "Kairos Performance"
-excerpt: "Most companies automate on top of broken foundations and amplify the mess. Five foundations to get right before you bring AI into your revenue operations."
+excerpt: "Most companies automate on top of broken foundations and amplify the mess. Six foundations to get right before you bring AI into your revenue operations."
 published: true
-formHeadline: "Unlock the remaining four foundations"
-formSubhead: "Enter your details to read the rest of the checklist. We'll send the occasional RevOps deep-dive, nothing more."
 ---
 
 The companies that get the most out of AI fix their foundation before they automate anything. The ones that skip it spend five or six figures making broken processes faster, then call it a transformation.
 
-This checklist isn't about whether your company should use AI. You should. It's about whether your revenue operations are ready for AI to work. Be honest with yourself on each of the five foundations below: the gaps you find here decide whether AI becomes an accelerant or an amplifier of the problems you already have.
+This checklist isn't about whether your company should use AI. You should. It's about whether your revenue operations are ready for AI to work. Be honest with yourself on each of the six foundations below: the gaps you find here decide whether AI becomes an accelerant or an amplifier of the problems you already have.
 
 ## 1. Data Integrity
 
@@ -41,8 +39,6 @@ But here's what gets overlooked most often: the real data integrity issue isn't 
 - Could you explain to a new hire how every critical field in your CRM gets populated, by whom, and how often it's validated?
 
 If you answered "no" to two or more of these, your data foundation isn't ready for AI. Any automation you build on top of it will inherit every problem your data already has, and scale those problems faster than your team can fix them.
-
-<!-- GATE -->
 
 ## 2. Process Documentation
 
@@ -136,10 +132,30 @@ There's also a measurement shift many companies haven't made yet. The growth-at-
 
 If your measurement framework isn't connected to the outcomes you're trying to drive, AI will just help you measure the wrong things more efficiently. The foundation here isn't more dashboards. It's knowing exactly what to measure, measuring it consistently, and acting on what it tells you.
 
+## 6. AI Adoption Readiness
+
+**In short:** clean data and documented processes still fail if nobody owns AI and the team never changes how it works.
+
+This is the foundation most checklists leave out, and it's where a lot of AI investment quietly disappears. A company can get the first five right and still stall, because the tools arrive and the habits don't change.
+
+The pattern is familiar. Individuals experiment on their own, a few people get real value, and nothing spreads. Leadership is interested but nobody owns the agenda, so there's no budget, no priorities, and no way to tell whether any of it is working. When a new tool rolls out, adoption spikes for a few weeks and then fades as everyone drifts back to the old way.
+
+Adoption is a project, not a byproduct. It needs an executive sponsor with a short list of measurable priorities, simple guidelines for which tools to use and how, training tied to real work, and someone in each team who champions the new way of doing things. Without that, even well-built automations sit unused.
+
+**Ask yourself honestly:**
+
+- Is there an executive who owns AI, with a budget and two or three priorities you could name?
+- Does your team use AI as part of how work gets done, with approved tools and shared guidelines, or are people experimenting on their own?
+- When you last rolled out a new tool or process, was adoption still there six months later?
+- Do you measure adoption, or do you assume it?
+- If your most capable AI user left tomorrow, would what they built and learned stay with the team?
+
+If AI use depends on a few enthusiasts and nobody owns the outcome, the foundation isn't ready, no matter how clean the data is. AI only pays off when the people using it change how they work.
+
 ## What to Do With This
 
-If you were honest with yourself and found gaps in two or more of these areas, you're not alone. Most growth-stage companies do. The ambition is there. The growth plan is there. But the operational foundation underneath it wasn't built to support what comes next, and that's exactly where AI either works or makes things worse.
+If you found gaps in two or more of these areas, you're not alone. Most growth-stage companies do. The ambition is there and the growth plan is there, but the foundation underneath wasn't built for what comes next, and that's exactly where AI either works or makes things worse.
 
-The question isn't whether these gaps exist. It's what to fix first and in what order. That's what the Kairos Performance AI Readiness Assessment is designed to answer: a structured diagnostic of your data, process, tooling, team alignment, and measurement maturity that delivers a prioritized roadmap, so you're fixing the right things in the right sequence.
+The question isn't whether these gaps exist. It's which ones to fix first. The fastest way to find out is the [AI Readiness Scorecard](/resources/ai-readiness-scorecard): 18 questions across these same six areas, about five minutes, with a score for each area and the fixes that matter most.
 
-If this checklist surfaced questions you want to talk through, we're here for that conversation.
+From there, we can help you choose the right way in, whether that's a focused sprint, an assessment, a scoped build, or an ongoing partnership. Every option and its price is on our [pricing page](/pricing).

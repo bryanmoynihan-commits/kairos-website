@@ -49,25 +49,6 @@ export function trackArticleView(
   });
 }
 
-// --- Gated Article (Lead Magnet) ---
-export function trackGatedArticleView(slug: string) {
-  gtag("event", "gated_article_view", {
-    article_slug: slug,
-  });
-}
-
-export function trackGatedArticleUnlockSubmit(slug: string) {
-  gtag("event", "gated_article_unlock_submit", {
-    article_slug: slug,
-  });
-}
-
-export function trackGatedArticleUnlockSuccess(slug: string) {
-  gtag("event", "gated_article_unlock_success", {
-    article_slug: slug,
-  });
-}
-
 // --- AI Readiness Scorecard ---
 export function trackScorecardStart() {
   gtag("event", "scorecard_start");

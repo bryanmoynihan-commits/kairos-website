@@ -14,7 +14,7 @@ const CATEGORIES: (PostCategory | "All")[] = [
 ];
 
 interface CategoryFilterProps {
-  posts: Omit<Post, "content">[];
+  posts: Omit<Post, "content" | "faq">[];
 }
 
 function CategoryFilterInner({ posts }: CategoryFilterProps) {

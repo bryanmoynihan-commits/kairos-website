@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Book an intro call with Kairos Performance. Tell us where your revenue operations are breaking down and we'll follow up within one business day.",
+  description: "Book a 30-minute intro call with Kairos Performance. Tell us where your revenue operations are breaking down and leave with an outline of the fix.",
 };
 
 export default function ContactPage() {
@@ -27,9 +27,9 @@ export default function ContactPage() {
                   Book your intro call.
                 </h1>
                 <p className="text-[#c0bdb8] text-base leading-relaxed">
-                  Tell us where you are and what you&apos;re trying to solve.
-                  We&apos;ll follow up within one business day to set up a
-                  focused conversation.
+                  A focused, 30-minute conversation about where your revenue
+                  operations are breaking down. You leave with an outline of the
+                  fix, whether or not we work together.
                 </p>
               </div>
             </FadeIn>
@@ -42,15 +42,15 @@ export default function ContactPage() {
                 <ul className="space-y-4 text-[#c0bdb8] text-sm leading-relaxed">
                   <li className="flex items-baseline gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs shrink-0">01</span>
-                    <span>We&apos;ll review your message and reach out within one business day to schedule an intro call.</span>
+                    <span>We&apos;ll reply within one business day to schedule your 30-minute intro call.</span>
                   </li>
                   <li className="flex items-baseline gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs shrink-0">02</span>
-                    <span>The intro call is focused. We&apos;ll learn how your business operates and where growth is creating friction.</span>
+                    <span>On the call, we learn how your business runs and where growth is creating friction. If you&apos;ve taken the AI Readiness Scorecard, we start from your results.</span>
                   </li>
                   <li className="flex items-baseline gap-3">
                     <span className="text-[#2dd4bf] font-mono text-xs shrink-0">03</span>
-                    <span>If there&apos;s a fit, we&apos;ll define a clear plan and move into hands-on work together.</span>
+                    <span>You leave with an outline of the fix and the right way in. If there&apos;s a fit, we build the plan together from there.</span>
                   </li>
                 </ul>
               </div>

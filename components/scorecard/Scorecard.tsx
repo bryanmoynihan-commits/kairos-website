@@ -598,6 +598,10 @@ export default function Scorecard() {
                 See pricing
               </TrackedLink>
             </div>
+            <p className="text-sm text-[#999] mt-5">
+              30 minutes. We walk through your results and you leave with an
+              outline of the fix, whether or not we work together.
+            </p>
           </section>
         </div>
       )}

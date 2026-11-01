@@ -92,12 +92,33 @@ export default async function ArticlePage({
     },
   };
 
+  // FAQPage markup is what AI assistants and search engines lift as direct
+  // answers. Built from the article's own FAQ section, so the two always match.
+  const faqJsonLd =
+    post.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: post.faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        }
+      : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <ArticleTracker
         slug={post.slug}
@@ -199,9 +220,9 @@ export default async function ArticlePage({
             <FadeIn delay={0.15}>
               <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
                 If any of this resonated with what you&apos;re seeing inside
-                your own revenue operations, start with a short intro call. No
-                pitch, just a conversation about what&apos;s getting in the
-                way and whether we&apos;re the right partner to help fix it.
+                your own revenue operations, start with a 30-minute intro call.
+                No pitch: you leave with an outline of the fix, whether or not
+                we&apos;re the right partner to help build it.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>

@@ -15,13 +15,11 @@ If your data is clean and your processes are defined, automation compounds your 
 
 The fix isn't to stop automating. It's to fix the foundation first.
 
-## Why this matters
-
 There's a version of this story playing out right now at hundreds of mid-market companies. A leadership team approves a five- or six-figure investment in automation or AI tooling, expecting faster pipeline, better conversion, and leaner operations. Six months later, the tools are live, the dashboards look busy, and nothing has actually improved. Sometimes it's gotten worse.
 
 The frustration is real, and the instinct to blame the tool is understandable. But in most cases, the tool did exactly what it was designed to do. It just amplified a system that was already broken.
 
-## The core problem: you can't automate your way out of a broken foundation
+## Can you automate your way out of a broken foundation?
 
 Bill Gates said it decades ago:
 
@@ -39,7 +37,7 @@ Here's what it looks like in practice. A company decides to automate lead routin
 
 The scariest version of this isn't the dramatic failure. It's the slow bleed: where the automation is running, the dashboards show activity, and leadership assumes things are working because the system is "doing stuff." But the stuff it's doing isn't moving revenue.
 
-## The three root causes (and how to spot them)
+## What are the signs your foundation is broken?
 
 Most broken GTM systems share the same underlying problems. The specifics differ by company, but the pattern is remarkably consistent.
 
@@ -77,7 +75,7 @@ OnRamp's 2026 State of Customer Onboarding Report (a survey of 161 onboarding an
 
 Without a RACI that defines who is responsible for what at each handoff point, automation just makes the gap more visible. You can automate a Slack notification that says "deal closed, start onboarding." But if nobody defined what information travels with that notification, you've automated the trigger without automating the substance.
 
-## What this actually looks like: a real example
+## What does this look like in a real company?
 
 We saw this play out at one B2B company. The marketing team was hosting webinars that had been inherited from an acquired business. The format attracted attendees, but the attendees weren't real buyers. They were people interested in the educational content of the original webinar series, not people with buying intent or purchasing authority.
 
@@ -87,7 +85,7 @@ The result: none of them closed. Zero. Not because the automation was broken. No
 
 That's the pattern. The automation did exactly what it was told to do. The problem was upstream.
 
-## The right sequence: fix, then automate
+## What should you fix before you automate?
 
 If any of this sounds familiar, the answer isn't to stop automating. Automation is genuinely powerful when applied to a solid foundation. The answer is to fix the foundation first.
 
@@ -104,7 +102,7 @@ Here's a practical sequence that works:
 
 This isn't glamorous work. It's not the exciting AI transformation that gets executive buy-in. But it's the work that makes everything else possible.
 
-## When it's OK to automate in parallel
+## When is it OK to automate in parallel?
 
 One nuance: the answer isn't always "fix everything first, then automate." There are quick wins that are fine to pursue in parallel, as long as they don't depend on the broken parts of your foundation.
 

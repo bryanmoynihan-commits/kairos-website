@@ -17,7 +17,7 @@ published: true
 
 That's the quick version. But if you're a CFO or CRO trying to build a real business case for RevOps investment - or figure out whether you're getting quoted a fair price - you need more context than a price range. Here's how to think about it.
 
-## What the market actually looks like right now
+## How much does RevOps consulting cost?
 
 RevOps consulting is growing fast. According to Skaled's RevOps Trends 2026 report, 79% of organizations entering 2025 now have a formal RevOps function - up significantly from just a few years ago. That growth in demand has created more options than ever for buyers, which is good for competition but makes pricing harder to evaluate.
 
@@ -31,7 +31,7 @@ Here's what you'll see if you start shopping:
 
 What you won't find on most consulting websites is published pricing at all. The majority of firms in this space gate their pricing behind "book a call" or "request a proposal." That doesn't necessarily mean they're hiding something - scoping RevOps work is genuinely complex and pricing depends on variables that are hard to standardize. But it does mean you'll spend more time in discovery calls before you can compare options. Firms that publish transparent pricing are making a deliberate choice to let you self-qualify before either side invests time - and that's worth noting when you're evaluating partners.
 
-## What actually drives the cost
+## What makes RevOps consulting more or less expensive?
 
 The range is wide because the inputs vary wildly. Here are the variables that move the number:
 
@@ -45,7 +45,7 @@ The range is wide because the inputs vary wildly. Here are the variables that mo
 
 **Seniority of the team doing the work.** A fractional VP of RevOps with 15 years of operating experience commands different rates than a junior ops analyst. Both have their place. The question is whether you're paying for execution or strategy - and most mid-market companies need both, which is why the "just hire a junior admin" approach often fails.
 
-## How engagement models compare
+## Hourly, project, or retainer: which pricing model is best?
 
 This is where it gets practical. There are four common pricing models in RevOps consulting, and they're not interchangeable.
 
@@ -62,7 +62,7 @@ Worse, hourly billing creates friction that kills engagement momentum. When a cl
 
 The retainer vs. project decision is more nuanced. Projects work well for bounded deliverables. But here's the pattern that plays out again and again: every RevOps project surfaces new priorities and scope changes mid-stream. A CRM audit reveals data quality issues that need addressing before the automation work can start. A pipeline redesign uncovers forecasting gaps. On a project contract, each of those discoveries triggers a stop - draft a change order, negotiate scope, restart. On a retainer, you adjust and keep moving. The momentum difference is real.
 
-## The comparison most buyers actually need: fractional vs. full-time hire
+## Is fractional RevOps cheaper than a full-time hire?
 
 This is the math exercise that matters. Let's be honest about both sides.
 
@@ -87,7 +87,7 @@ Union Square Consulting published a conservative ROI model in their GTM Science 
 
 The math works because RevOps improvements compound. You're not making one fix - you're improving the system that all revenue flows through. Better data improves forecasting and automation. Better processes improve rep productivity and customer experience. Better systems improve reporting and decision-making. Each improvement makes the next one easier and more impactful.
 
-## How to evaluate what you're being quoted
+## How do you know if a RevOps quote is fair?
 
 If you're in the market for RevOps consulting, here are three things to pressure-test:
 
@@ -96,6 +96,24 @@ If you're in the market for RevOps consulting, here are three things to pressure
 **2. Ask what they build vs. what they advise.** Strategy decks don't fix broken CRMs. You want a partner that executes, not one that hands you a PowerPoint and wishes you luck.
 
 **3. Ask who actually does the work.** Some firms sell senior partners and staff junior analysts. Know who's showing up on Tuesday morning.
+
+## Frequently asked questions
+
+### Do you charge hourly?
+
+No. Every Kairos Performance engagement is a fixed fee or a monthly retainer, priced by scope. Hourly billing rewards time spent rather than problems solved, so we don't use it. Every option and price is on our [pricing page](/pricing).
+
+### What's the minimum engagement?
+
+The smallest way to start is a Discovery Sprint: one automation opportunity, mapped and priced, in 1 to 2 weeks. Retainers start at $10,000 a month with a 3-month minimum.
+
+### What does a Discovery Sprint cost?
+
+$2,000 to $5,000, depending on the scope of the workflow, and it takes 1 to 2 weeks. You leave with the cost of the status quo, an ROI estimate, and a priced path to execution.
+
+### Does the Sprint fee count toward a bigger engagement?
+
+Yes. If your next engagement starts within 30 days, the Sprint fee is credited in full toward it, whether that's an assessment, a build, or a retainer.
 
 ## Next steps
 

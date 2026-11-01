@@ -9,9 +9,21 @@ import ArrowIcon from "@/components/ArrowIcon";
 import ArticleTracker from "@/components/ArticleTracker";
 import Footer from "@/components/Footer";
 import TrackedLink from "@/components/TrackedLink";
-import ChecklistGate from "@/components/resources/ChecklistGate";
 
 const SLUG = "ai-readiness-checklist";
+
+const markdownComponents = {
+  a: ({ children, href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a
+      href={href}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+      {...props}
+    >
+      {children}
+    </a>
+  ),
+};
 const CANONICAL = `https://kairosperformance.ai/resources/${SLUG}`;
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -81,13 +93,13 @@ export default function ChecklistPage() {
         readingTime={resource.readingTime}
       />
 
-      <article className="pt-32 pb-24">
+      <article className="pt-28 pb-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Back link */}
           <FadeIn>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0f0eb] transition-colors duration-200 mb-10 group"
+              className="inline-flex items-center gap-2 text-sm text-[#999] hover:text-[#f0f0eb] transition-colors duration-200 mb-8 group"
             >
               <span className="rotate-180 transition-transform duration-300 group-hover:-translate-x-1">
                 <ArrowIcon />
@@ -97,7 +109,7 @@ export default function ChecklistPage() {
           </FadeIn>
 
           {/* Article header */}
-          <header className="max-w-prose mb-12">
+          <header className="max-w-3xl mb-6">
             <FadeIn delay={0.1}>
               <span className="text-sm uppercase tracking-widest text-[#2dd4bf] mb-4 block">
                 Resource · Checklist
@@ -117,42 +129,92 @@ export default function ChecklistPage() {
             </FadeIn>
           </header>
 
-          {/* Public body */}
+          {/* Intro */}
           <FadeIn delay={0.25}>
             <div className="prose-kairos max-w-prose">
-              <Markdown
-                remarkPlugins={[remarkGfm]}
-                components={{
-                  a: ({ children, href, ...props }) => (
-                    <a
-                      href={href}
-                      target={href?.startsWith("http") ? "_blank" : undefined}
-                      rel={
-                        href?.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      {...props}
-                    >
-                      {children}
-                    </a>
-                  ),
-                }}
-              >
-                {resource.publicContent}
+              <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                {resource.intro}
               </Markdown>
             </div>
           </FadeIn>
 
-          {/* Gate / gated body */}
-          <div className="mt-12">
-            <ChecklistGate
-              slug={resource.slug}
-              gatedMarkdown={resource.gatedContent}
-              formHeadline={resource.formHeadline}
-              formSubhead={resource.formSubhead}
-            />
-          </div>
+          {/* The foundations: summary always visible, detail on demand. Rendered
+              on the server, so the full text stays readable to search engines
+              and AI assistants while collapsed. */}
+          <FadeIn delay={0.3}>
+            <p className="text-sm text-[#999] mt-4 mb-3">
+              Open any foundation for the detail and the questions to ask yourself.
+            </p>
+            <ol className="border-t border-[#1f1f1f]">
+              {resource.items.map((item) => (
+                <li key={item.number} className="border-b border-[#1f1f1f]">
+                  <details className="group/item">
+                    <summary className="flex items-start gap-5 cursor-pointer list-none py-5 [&::-webkit-details-marker]:hidden">
+                      <span className="font-mono text-sm text-[#2dd4bf] pt-1.5 shrink-0">
+                        0{item.number}
+                      </span>
+                      <span className="flex-1">
+                        <span className="block text-xl sm:text-2xl font-semibold text-[#f0f0eb] mb-2">
+                          {item.title}
+                        </span>
+                        <span className="block text-base text-[#c0bdb8] leading-relaxed">
+                          {item.summary}
+                        </span>
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="text-[#2dd4bf] text-2xl leading-none pt-1 transition-transform duration-300 group-open/item:rotate-45"
+                      >
+                        +
+                      </span>
+                    </summary>
+                    <div className="prose-kairos max-w-prose pb-8 sm:pl-10">
+                      <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                        {item.body}
+                      </Markdown>
+                    </div>
+                  </details>
+                </li>
+              ))}
+            </ol>
+          </FadeIn>
+
+          {/* What to do with this */}
+          <FadeIn delay={0.1}>
+            <div className="prose-kairos max-w-prose mt-12">
+              <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                {resource.outro}
+              </Markdown>
+            </div>
+          </FadeIn>
+
+          {/* Next rung on the ladder: the scored version of this checklist */}
+          <FadeIn delay={0.1}>
+            <div className="mt-10 max-w-prose border border-[#2dd4bf]/30 bg-[#2dd4bf]/[0.04] rounded-sm p-6 sm:p-8">
+              <p className="text-sm uppercase tracking-widest text-[#2dd4bf] mb-3">
+                Get your score
+              </p>
+              <h2 className="text-2xl font-semibold text-[#f0f0eb] mb-3">
+                See where you stand on all six
+              </h2>
+              <p className="text-base text-[#c0bdb8] leading-relaxed mb-6">
+                The AI Readiness Scorecard turns this checklist into a score: 18
+                questions, about five minutes, with your top fixes and a report
+                you can share with your team.
+              </p>
+              <TrackedLink
+                href="/resources/ai-readiness-scorecard"
+                ctaName="AI Readiness Scorecard"
+                ctaLocation="checklist_scorecard"
+                className="group inline-flex items-center gap-2 bg-[#f0f0eb] text-[#0e0d0d] text-sm font-semibold px-8 py-4 rounded-sm hover:bg-white hover:-translate-y-0.5 transition-all duration-300 ease-out"
+              >
+                Get your AI Readiness Score
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  <ArrowIcon />
+                </span>
+              </TrackedLink>
+            </div>
+          </FadeIn>
         </div>
       </article>
 
@@ -173,9 +235,9 @@ export default function ChecklistPage() {
             <FadeIn delay={0.15}>
               <p className="text-[#c0bdb8] text-base leading-relaxed mb-8">
                 If any of this resonated with what you&apos;re seeing inside
-                your own revenue operations, start with a short intro call. No
-                pitch, just a conversation about what&apos;s getting in the
-                way and whether we&apos;re the right partner to help fix it.
+                your own revenue operations, start with a 30-minute intro call.
+                No pitch: you leave with an outline of the fix, whether or not
+                we&apos;re the right partner to help build it.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>

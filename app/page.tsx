@@ -73,12 +73,39 @@ const stats = [
   { value: "−45%", label: "Information-seeking time" },
 ];
 
+const outputs = [
+  {
+    title: "A prioritized roadmap",
+    body: "What to fix first, in what order, and what each fix is worth.",
+  },
+  {
+    title: "Data your board can trust",
+    body: "Clean records, written definitions, and an owner for every critical field.",
+  },
+  {
+    title: "Live automations and AI agents",
+    body: "Built inside the tools you already use, documented, and owned by your team.",
+  },
+  {
+    title: "A forecast that holds up",
+    body: "Targets built backward from your real conversion rates, with weekly pacing your leadership actually uses.",
+  },
+  {
+    title: "A team that uses it",
+    body: "Training, champions in each team, and adoption you can measure.",
+  },
+  {
+    title: "Everything written down",
+    body: "Runbooks and recordings, so the system outlasts the engagement.",
+  },
+];
+
 const planSteps = [
   {
     step: "01",
     title: "Book an Intro Call",
     href: "/contact",
-    body: "Tell us where things are breaking down: data, process, tooling, team alignment. We listen first.",
+    body: "30 minutes on where things are breaking down: data, process, tooling, team alignment. Bring your Scorecard results if you have them. You leave with an outline of the fix, whether or not we work together.",
   },
   {
     step: "02",
@@ -291,6 +318,46 @@ export default function Home() {
             <div className="mt-16">
               <CTAButton location="plan" />
             </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Outputs: what lands in the client's hands, and when */}
+      <section className="border-b border-[#1f1f1f] py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12">
+            <FadeIn delay={0}>
+              <p className="text-sm uppercase tracking-widest text-[#999] mb-4">
+                What lands in your hands
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#f0f0eb] leading-snug">
+                Named outputs, not phases.
+              </h2>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {outputs.map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.06} className="h-full">
+                <div className="h-full p-8 border border-[#1f1f1f] border-t-2 border-t-[#2dd4bf] rounded-sm">
+                  <h3 className="text-lg font-semibold text-[#f0f0eb] mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#c0bdb8] text-base leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={0.1}>
+            <p className="mt-12 text-lg text-[#f0f0eb] leading-relaxed">
+              Quick wins in the first 30 days. Structural fixes in 60 to 90.
+              Results that compound from there.
+            </p>
           </FadeIn>
         </div>
       </section>
