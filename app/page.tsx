@@ -341,7 +341,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {outputs.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.06} className="h-full">
-                <div className="h-full p-8 border border-[#1f1f1f] border-t-2 border-t-[#2dd4bf] rounded-sm">
+                <div className="h-full p-8 border border-[#1f1f1f] border-t-2 border-t-[#2dd4bf] rounded-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#333] hover:border-t-[#2dd4bf] hover:bg-[#2d2a2b]/40 hover:shadow-[0_0_30px_rgba(240,237,232,0.04)]">
                   <h3 className="text-lg font-semibold text-[#f0f0eb] mb-3">
                     {item.title}
                   </h3>
