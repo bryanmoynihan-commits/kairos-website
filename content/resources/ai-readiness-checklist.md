@@ -31,7 +31,7 @@ But here's what gets overlooked most often: the real data integrity issue isn't 
 | **Alerts** | Missing or conflicting critical data triggers an alert before it compounds | Errors are found by hand, after the damage is done |
 | **Definitions** | Every critical field has a written definition, owner, and source | Fields mean different things to different teams |
 
-**Ask yourself honestly:**
+**The data integrity questions that matter:**
 
 - If your CEO asked for a pipeline report right now, would you trust the numbers without manually checking them first?
 - Do you have a defined process for identifying and resolving duplicate records, missing fields, and conflicting data across your core objects (accounts, contacts, opportunities, quotes)?
@@ -50,7 +50,7 @@ That reframe matters because it turns process documentation from a compliance ex
 
 The symptoms of undocumented processes are predictable. Critical processes live in one person's head. Two reps do the same thing completely differently. Handoffs between teams are inconsistent because nobody agreed on what triggers them or what information needs to transfer. New hires take months to ramp because tribal knowledge is the only knowledge. And, connecting straight back to data integrity, bad data gets produced in your systems as a direct result of processes being undocumented and executed inconsistently.
 
-**Ask yourself honestly:**
+**How documented are your processes, really?**
 
 - If your top-performing rep left tomorrow, could someone else follow their exact process from lead to close without calling them?
 - Are your critical workflows (lead routing, opportunity management, deal handoffs, renewal processes) documented in a way that a new hire could follow them on day one?
@@ -73,7 +73,7 @@ This is one of the most damaging problems a growth-stage company can have. We've
 
 Beyond integration, watch for these signals: redundant tools doing the same job because different teams bought their own solutions. Manual data entry bridging gaps between systems that should be connected. No clear owner of the stack as a whole, where individual tools have admins but nobody is responsible for how the entire system works together. And tools used at a fraction of their capability: paying for enterprise-tier software but using it like a spreadsheet because nobody configured it properly.
 
-**Ask yourself honestly:**
+**Pressure-test your systems architecture:**
 
 - Can you draw a diagram of how data flows between your core systems (CRM, marketing automation, CS platform, billing), and does that diagram reflect what actually happens, or what you think happens?
 - For your most important data objects (accounts, opportunities, customers), is there one clearly defined source of truth, and does every team know what it is?
@@ -98,7 +98,7 @@ Handoffs are another friction point. CS asks customers the same questions sales 
 
 And then there are the definition problems. What does "closed-won" actually mean: when the contract is signed, when the first payment arrives, or when onboarding starts? What counts as an MQL versus an SQL? These sound like semantic debates, but they create real measurement problems. If your teams measure different things and call them by the same name, your data will reflect that confusion, and any AI you build on top of it will amplify it.
 
-**Ask yourself honestly:**
+**Where does team alignment actually break down?**
 
 - Do your marketing, sales, and CS teams share a common set of definitions for lead stages, pipeline stages, and customer lifecycle stages, and are those definitions written down?
 - When a deal moves from sales to onboarding, does the receiving team have everything they need without asking the customer to repeat information?
@@ -122,7 +122,7 @@ What we see more often is the opposite. Teams track metrics but don't act on the
 
 There's also a measurement shift many companies haven't made yet. The growth-at-all-costs days of 2021 are over. Efficiency is at a premium. Companies should be measuring not just growth but efficiency metrics that show how they're progressing with AI and operational scalability. Think ARR per full-time employee. Cost per MQL. Cost per opportunity. LTV to CAC. These tell you whether your growth is sustainable and whether your operational investments are creating leverage, or just creating more cost. If you're not measuring how efficiently you grow, you're only seeing half the picture.
 
-**Ask yourself honestly:**
+**Are you measuring the right things?**
 
 - Can you work backward from your bookings target to the exact number of MQLs, qualified meetings, pipeline deals, and pipeline value you need at each stage, and are those numbers based on real conversion data?
 - Do you track your pacing against those targets weekly, and does your team take action based on what the data shows?
@@ -142,7 +142,7 @@ The pattern is familiar. Individuals experiment on their own, a few people get r
 
 Adoption is a project, not a byproduct. It needs an executive sponsor with a short list of measurable priorities, simple guidelines for which tools to use and how, training tied to real work, and someone in each team who champions the new way of doing things. Without that, even well-built automations sit unused.
 
-**Ask yourself honestly:**
+**Is AI changing how your team works?**
 
 - Is there an executive who owns AI, with a budget and two or three priorities you could name?
 - Does your team use AI as part of how work gets done, with approved tools and shared guidelines, or are people experimenting on their own?

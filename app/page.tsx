@@ -379,7 +379,7 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="space-y-6 text-[#c0bdb8] text-base leading-relaxed">
               <p>
-                Kairos Performance partners with mid-market B2B leadership
+                Kairos Performance partners with growth-oriented B2B leadership
                 teams to diagnose and fix the foundational gaps in their revenue
                 operations: data, definitions, process, and tooling. We start by understanding
                 what you actually need, recommend the right way in, and then

@@ -23,7 +23,7 @@ RevOps consulting is growing fast. According to Skaled's RevOps Trends 2026 repo
 
 Here's what you'll see if you start shopping:
 
-**Fractional/retainer engagements** range from $5,000 to $25,000+ per month depending on scope, seniority, and hours. On the lower end, firms like On The Fly Ops offer fractional RevOps starting at $5,000/month for 20-25 hours. At the higher end, firms like Union Square Consulting price GTM strategy and operations engagements starting at $15,000/month with three-month minimums. Most boutique firms land somewhere in the $8,000-$15,000/month range for mid-market clients.
+**Fractional/retainer engagements** range from $5,000 to $25,000+ per month depending on scope, seniority, and hours. On the lower end, firms like On The Fly Ops offer fractional RevOps starting at $5,000/month for 20-25 hours. At the higher end, firms like Union Square Consulting price GTM strategy and operations engagements starting at $15,000/month with three-month minimums. Most boutique firms land somewhere in the $8,000-$15,000/month range for growth-oriented clients.
 
 **Project-based work** - assessments, CRM migrations, automation builds, process redesigns - typically runs $6,500 to $75,000+ depending on complexity. A RevOps audit or assessment might cost $6,500-$30,000. A full CRM architecture rebuild or large-scale automation project can run $25,000-$75,000.
 
@@ -43,7 +43,7 @@ The range is wide because the inputs vary wildly. Here are the variables that mo
 
 **Scope of transformation vs. optimization.** Are you tuning a foundation that basically works, or rebuilding it from the ground up? Optimization engagements are shorter, cheaper, and lower-risk. Transformation engagements take longer, cost more, and deliver bigger returns. Most companies think they need optimization when they actually need transformation. That's not a sales pitch - it's a diagnostic reality.
 
-**Seniority of the team doing the work.** A fractional VP of RevOps with 15 years of operating experience commands different rates than a junior ops analyst. Both have their place. The question is whether you're paying for execution or strategy - and most mid-market companies need both, which is why the "just hire a junior admin" approach often fails.
+**Seniority of the team doing the work.** A fractional VP of RevOps with 15 years of operating experience commands different rates than a junior ops analyst. Both have their place. The question is whether you're paying for execution or strategy - and most growth-oriented companies need both, which is why the "just hire a junior admin" approach often fails.
 
 ## Hourly, project, or retainer: which pricing model is best?
 

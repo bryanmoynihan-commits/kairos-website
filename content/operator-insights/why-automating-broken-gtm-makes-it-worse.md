@@ -15,7 +15,7 @@ If your data is clean and your processes are defined, automation compounds your 
 
 The fix isn't to stop automating. It's to fix the foundation first.
 
-There's a version of this story playing out right now at hundreds of mid-market companies. A leadership team approves a five- or six-figure investment in automation or AI tooling, expecting faster pipeline, better conversion, and leaner operations. Six months later, the tools are live, the dashboards look busy, and nothing has actually improved. Sometimes it's gotten worse.
+There's a version of this story playing out right now at hundreds of growth-oriented companies. A leadership team approves a five- or six-figure investment in automation or AI tooling, expecting faster pipeline, better conversion, and leaner operations. Six months later, the tools are live, the dashboards look busy, and nothing has actually improved. Sometimes it's gotten worse.
 
 The frustration is real, and the instinct to blame the tool is understandable. But in most cases, the tool did exactly what it was designed to do. It just amplified a system that was already broken.
 
