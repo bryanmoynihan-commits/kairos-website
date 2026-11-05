@@ -29,7 +29,7 @@ Because a two-week Discovery Sprint and a three-month retainer shouldn't look th
 | Discovery Sprint | 1 to 2 weeks | Finished: one automation opportunity mapped, ROI estimated, and a priced proposal for what comes next |
 | Pilot | 2 to 6 weeks | One automation built and tested, with a go or no-go recommendation, or close to it |
 | AI Readiness Assessment or RevOps Assessment | 3 to 5 weeks | Findings and a prioritized roadmap, or close to it. Usually no live automation yet, and that's by design |
-| Scoped build | 4 to 10 weeks | Design agreed, build underway, first pieces in testing |
+| Scoped build | 2 to 10 weeks | Design agreed, build underway, first pieces in testing |
 | Retainer (Stabilize, Build or Transform) | 3-month minimum | Priorities ranked, first builds underway, often one small thing already in use |
 
 Full scope and pricing for each is on the [pricing page](/pricing).
